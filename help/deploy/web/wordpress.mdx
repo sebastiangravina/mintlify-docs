@@ -64,26 +64,6 @@ Enhance user experience by injecting WordPress-specific variables directly into 
 
 ---
 
-## Troubleshooting
-
-### Common Issues and Fixes
-
-#### LiteSpeed Cache Issues
-1. **Localize Resources**:
-   - Remove the URL `https://cdn.jsdelivr.net` from LiteSpeed’s "Localize Resources" list.
-2. **JS Exclusion**:
-   - Add `web.js` and `typebot` to the **JS Excludes** and **JS Deferred Excludes** fields in LiteSpeed's **Tuning Settings**.
-
-#### WP Rocket Cache Plugin
-1. Navigate to **Settings > WP Rocket > Excluded Inline JavaScript**.
-2. Add the term `typebot`.
-3. Save changes.
-
-#### Script Defer Issues
-- If a plugin adds the `defer` attribute to external scripts, add an exception for `agent` in the plugin's configuration.
-
----
-
 ### Further Support
 
 If your agent still isn’t showing:
