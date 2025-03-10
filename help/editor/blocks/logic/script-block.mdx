@@ -1,0 +1,83 @@
+---
+title: Script
+icon: code
+---
+
+The **Script** block allows you to execute JavaScript code within your project. Below are its functionalities, limitations, and examples to guide proper usage.
+
+---
+
+## Key Features
+
+- The **Script** block enables you to execute JavaScript code, but it **does not allow you to create custom visual blocks**.
+- Variables in the script are **evaluated**, not parsed, so they must be treated as real JavaScript variables.
+
+> **Note**: Use `console.log({{My variable}})` instead of `console.log("{{My variable}}")`.
+
+---
+
+## `setVariable` Function
+
+### Purpose
+If you want to set a variable value with Javascript, the [Set Variable](/help/editor/blocks/logic/set-variable) is more appropriate for most cases. However `setVariable` function allows you to set values within a **Script** block.
+
+### Example
+```javascript
+if ({{My variable}} === 'foo') {
+  setVariable('My variable', 'bar');
+} else {
+  setVariable('My variable', 'other');
+}
+```
+
+> **Important**: 
+> - The `setVariable` function is **only available in scripts executed on the server**.
+> - It **will not work** if the **Execute on client?** option is checked.
+
+---
+
+## Server-Side Script Limitations
+
+When scripts are executed on the server, they run in a secure, isolated environment. As a result, some JavaScript functionalities are restricted:
+
+### Restricted Functions
+- Global functions like `console.log`, `setTimeout`, and `setInterval` are **not available**.
+- Importing external libraries using `import` or `require` is **not supported**.
+- Browser APIs like `window`, `document`, and `localStorage` are **not accessible**.
+
+### Fetch Behavior
+The behavior of the `fetch` function differs from the native implementation:
+- The `response` will always be a string, even if the server returns a JSON object.
+- You need to manually parse the response using `JSON.parse()`.
+
+#### Examples:
+```javascript
+// ❌ This throws an error
+const response = await fetch('https://jsonplaceholder.mycode.com/todos/1');
+const data = await response.text();
+
+// ✅ Correct usage
+const response = await fetch('https://jsonplaceholder.mycode.com/todos/1');
+const data = JSON.parse(response);
+```
+
+> **Note**: Avoid using `await response.text()` or `await response.json()`.
+
+---
+
+## Client-Side Script Execution
+
+If you need access to browser APIs, ensure the **Execute on client?** option is checked. This allows the script to run in the user's browser.
+
+### Examples:
+#### Reload Page
+```javascript
+window.location.reload();
+```
+
+#### Redirect Based on Variable Value
+```javascript
+if ({{Category}} === 'qualified') {
+  window.location.href = 'https://my-site.com';
+}
+```

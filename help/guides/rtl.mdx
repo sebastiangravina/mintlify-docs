@@ -1,0 +1,34 @@
+---
+title: Enable RTL
+---
+
+## Steps to Enable RTL
+
+1. Navigate to the **Theme** tab in your Agent settings.
+2. Paste the following Custom CSS into the designated Custom CSS field:
+
+   ```css
+   .agent-container {
+     direction: rtl;
+   }
+
+   .agent-avatar-container {
+     margin-right: 0;
+     margin-left: 0.5rem;
+   }
+
+   .guest-container {
+     margin-left: 0;
+     margin-right: 50px;
+   }
+   ```
+
+3. Save the changes to apply the new styling.
+
+> **Note**: Adjust margins or padding values as needed to ensure proper alignment based on your layout preferences.
+
+### Validation and Testing
+Before deployment:
+- Confirm that text aligns properly in right-to-left format.
+- Verify that margins and paddings are consistent across all elements.
+- Test on different devices to ensure responsiveness.

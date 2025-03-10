@@ -1,0 +1,52 @@
+---
+title: How-to
+---
+
+## How to find my `AgentId`
+
+If you'd like to execute the Agent in preview mode, you will need to provide the ID of the building Agent available in the editor URL:
+
+
+
+## How to find my `publicId`
+
+For published Agent execution, you need to provide the public Agent ID available here:
+
+
+
+## How to find my `workspaceId`
+
+In your workspace dashboard, head over to **Settings & Members > Workspace > Settings** and copy the workspace ID.
+
+## How to handle stream
+
+If you enabled streaming, whenever an AI message should be streamed, you will receive the following JSON response:
+
+```json
+{
+  "messages": [],
+  "clientSideActions": [
+    {
+      "type": "stream",
+      "stream": true,
+      "expectsDedicatedReply": true
+    }
+  ]
+}
+```
+
+The bot is ready to accept the message streaming. You now need to send the following query:
+
+```sh
+curl -X POST https://release0.com/api/v2/sessions/{sessionId}/streamMessage
+```
+
+Where `{sessionId}` should be replaced by the session ID you got from the start chat response.
+
+This endpoint will send Server-Sent events with all the information to display the streamed message.
+
+Once it is done, you can continue the flow by sending a [continue chat request](./chat/continue-chat) with the streamed message as the message content.
+```
+
+> **Note**: Ensure that all IDs (e.g., `AgentId`, `publicId`, `workspaceId`) are correctly obtained and used to avoid errors in execution.
+```

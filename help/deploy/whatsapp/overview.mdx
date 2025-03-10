@@ -1,0 +1,116 @@
+---
+title: WhatsApp Integration
+---
+
+## Preview
+
+You can preview and test your bot by clicking the **Preview** button in the editor and changing the runtime to “WhatsApp”.
+
+### WhatsApp Preview Dropdown
+
+- Select "WhatsApp" from the runtime options to simulate the bot's behavior in the WhatsApp environment.
+
+---
+
+## Limitations
+
+When building your bot for WhatsApp, consider the following restrictions:
+
+- **Unsupported Media**:
+  - GIF and SVG image files are not supported.
+  - Only **.mp4** videos are supported. Refer to the [Supported Media Types](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media#supported-media-types) for more details.
+
+- **Button Limitations**:
+  - Button content cannot exceed **20 characters**. Content exceeding this limit will be truncated.
+  - WhatsApp displays only **3 buttons** at a time. To include more buttons, the system adds "..." messages to show additional options.
+
+- **Skipped Blocks**:
+  Certain blocks are incompatible with WhatsApp and will be ignored:
+  - Payment input block
+  - Chatwoot block
+  - Script or Set Variable block with `Execute on client` option enabled
+  - Google Analytics block
+  - Meta Pixel block
+  - Cal.com block
+
+---
+
+## Contact Information
+
+To assign contact details such as name and phone number to variables, use a **Set Variable** block with dedicated system values. These variables can automatically store:
+
+- Contact name
+- Phone number
+
+---
+
+## Deploy on Your Phone Number
+
+To integrate your bot with WhatsApp:
+
+1. Go to the **Share** tab in your bot editor.
+2. Click the **WhatsApp** button.
+3. Follow the provided instructions to complete the integration.
+
+---
+
+## Configuration
+
+### Session Expiration Timeout
+
+- Define a timeout value (from **0 to 48 hours**) for the session.
+- If a user remains inactive beyond this timeout, their session expires, and a new conversation starts upon their next message.
+- Default: **4 hours**.
+
+### Start Bot Condition
+
+- Configure a condition to trigger the bot when a user starts a conversation.
+- If the condition is unmet, the bot will not be activated.
+
+---
+
+## Collect Position
+
+You can request the user’s location with a basic **Text input block**. The collected position will be saved as a variable in the format:
+
+```
+<LAT>, <LONG>
+```
+
+### Example Flow
+
+```plaintext
+User > Bot > Position Collection
+```
+
+---
+
+## Validation and Testing
+
+Before deployment, ensure:
+
+1. All limitations are addressed (e.g., button length, media types).
+2. The **Set Variable** block is properly configured for contact details.
+3. The bot operates seamlessly in WhatsApp's runtime environment.
+
+> **Note**: Always test your bot thoroughly in the WhatsApp Preview mode to verify compatibility and performance.
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="How many WhatsApp numbers can I use?">
+    You can integrate as many numbers as you'd like. Keep in mind that Release0 does not provide those numbers. We work as a "Bring your own Meta application" and we give you clear instructions on [how to set up your Meta app](/help/deploy/whatsapp/create-meta-app).
+  </Accordion>
+  <Accordion title="Can I link multiple Agents to the same WhatsApp number?">
+    Yes, you can. You will have to add a "Start bot condition" to each of your bots to make sure that the right bot is triggered when a user starts a conversation.
+  </Accordion>
+  <Accordion title="Does the integration with WhatsApp requires any paid API?">
+    You integrate your agents with your own WhatsApp Business Platform which is the official service from Meta. At the moment, the first 1,000 Service conversations each month are free. For more information, refer to <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started#pricing---payment-methods" target="_blank">their documentation</a>
+  </Accordion>
+  <Accordion title="I receive the preview initial message but then the bot doesn't respond">
+    This can be due to a mismatch between the WhatsApp number displayed in your WhatsApp application profile settings and the number you have typed in your Agent configuration.
+
+    For example, in Argentina they have 2 numbers, 1 with 8 digits, the other with 9 digits. In Release0, you need to type the number that is displayed in your WhatsApp application profile settings to make sure the bot works properly.
+
+  </Accordion>
+</AccordionGroup>

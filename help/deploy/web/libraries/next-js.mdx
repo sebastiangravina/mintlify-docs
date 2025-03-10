@@ -1,0 +1,49 @@
+---
+title: Next.js
+---
+
+## Installation
+
+To install the library for use with Next.js, run the following command:
+
+```bash
+npm install @release0.com/nextjs
+```
+
+## Usage
+
+This library is a convenient wrapper around the **agent react** library. It ensures that components are **lazy-loaded** for optimal performance in your Next.js application.
+
+### Example Code
+
+Use it the same way you would use the **agent react** library. Below is an example of integration:
+
+```javascript
+import dynamic from 'next/dynamic';
+
+// Dynamically import the agent component
+const agentComponent = dynamic(() => import('@release0.com/react'), { ssr: false });
+
+export default function agentPage() {
+  return (
+    <div>
+      <h1>Welcome to Your Agent</h1>
+      <AgentComponent id="your-agent-id" />
+    </div>
+  );
+}
+```
+
+### Explanation
+
+1. **Dynamic Import**: The library is designed for lazy-loading, which is achieved through `next/dynamic`. This ensures the component is not included in the server-side rendering (SSR) process.
+2. **Agent ID**: Replace `your-agent-id` with the ID of your configured Agent.
+
+
+### Validation and Testing
+
+Before deploying, confirm the following:
+
+- The `AgentComponent` renders without errors in both development and production environments.
+- The agent ID used corresponds to an active Agent.
+- Lazy-loading is functioning correctly (check the network tab for dynamic imports).

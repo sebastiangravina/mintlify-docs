@@ -1,15 +1,17 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Release0",
+  "backgroundImage": "/images/background.png",
+  "theme": "venus",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#70A3F3",
+    "light": "#70A3F3",
+    "dark": "#70A3F3",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -17,75 +19,288 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Github",
+      "url": "https://github.com/"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://app.release0.com"
+  },
+  "primaryTab": {
+    "name": "Learn"
   },
   "tabs": [
     {
       "name": "API Reference",
-      "url": "api-reference"
+      "url": "help/api-reference"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
       "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "icon": "discord",
+      "url": "https://release0.com/discord"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
+      "pages": ["/help/get-started/introduction"]
+    },
+    {
+      "group": "Flow",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "help/editor/graph",
+        {
+          "group": "Blocks",
+          "icon": "block",
+          "pages": [
+            "help/editor/blocks/overview",
+            {
+              "group": "Agent Dialog",
+              "pages": [
+                "help/editor/blocks/agent-dialog/text",
+                "help/editor/blocks/agent-dialog/image",
+                "help/editor/blocks/agent-dialog/video",
+                "help/editor/blocks/agent-dialog/embed",
+                "help/editor/blocks/agent-dialog/audio"
+              ]
+            },
+            {
+              "group": "User Inputs",
+              "pages": [
+                "help/editor/blocks/user-inputs/text",
+                "help/editor/blocks/user-inputs/number",
+                "help/editor/blocks/user-inputs/email",
+                "help/editor/blocks/user-inputs/website",
+                "help/editor/blocks/user-inputs/date",
+                "help/editor/blocks/user-inputs/phone",
+                "help/editor/blocks/user-inputs/buttons-choice",
+                "help/editor/blocks/user-inputs/picture-choice",
+                "help/editor/blocks/user-inputs/collect-payment",
+                "help/editor/blocks/user-inputs/rating",
+                "help/editor/blocks/user-inputs/fileUpload"
+              ]
+            },
+            {
+              "group": "Logic",
+              "pages": [
+                "help/editor/blocks/logic/set-variable",
+                "help/editor/blocks/logic/condition",
+                "help/editor/blocks/logic/redirect",
+                "help/editor/blocks/logic/script-block",
+                "help/editor/blocks/logic/link-to-agent",
+                "help/editor/blocks/logic/wait",
+                "help/editor/blocks/logic/jump",
+                "help/editor/blocks/logic/ab-test",
+                "help/editor/blocks/logic/webhook"
+              ]
+            },
+            {
+              "group": "Integrations",
+              "pages": [
+                "help/editor/blocks/integrations/google-sheets",
+                "help/editor/blocks/integrations/google-analytics",
+                "help/editor/blocks/integrations/http-request",
+                "help/editor/blocks/integrations/send-email",
+                "help/editor/blocks/integrations/zapier",
+                "help/editor/blocks/integrations/make-com",
+                "help/editor/blocks/integrations/pabbly-connect",
+                "help/editor/blocks/integrations/chatwoot",
+                "help/editor/blocks/integrations/meta-pixel",
+                "help/editor/blocks/integrations/nocodb",
+                "help/editor/blocks/integrations/segment",
+                "help/editor/blocks/integrations/zendesk"
+              ]
+            },
+            {
+              "group": "Ai Agents",
+              "pages": [
+                "help/editor/blocks/ai-agents/anthropic",
+                "help/editor/blocks/ai-agents/dify",
+                "help/editor/blocks/ai-agents/elevenlabs",
+                "help/editor/blocks/ai-agents/mistralAI",
+                "help/editor/blocks/ai-agents/openAi"
+              ]
+            }
+          ]
+        },
+        "help/editor/variables",
+        "help/editor/publish",
+        "help/editor/share",
+        "help/editor/context-menu",
+        "help/editor/export-import"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Theme",
+      "pages": ["help/theme/overview", "help/theme/font"]
+    },
+    {
+      "group": "Settings",
+      "pages": ["help/settings/overview", "help/settings/remember-user"]
+    },
+    {
+      "group": "Deploy",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        {
+          "group": "Web",
+          "icon": "globe",
+          "pages": [
+            "help/deploy/web/overview",
+            {
+              "group": "Libraries",
+              "pages": [
+                "help/deploy/web/libraries/html-javascript",
+                "help/deploy/web/libraries/react",
+                "help/deploy/web/libraries/next-js"
+              ]
+            },
+            "help/deploy/web/wordpress",
+            "help/deploy/web/iframe",
+            "help/deploy/web/script",
+            "help/deploy/web/webflow",
+            "help/deploy/web/custom-domain"
+          ]
+        },
+        {
+          "group": "WhatsApp",
+          "icon": "whatsapp",
+          "pages": [
+            "help/deploy/whatsapp/overview",
+            "help/deploy/whatsapp/create-meta-app"
+          ]
+        },
+        {
+          "group": "API",
+          "icon": "code-simple",
+          "pages": ["help/deploy/api/overview"]
+        }
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Results",
       "pages": [
-        "api-reference/introduction"
+        "help/results/overview",
+        "help/results/analytics",
+        "help/results/realtime"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Workspace",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "help/workspace/overview",
+        "help/workspace/add-members-and-guests",
+        "help/workspace/subscription",
+        "help/workspace/preferences"
+      ]
+    },
+    {
+      "group": "Guides",
+      "pages": [
+        "help/guides/how-to-get-help",
+        "help/guides/mailer-lite",
+        "help/guides/multi-avatars",
+        "help/guides/rtl",
+        "help/guides/utm-in-results",
+        "help/guides/how-to-create-loops",
+        "help/guides/how-to-split-ai-messages-in-multi-blocks"
+      ]
+    },
+    {
+      "group": "Misc",
+      "pages": [
+        "help/faq",
+        "help/privacy-policies",
+        "help/report-abuse",
+        "help/breaking-changes"
+      ]
+    },
+    {
+      "group": "Get started",
+      "pages": [
+        "help/api-reference/authentication",
+        "help/api-reference/how-to"
+      ]
+    },
+    {
+      "group": "Chat",
+      "pages": [
+        "help/api-reference/chat/start-chat",
+        "help/api-reference/chat/start-preview-chat",
+        "help/api-reference/chat/continue-chat",
+        "help/api-reference/chat/save-logs",
+        "help/api-reference/chat/generate-upload-url",
+        "help/api-reference/chat/update-agent-in-session"
+      ]
+    },
+    {
+      "group": "Agent",
+      "pages": [
+        "help/api-reference/agent/list",
+        "help/api-reference/agent/get",
+        "help/api-reference/agent/create",
+        "help/api-reference/agent/import",
+        "help/api-reference/agent/update",
+        "help/api-reference/agent/delete",
+        "help/api-reference/agent/get-published-bot",
+        "help/api-reference/agent/publish",
+        "help/api-reference/agent/unpublish"
+      ]
+    },
+    {
+      "group": "Results",
+      "pages": [
+        "help/api-reference/results/list",
+        "help/api-reference/results/get",
+        "help/api-reference/results/delete",
+        "help/api-reference/results/list-logs"
+      ]
+    },
+    {
+      "group": "Analytics",
+      "pages": ["help/api-reference/analytics/get-stats"]
+    },
+    {
+      "group": "Folder",
+      "pages": [
+        "help/api-reference/folder/list",
+        "help/api-reference/folder/get",
+        "help/api-reference/folder/create",
+        "help/api-reference/folder/update",
+        "help/api-reference/folder/delete"
+      ]
+    },
+    {
+      "group": "Workspace",
+      "pages": [
+        "help/api-reference/workspace/list",
+        "help/api-reference/workspace/get",
+        "help/api-reference/workspace/create",
+        "help/api-reference/workspace/update",
+        "help/api-reference/workspace/delete",
+        "help/api-reference/workspace/list-members"
+      ]
+    },
+    {
+      "group": "Billing",
+      "pages": [
+        "help/api-reference/billing/get-usage",
+        "help/api-reference/billing/list-invoices"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
-  }
+    "website": "https://release0.com",
+    "discord": "https://release0.com/discord",
+    "twitter": "https://twitter.com/Typebot_io",
+    "github": "https://github.com/release0/release0"
+  },
+  "redirects": [
+    {
+      "source": "/editor/blocks/integrations/webhook",
+      "destination": "/editor/blocks/integrations/http-request"
+    }
+  ]
 }

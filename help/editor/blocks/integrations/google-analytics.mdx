@@ -1,0 +1,38 @@
+---
+title: Google Analytics
+---
+The **Google Analytics** integration block allows you to track Google Analytics events at specific moments in your flow.
+
+## How the Google Analytics Block Works
+
+When you include a Google Analytics block in your flow, it performs the following actions:
+1. **Initialize GA**: Tracks a "Page view" event upon page load.
+2. **Track Events**: Executes the specified event when the block is triggered.
+
+### Example: Google Analytics Block Configuration
+
+| Property         | Value              |
+|------------------|--------------------|
+| **Tracking ID**  | G-12345           |
+| **Event Category** | Agent Dialog |
+| **Event Action** | Replied form      |
+
+---
+
+## Tracking Conversions with Google Ads
+
+You can use the Google Analytics block to track **conversion events** for Google Ads. Configure the block with the following properties:
+
+- **Event action**: `conversion`
+- **Send to**: `<YOUR_AW_ID>`
+- **Value (optional)**: Specify a numerical value to quantify the conversion.
+
+> **Note**: Replace `<YOUR_AW_ID>` with your actual Google Ads conversion ID.
+
+---
+
+## Troubleshooting
+
+To debug and monitor your Google Analytics events:
+1. Install the [**Google Analytics Debugger**](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) extension in your browser.
+2. Use the extension to inspect the data being sent to Google Analytics.

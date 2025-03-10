@@ -1,0 +1,97 @@
+---
+title: React
+---
+
+## Installation
+
+To install the required package, use the following command:
+
+```bash
+npm install @release0.com/react
+```
+
+## Standard Integration
+
+The `Standard` component creates a container with a width of 100% (matching the parent width) and a height of 600px.
+
+```javascript
+import { Standard } from '@release0.com/react';
+
+const App = () => {
+  return (
+    <Standard
+      typebot="lead-generation-copy-3luzm6b"
+      style={{ width: '100%', height: '600px' }}
+    />
+  );
+};
+```
+
+## Popup Integration
+
+The `Popup` component automatically triggers a popup window after a specified delay. The example below triggers it after 3 seconds:
+
+```javascript
+import { Popup } from '@release0.com/react';
+
+const App = () => {
+  return <Popup typebot="lead-generation-copy-3luzm6b" autoShowDelay={3000} />;
+};
+```
+
+## Bubble Integration
+
+The `Bubble` component displays a bubble with a preview message. In this example, the message appears after 5 seconds, and you can customize the theme and avatar:
+
+```javascript
+import { Bubble } from '@release0.com/react';
+
+const App = () => {
+  return (
+    <Bubble
+      typebot="lead-generation-copy-3luzm6b"
+      previewMessage={{
+        message: 'I have a question for you!',
+        autoShowDelay: 5000,
+        avatarUrl: 'https://avatars.githubusercontent.com/u/16015833?v=4',
+      }}
+      theme={{
+        button: { backgroundColor: '#0042DA', iconColor: '#FFFFFF' },
+        previewMessage: { backgroundColor: '#ffffff', textColor: 'black' },
+      }}
+    />
+  );
+};
+```
+
+## Additional Configuration
+
+To prefill bot variables in your embed code, use the `prefilledVariables` option. The example below pre-populates values for `Current URL` and `User name`:
+
+```javascript
+import { Standard } from '@release0.com/react';
+
+const App = () => {
+  return (
+    <Standard
+      typebot="lead-generation-copy-3luzm6b"
+      style={{ width: '100%', height: '600px' }}
+      prefilledVariables={{
+        'Current URL': 'https://my-site/account',
+        'User name': 'John Doe',
+      }}
+    />
+  );
+};
+```
+
+> **Note**: If your site URL contains query parameters (e.g., `https://release0.com?User%20name=John%20Doe`), these variables are automatically injected into the bot. Manual transfer is not necessary.
+
+---
+
+### Validation and Testing
+
+Before deploying, ensure:
+1. All components are rendering as expected.
+2. Variables are being prefilled correctly.
+3. Auto-show delays and custom themes match your requirements.

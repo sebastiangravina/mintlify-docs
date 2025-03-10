@@ -1,0 +1,86 @@
+---
+title: Buttons Choice
+icon: arrow-pointer
+---
+
+The **Buttons Choice** User Input Block allows you to present predefined options to your users. This block supports both single-choice and multiple-choice inputs and can dynamically display options based on variables.
+
+
+## Key Features
+
+### Single Choice
+- Users can select one option from a list.  
+- Each choice can be linked to a specific path in your flow for direct branching.  
+- Use the **Default** path to handle cases where no specific path is linked to the selected option.
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/help/images/blocks/inputs/buttons-choice.png" alt="Agent buttons choice block" />
+</Frame>
+
+### Multiple Choice
+- Allows users to select multiple options at once.  
+- The selections can be saved in a variable for further processing or conditional responses.
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/help/images/blocks/inputs/buttons-multiple-choice.png" alt="Agent buttons multiple choice block" />
+</Frame>
+
+### Dynamic Items
+- Dynamically populate the list of options using a variable.  
+- This feature is useful for displaying lists sourced from external data, such as Google Sheets or APIs.  
+- Ensure the variable contains a list of values before using it in the block.
+
+### Adding an "Other" Button
+- Include an "Other" button to let users provide an answer that isn’t listed in the predefined options.  
+- Connect the "Other" button to a [Text](/help/editor/blocks/user-inputs/text) Input Block to collect custom input.
+
+## How to Configure
+
+### Single Choice Example
+1. Add a **Buttons Choice** Input Block.  
+2. Define the options (e.g., "Option 1," "Option 2").  
+3. Link each choice to a specific path in your flow.  
+4. Set a **Default** path for fallback handling.
+
+### Multiple Choice Example
+1. Enable the **Multiple Choice** option.  
+2. Define the list of options.  
+3. Save the user’s selections in a variable for further use.  
+
+### Dynamic Items Example
+1. Populate a variable with a list of items (e.g., from Google Sheets).  
+2. In the block configuration, select the variable containing the list.  
+3. The options will be dynamically displayed to users.
+
+### Adding an "Other" Button
+1. Add an **Other** button to the list of predefined choices.  
+2. Connect the "Other" button to a **Text** Input Block.  
+3. Collect and process the user’s custom input.
+
+### Different Replies Based on Multiple Choices
+1. Save the user’s selections in a variable.  
+2. Add a **Condition** Logic Block to check the value of the variable.  
+3. Define different paths and responses based on the user’s selections.
+
+## Example Use Cases
+
+1. **Single Choice**:  
+   - "What would you like to do?"  
+     - Option 1: "Have more info."  
+     - Option 2: "Navigate to the app."  
+     - Option 3: "Ask a question."
+
+2. **Multiple Choice**:  
+   - "What are you interested in?"  
+     - New Car Purchase  
+     - Sell my Car 
+     - Service my Car  
+     - Refinance my Car Loam
+     - Other
+
+3. **Dynamic Items**:  
+   - Populate a list of services from Google Sheets (e.g., ["Refinance my Car Loam", "Sales", "Service"]).
+
+4. **"Other" Button**:  
+   - Allow users to provide a custom response outside predefined options.
+

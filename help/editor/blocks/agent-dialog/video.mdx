@@ -1,0 +1,45 @@
+---
+title: Video
+icon: video
+---
+
+The **Video** Agent Dialog Block allows you to play videos to your users by pasting video URLs from supported platforms. This block is designed to automatically detect the video service and configure the correct settings for playback.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/help/images/blocks/agent-dialog/video.png" alt="Agent video blocks" />
+</Frame>
+
+### Supported Video Services
+
+When you paste a video URL, the system automatically detects the service and adjusts the iframe settings. Supported platforms include:
+
+- **YouTube** (videos and shorts)
+- **Vimeo**
+- **TikTok**
+- **Gumlet**
+- **OneDrive**
+
+### Missing Services
+
+If the video platform is not supported, you can use the [Embed](embed) Agent Dialog Block and paste the iframe code manually.
+
+### Limitation: YouTube Clips
+
+YouTube clips are not supported because the platform cannot automatically transform the clip URL into an embeddable format. To embed a YouTube clip:
+
+1. Go to YouTube and click **Share > Embed**.
+2. Copy the iframe code.
+3. Use the **Embed Agent Dialog Block** to paste the iframe code.
+
+
+### Adding a Video with a URL
+
+1. Copy the video URL from a supported platform.
+2. Paste it into the Video Agent Dialog block.
+3. The system will handle the embedding automatically.
+
+### Adding a Video with the Embed Agent Dialog Block (for unsupported services)
+
+1. Obtain the iframe embed code from the video platform.
+2. Add an **Embed** Agent Dialog Block.
+3. Paste the iframe code directly into the block.

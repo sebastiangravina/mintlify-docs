@@ -1,0 +1,70 @@
+---
+title: Segment
+---
+The **Segment** block enables you to send events to **Twilio’s Segment** and trigger workflows. It utilizes the Segment Analytics Node.js library to send server-side events, ensuring compatibility with non-web browser devices.
+
+---
+
+## How to Find Your Write Key
+
+To locate your **Write Key**, follow these steps:
+
+1. Navigate to your Segment dashboard.
+2. Click on the **Sources** tab.
+3. Select the desired source and click the **API Keys** button to retrieve the key.
+
+---
+
+## Actions Overview
+
+### Identify User
+Use this action to identify a user in Segment.
+
+#### Required Parameters:
+- **User ID**: A unique identifier for the user.
+- **Email**: The email address of the user.
+
+#### Optional:
+- **Traits**: A set of user-specific traits (e.g., name, location).
+
+---
+
+### Alias
+This action allows you to alias a user in Segment, linking two user identities.
+
+#### Required Parameters:
+- **Previous ID**: The old identifier for the user.
+- **User ID**: The new identifier for the user.
+
+---
+
+### Event
+Track an event in Segment using this action.
+
+#### Required Parameters:
+- **Event Name**: The name of the event (e.g., "Order Completed").
+- **User ID**: The identifier of the user triggering the event.
+
+#### Optional:
+- **Properties**: A set of event-specific properties (e.g., order ID, amount).
+
+---
+
+### Page
+Send a page view event to Segment using this action.
+
+#### Required Parameters:
+- **Agent Name**: The name of the agent or application initiating the event.
+
+#### Optional:
+- **Category**: A category name for the page.
+- **Properties**: Additional properties related to the page view.
+
+---
+
+### Validation and Testing
+Before deployment:
+- Verify your **Write Key** is correctly configured.
+- Test each action with valid parameters to ensure proper functionality.
+- Use [Segment’s Debugger](https://segment.com/docs/connections/sources/debugger/) to validate the events sent.
+

@@ -1,0 +1,60 @@
+---
+title: Text
+icon: text
+---
+
+The **Text** User Input Block enables you to collect text-based responses from your users. It offers flexibility to handle different types of text inputs and additional functionalities like file attachments and audio recordings.
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/help/images/blocks/inputs/text-input.png" alt="Agent embed blocks" />
+</Frame>
+
+## Key Features
+
+### Short Text Input
+- **Default Behavior**: The block is configured to expect short text answers by default.  
+- **Use Case**: Suitable for concise responses, such as names, email addresses, or brief feedback.
+
+### Long Text Input
+- **Configuration**: Enable long text input in the block's settings.  
+- **Use Case**: Ideal for detailed responses, such as descriptions, opinions, or open-ended questions.
+
+### Allow Attachments
+- **Purpose**: Lets users attach files (e.g., documents, images) to their responses.  
+- **How It Works**:  
+  - Attachments are uploaded, and a URL is generated for each file.  
+  - The URL is stored in the variable defined in the block configuration.  
+- **Use Case**: Useful for collecting supporting documents or images.
+
+#### Allow Audio Clips
+- **Purpose**: Adds a microphone button to the input field for users to record and send voice messages.  
+- **File Format**:  
+  - The recorded file is a WebM file if supported.  
+  - If not (e.g., Safari), the file is in MP4 format.  
+- **Use Case**: Perfect for scenarios where users prefer or need to respond via audio.
+
+#### Example Use Cases
+
+1. **Short Text Input**:  
+   - "What is your name?"  
+   - "Enter your email address."
+
+2. **Long Text Input**:  
+   - "Describe your experience with our product."  
+   - "Provide any additional details about your request."
+
+3. **Attachments**:  
+   - "Please upload a copy of your resume."  
+   - "Attach a photo of the issue."
+
+4. **Audio Clips**:  
+   - "Record and send us your feedback."  
+   - "Describe the problem using voice notes."
+
+## Considerations
+
+- **Testing**: Ensure the block is configured correctly for the desired input type.  
+- **Compatibility**: Confirm that attachment uploads and audio recordings are supported across user devices and browsers.  
+- **Variable Storage**: Define and verify the variable for storing URLs of attachments or audio files.
+
+By configuring the Text User Input Block appropriately, you can gather a wide variety of responses from your users effectively.

@@ -1,0 +1,80 @@
+---
+title: Chatwoot
+---
+The Chatwoot integration block allows you to open a Chatwoot widget, enabling users to directly communicate with a human. This feature adds a **Live Chat** layer to your **Agent Dialog** on *release0.com*. 
+
+## Requirements
+
+To use this integration, ensure the following prerequisites are met:
+
+1. **Chatwoot Account**: Create an account on [Chatwoot](https://www.chatwoot.com).
+2. **Website Inbox**: Set up a "Website" inbox in your Chatwoot account.
+
+### Steps to Create a Website Inbox
+
+1. Log in to your Chatwoot account.
+2. Navigate to the **Inbox Settings**.
+3. Select "Website" as the type and complete the configuration.
+
+---
+
+## Setup Instructions
+
+### 1. Insert a Chatwoot Block
+
+Place the **Chatwoot Block** in your **Agent Dialog** wherever you want the widget to be triggered.
+
+### 2. Obtain Your Website Token
+
+To locate your website token:
+
+1. Go to your Chatwoot dashboard.
+2. Navigate to **Inbox Settings** of your created Website Inbox.
+3. Copy the **Website Token**.
+
+### 3. Prefill User Information
+
+You can use collected variables to prefill user information in Chatwoot by setting values in the **Set User Details** section.
+
+- **Example**: If you set the `Email` input to `john@gmail.com`, Chatwoot will associate the email with the current user.
+
+---
+
+## Custom Attributes
+
+Chatwoot supports custom attributes, which allow you to enhance user interactions. These attributes will be automatically filled by your **Agent Dialog**.
+
+### Example: Result URL
+
+You can link the current **Result URL** to the Chatwoot conversation by adding the following custom attribute:
+
+- Applies to: Contact
+- Display Name: Agent Result URL
+- Key: Agent_result_url
+- Description: Release0 result URL that points the user on Release0, before triggering the Chatwoot widget
+- Type: Link
+
+---
+
+## Setting User Behavior
+
+When prefilling user information, you can specify how the user ID is handled:
+
+1. **Default Behavior**: If the `ID` input is left empty, Chatwoot will use either:
+   - The user's `Email`.
+   - The `Result ID` from your **Agent Dialog**.
+
+2. **Avoid Duplicate Contacts**: Setting the `Email` as the `ID` ensures contacts are properly merged and prevents duplicates in Chatwoot.
+
+---
+
+### Validation and Testing
+
+Before deploying the integration, ensure the following:
+
+- The **Chatwoot Block** is correctly configured in your **Agent Dialog**.
+- The **Website Token** is accurate and functional.
+- Custom attributes, such as the `Result URL`, are correctly passed to Chatwoot.
+- Prefilled user information appears correctly in the Chatwoot conversation.
+
+> **Note**: If issues persist, refer to the [Chatwoot Documentation](https://www.chatwoot.com/docs) or contact their support team.
