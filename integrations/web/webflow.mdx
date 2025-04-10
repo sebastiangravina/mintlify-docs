@@ -1,0 +1,72 @@
+---
+title: Webflow
+---
+## Embedding Your agent in Webflow
+
+To embed your agent in Webflow, follow these steps:
+
+1. Go to the **Share** tab of your agent.
+2. Click the **Webflow** button to get the embed instructions.
+
+---
+
+## Advanced Guides
+
+### Trigger an agent Command on Button Click
+
+You can trigger an agent command (like opening a popup) when a button is clicked. Here's how:
+
+1. Assign a unique ID to your button:
+   - Navigate to the **Settings** tab of the button in Webflow.
+   - Add a dedicated ID to the button element.
+
+2. Update your embed code:
+   - In the existing `<script>` tag of your agent Embed element, insert the following code:
+
+   ```javascript
+   document.getElementById('BUTTON_ID').addEventListener('click', (event) => {
+     event.preventDefault();
+     Agent.open();
+   });
+   ```
+
+3. For multiple buttons, repeat the process:
+   - Add more button IDs and associate them with the same or different commands. Your code might look like this:
+
+   ```javascript
+   <script type="module">
+     import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.0/dist/web.js';
+
+     Agent.initPopup({
+       agent: 'my-agent',
+     });
+
+     document.getElementById('BUTTON_ID_1').addEventListener('click', (event) => {
+       event.preventDefault();
+       Agent.open();
+     });
+
+     document.getElementById('BUTTON_ID_2').addEventListener('click', (event) => {
+       event.preventDefault();
+       Agent.open();
+     });
+   </script>
+   ```
+
+   > **Note**: Replace `BUTTON_ID_1` and `BUTTON_ID_2` with the actual IDs assigned to your buttons.
+
+---
+
+## Example Use Case
+
+In this example, clicking the specified buttons will open the agent popup. However, you can replace `Agent.open()` with any other command supported by the [Java library commands](/deploy/web/libraries/html-javascript#commands).
+
+---
+
+## Validation and Testing
+
+Before deploying, ensure:
+- All button IDs match those specified in the script.
+- The JavaScript code does not contain syntax errors.
+- The agent popup works as expected when the buttons are clicked.
+

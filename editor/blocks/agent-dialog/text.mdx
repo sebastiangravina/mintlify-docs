@@ -1,0 +1,40 @@
+---
+title: Text
+icon: font
+---
+
+The **Text** Agent Dialog Block allows you to display simple text messages to your users. These messages can be chained together, creating a smooth animation that enhances the user experience.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/agent-dialog/text.png" alt="Agent dialog blocks" />
+</Frame>
+###
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/blocks/agent-dialog/text-agent-dialog.gif" alt="Agent dialog blocks" />
+</Frame>
+
+## Adding a Link to Text
+
+You can include a link within your text messages by using the link icon in the editor.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/agent-dialog/text-link.png" alt="Agent dialog blocks" />
+</Frame>
+
+### Supported Link Formats
+
+You can insert links using the following formats:
+
+- **HTTP/HTTPS URLs**: `http://` or `https://`
+- **Email Links**: `mailto:example@example.com`
+- **Phone Links**: `tel:+123456789`
+- **SMS Links**: `sms:+123456789`
+
+Additionally, links can dynamically include variables, enabling personalized or contextual link generation.
+
+### Example of a Text Agent Dialog with Links
+
+```markdown
+Hello! Check out our [website](https://release0.com) for more details.
+
+You can also [contact us](mailto:support@release0.com) 

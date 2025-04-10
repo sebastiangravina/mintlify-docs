@@ -1,0 +1,53 @@
+---
+title: Font
+icon: font
+---
+
+## Changing the Font
+
+You can change the font of your **Agent** in the Theme tab under the **Global** section. 
+
+### Font Options
+
+- **Google Fonts**: Select a font from Google Fonts.
+- **Custom Font**: Define your own custom font.
+
+---
+
+## How to Import a Custom Font?
+
+To import your own font, follow these steps:
+
+1. Go to the **Theme tab** under the **Global section**.
+2. Select the **Custom** option.
+3. Define the **font family** and provide the CSS `@font-face` properties.
+
+### Example: Importing a Custom Font
+
+If you want to import a font named *Awesome Font*, you would define the font family as follows:
+
+```css
+"Awesome Font", "Helvetica Neue", sans-serif;
+```
+
+- **Note**: A font name with white space should be enclosed in quotes. For example: `"Awesome Font"`. 
+- The browser uses the first available font from the list. If the first font is unavailable, the browser tries the next one.
+
+### Defining the `@font-face` Rule
+
+Here is an example of the required CSS for the font:
+
+```css
+@font-face {
+  font-family: 'Awesome Font';
+  src: url('https://example.com/awesome.woff') format('woff'),
+       url('https://example.com/awesome.ttf') format('truetype');
+}
+```
+
+### Requirements for Custom Fonts
+
+- The server hosting the font files (e.g., `https://example.com/awesome.woff`) **must support HTTPS**.
+- Ensure the server also supports **Cross-Origin Resource Sharing (CORS)**.
+
+> **Note**: Misconfigured CORS policies may prevent the font from loading. Always test your custom font implementation.

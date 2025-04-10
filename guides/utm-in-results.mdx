@@ -1,0 +1,51 @@
+---
+title: Forward UTM Parameters to an Agent
+---
+
+## Overview
+
+To forward **UTM parameters** to your Agent, follow these steps. The UTM parameter name will be listed in the **Variables** dropdown of your flow. You can declare it in any **Variable** dropdown, and it will appear in the **Results** tab once the Agent is launched with the declared UTM parameter.
+
+## Steps to Forward UTM Parameters
+
+1. **Declare the UTM Parameter Variables**:
+   - Navigate to the **Variables** dropdown in your Agent flow editor.
+   - Add the desired UTM parameters as variables, such as `utm_source` and `utm_value`.
+
+2. **Pass UTM Parameters When Launching the Agent**:
+   - Ensure the Agent is launched with the declared UTM parameters. For example:
+     ```
+     https://your-agent-url.com/?utm_source=google&utm_value=ad_campaign
+     ```
+   - The provided UTM values (`google` and `ad_campaign` in this example) will be automatically captured and displayed in the **Results** tab.
+
+3. **Save UTM Parameters in Variables**:
+   - When a UTM parameter is included in the Agent's URL, it will be stored in the corresponding variable (e.g., `utm_source`).
+
+4. **Build a Redirect URL**:
+   - Use the saved UTM values to construct a redirect URL in a **[Redirect Logic Block](/editor/blocks/logic/redirect)**. For example:
+     ```url
+     https://redirect-site.com?utm_source={{utm_source}}&utm_value={{utm_value}}
+     ```
+
+## Example Redirect Block
+
+Here’s an example of how to build a redirect URL using the UTM variables:
+
+```json
+{
+  "block_type": "Redirect",
+  "url": "https://redirect-site.com?utm_source={{utm_source}}&utm_value={{utm_value}}"
+}
+```
+
+> **Note**: Replace `redirect-site.com` with the appropriate destination URL.
+
+## Validation and Testing
+
+Before deployment, ensure:
+- All declared UTM parameters are listed correctly in the **Variables** dropdown.
+- The redirect URL dynamically includes the UTM parameters without errors.
+- The Agent properly captures and displays UTM parameters in the **Results** tab.
+
+Use tools like [JSONLint](https://jsonlint.com/) to validate JSON structures and [Markdownlint](https://github.com/DavidAnson/markdownlint) to verify the Markdown format.

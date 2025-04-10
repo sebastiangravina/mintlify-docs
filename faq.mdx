@@ -1,0 +1,35 @@
+---
+title: FAQ
+---
+
+## Why are some of my results empty?
+
+Your Agent collects results as soon as your user provides input in the first [User Input](/editor/blocks/user-inputs/text). If other User Inputs have blank answers, it means the user did not answer them and exited the Agent Dialog.
+
+## How can I delete a block or an edge?
+
+You can right-click on most elements in the graph to open a contextual menu for deletion or other actions. In the case of an edge, you can also click on the edge to select it and then press the delete key on your keyboard or click on the trash icon in the edge path.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/edge-delete.png" alt="Delete edge" />
+</Frame>
+
+## Is human takeover available on release0.com?
+
+Live chat is not natively integrated. Release0.com Agents are specifically built for asynchronous chats. However, you can implement a human takeover feature using the [Chatwoot block](/editor/blocks/integrations/chatwoot), which triggers a Chatwoot live chat box when activated.
+
+Alternatively, you can enhance customer support by integrating ticketing systems such as [Freshdesk](https://freshdesk.com/) or [Zendesk](https://www.zendesk.com/). These systems allow you to create tickets each time a user interacts with the Agent Dialog.
+
+## Is there an affiliate program available?
+
+Yes, we are currently working on it. Stay tunned for the release0 affiliate program.
+
+## How can I change my password?
+
+Release0.com does **not** store or manage user passwords directly. Instead, we use secure third-party authentication providers such as **GitHub**, **Google**, **Facebook**, or **Magic Link email login**.
+
+> **Note**: To update your password, please do so through the platform you use to log in (e.g., change your password on GitHub or Google).
+
+## Can I set a variable with the Script block?
+
+No, the Script block is designed solely for executing scripts. If you need to set a variable, use the [Set Variable block](/editor/blocks/logic/set-variable) for this purpose.

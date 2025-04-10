@@ -1,0 +1,45 @@
+---
+title: Script Embed Snippet
+---
+
+## Overview
+
+The **script embed option** is useful in scenarios where you **don’t have access** to the HTML tree of your application or if your website builder only permits inline script snippets. 
+
+### When to Use
+- When access to the HTML structure is restricted.
+- When using website builders with limited customization options.
+
+### Recommendation
+Whenever possible, prefer the **[HTML & JavaScript embed instructions](/deploy/web/libraries/html-javascript)** over the script embed method. Script snippets are merely scripts that inject code from the HTML & JavaScript embed method, offering limited control and customization.
+
+### Example: Script Embed Snippet
+
+Below is an example of how a script embed snippet might look:
+
+```html
+<script>
+  (function(d, s, id) {
+    var js, scriptTag = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://your-custom-url.com/embed.js";
+    scriptTag.parentNode.insertBefore(js, scriptTag);
+  }(document, 'script', 'your-custom-script-id'));
+</script>
+```
+
+> **Note**: Replace `https://your-custom-url.com/embed.js` with the actual URL of the script you want to embed.
+
+### Validation and Testing
+
+Before deploying, ensure:
+- The script is embedded correctly and is functional.
+- The `id` in the script is unique to prevent conflicts.
+- The script does not interfere with other parts of the application.
+
+### Additional Notes
+
+- Always test the snippet in a staging environment before deploying it to production.
+- Ensure compliance with any performance or security requirements of your website.

@@ -1,0 +1,76 @@
+---
+title: Domains
+icon: globe
+---
+
+
+Whenever you're creating an Agent for marketing purposes, support or lead generation, it is important to use a custom domain for better brand recognition.
+
+At **Release0** we offer our own short link domain like **'r0.ar'**, **'release0.ar'** for your agents for free. However, you can also use your own custom domain for your agents. Check out our [pricing page](https://release0.com/pricing) for details about custom domian limits per plan.
+
+## Prerequisites
+
+1. A Release0 Workspace. If you don't have one, you can create one for free.
+2. A custom domain that you own. If you don't have one, you can purchase one from a domain registrar like [GoDaddy](https://www.godaddy.com/), [Namecheap](https://www.namecheap.com/), or [Google Squarespace](https://domains.squarespace.com/).
+3. Access to your domain registrar's DNS settings.
+
+
+## Step 1 Add a Custom Domain
+
+1. Go to the **Settings** menu in your workspace.
+2. Click on **Domains**.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/workspace/domains/add-domain.png" alt="Add new domain" />
+</Frame>
+3. Click on **Add Domain** button
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/workspace/domains/domain-name.png" alt="Add domain name" />
+</Frame>
+
+4. Enter your custom domain name in the *Your domain** field and click **Add Domain**.
+
+
+
+
+## Step 2 Configure your domain
+
+After adding your domain, you will see a new domian in the entry list, click on the config gear and you'll be presented with a DNS record that you'll need to add to your domain's DNS settings.
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/workspace/domains/dns-settings.png" alt="DNS settings" />
+</Frame>
+
+Use the information provided to add a new A record or CNAME record to your domain registrar's DNS settings. The CNAME record should point to the provided value.
+
+## Step 2a: Adding an Apex Domain
+
+If you're adding an apex domain (e.g. `example.com`), you'll need to add an **A record** with the following values:
+
+```plaintext
+Name: @ (or leave it blank)
+Value: 76.76.21.21
+TTL: 86400 (or the highest value possible)
+```
+
+## Step 2b: Adding a Subdomain
+
+If you're adding a subdomain (e.g. `my-agent.mycompany.com`), you'll need to add a **CNAME record** with the following values:
+
+```plaintext
+Name: my-agent (or whatever subdomain you want to use)
+Value: cname.release0.com
+TTL: 86400 (or the highest value possible)
+```
+
+> **Note:** We do not support using `www.` as a subdomain, since the `www.` subdomain will always redirect to the apex domain instead.
+
+### Recommended Subdomain Variations
+
+We recommend using the following variations for your subdomains:
+
+- `agent.example.com`
+- `support.example.com`
+- `nps.example.com`
+- `salesbot.example.com`

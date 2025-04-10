@@ -1,0 +1,126 @@
+---
+title: Agent Configuration
+icon: robot
+---
+
+The **Agent Configuration** menu allows you to configure various aspects of your agent, including its name, URL, access settings, and more. Below are the available configuration options:
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/agent-settings/agent-settings.png" alt="Agent configuration" />
+</Frame>
+
+### How to access Agent Configuration?
+
+There are two ways to access the Agent Configuration::
+- **From the Agent List**: Click on the three dots next to the agent name and select **Configuration**.
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/agent-settings/agent-3dot-settings.png" alt="Agent 3 dot config" />
+</Frame>
+- **From the Flow Editor**: Click on the agent name at the top left of the flow editor.
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/agent-settings/click-agent-name.png" alt="Agent click name config" />
+</Frame>
+### Agent Public Domain
+- A dropdown selection where you can choose the domain under which your agent will be publicly accessible.
+- Example: `https://r0.com/my-workspace/`
+
+You can also add your own custom domain to your workspace to use it for your agent. Please see the [Custom Domain](/workspace/domains) documentation for more information.
+
+### Agent URL
+- The unique URL slug for your agent.
+- Example: `https://r0.com/my-workspace/my-agent`
+
+### Agent Name
+- The display name for your agent.
+- This is visible to users and in the agent link preview.
+
+### Agent Icon
+- The icon that represents your agent.
+- You can choose from a set of emojis, upload a custom image or link your image from a URL.
+- The icon will be displayed in the agent link preview and in the agent list.
+
+To change the icon, click on the current icon and select a new one from the emoji picker or upload an image. You can also paste a URL to an image.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/agent-settings/agent-icon.png" alt="Agent icon" />
+</Frame>
+
+
+
+### Tags
+- Add relevant tags to help categorize your agent.
+- Example: `Support, AI Assistant, Chatbot`
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/agent-settings/agent-tags.png" alt="Agent tags" />
+</Frame>
+
+For more information on how to use tags, please refer to the [Tags](/workspace/tags) documentation.
+
+### Description
+- A short description of your agent that will be used in link previews and for internal identification.
+- Example: *"A smart customer support agent for handling inquiries."*
+
+
+### QR Code
+- Automatically generates a QR code for easy access to your agent.
+- Users can scan the QR code to open the agent directly.
+
+The agent QR code is located in the agent configuration menu. 
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/agent-settings/qr-code-dialog.png" alt="Agent qr" />
+</Frame>
+
+You can click the pen icon 🖊️ to edit the QR code settings.
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/agent-settings/agent-qr-code-edit.png" alt="Agent qr edit" />
+</Frame>
+
+This will open a dialog where you can customize the QR code design.
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/agent-settings/qr-code-design.png" alt="Agent qr design" />
+</Frame>
+
+### Agent Link Preview (For Social Networks)
+- Allows you to configure how the agent appears when shared on social media.
+- Includes preview image, title, and description.
+
+### Agent Expiration
+- Set an optional expiration date for your agent. 
+- After the expiration date, the agent will no longer be accessible.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/agent-settings/agent-expiration.png" alt="Agent expiration" />
+</Frame>
+
+Agent expiration date field supports relative dates such as *in 2 weeks* or *in 3 days*.
+You can customize the expiration message that will be shown to users when the agent expires. You can even rediret them to a custom URL once the agent expires.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/agent-settings/agent-expiration-dialog.png" alt="Agent expiration dialog" />
+</Frame>
+
+
+### Agent Password
+- Optionally secure your agent with a password to restrict access.
+- Users will need to enter the password before interacting with the agent.
+
+In order to set you agent password, click on the **Password** button located at the agent **Configuration**. 
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/agent-settings/agent-password.png" alt="Agent password" />
+</Frame>
+
+This will open a dialog where you can enter the password. Users will need to enter this password to access the agent.
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/agent-settings/agent-password-dialog.png" alt="Agent password dialog" />
+</Frame>
+
+
+### Save and Publish
+- **Save**: Stores your changes without making the agent or the new changes live.
+- **Publish**: Saves an deploys the agent and makes it publicly accessible with the selected settings.
+
+> **Note**: Always verify your agent settings before publishing to ensure proper accessibility and security. Making URL changes after publishing may affect the agent's availability.
+
+

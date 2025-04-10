@@ -1,0 +1,33 @@
+---
+title: Real Time
+icon: clock
+---
+
+## Overview
+
+On any given day, we track upwards of 100,000 Agent events at Release0. These events are ingested into our data warehouse, which is then materialized in a comprehensive, real-time analytics dashboard that gives you powerful insights into your Agent performance. 
+
+While this is great, it is still an aggregated view of your data. What if you want to see a chronological stream of Agent events and export them for further analysis? This is where Release0's Real-time Events feature comes in. Release0's Real-time Events Stream is a detailed, real-time stream of events across your entire Release0 workspace.
+
+To access your real-time events stream, navigate to the **Realtime** section in your workspace side menu.
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/submission/realtime.png" alt="Realtime events" />
+</Frame>
+
+You can filter your realtime view with the following attributes:
+
+| Attribute    | Description                                                                                      |
+| :----------- | :----------------------------------------------------------------------------------------------- |
+| `agent`      | The agent name                                                                                   |
+| `Domain`     | The agent name                                                                                   |
+| `tag`        | The tag label assigned to the agent                                                              |
+| `country`    | The country of the user who initiated the agent                                                  |
+| `city`       | The city of the user who initiated the agent                                                     |
+| `region`     | The Region of the user who initiated the agent                                                   |
+| `continent`  | The continent of the user who initiated the agent                                                |
+| `device`     | The device of the user who initiated the agent                                                   |
+| `browser`    | The browser of the user who initiated the agent                                                  |
+| `os`         | The operating system of the user initiated the agent                                             |
+
+These events happen on the server-side and cannot be blocked by browser extensions or ad-blockers, which improves the accuracy of your analytics data.

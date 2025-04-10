@@ -1,0 +1,46 @@
+---
+title: Jump to agent
+icon: cube
+---
+The **Agent Link** Logic Block allows you to seamlessly transition from one Agent dialog flow to another. This feature ensures that your workflows remain clean, modular, and reusable in various contexts.
+
+## Key Features
+
+### Share Variables Between Agents
+
+The **Jump to agent** Logic Block automatically shares variable values between linked Agents. If the linked Agent contains variables with the same names, they are pre-filled with the values collected from the first Agent.
+
+- **Example**:
+  1. The first Agent asks the user for their name and stores it in the variable `Name`.
+  2. The linked Agent displays the `Name` variable in a response.
+  - **Outcome**: The user's name collected in the first Agent is displayed in the second Agent dialog.
+
+### Merge Answers
+
+The **Merge Answers** option allows you to combine the answers gathered from the linked Agent with those collected in the current Agent. This feature is particularly useful for:
+
+- Sending all collected data to a third-party app in a single request.
+- Compiling responses into a unified results table.
+
+- **Example**:
+  1. The first Agent collects basic information (e.g., name, email).
+  2. The linked Agent gathers additional details (e.g., preferences, feedback).
+  3. All answers are combined and processed as a single dataset.
+
+## Benefits
+
+- **Modularity**: Create reusable Agent flows for common tasks, reducing duplication.
+- **Streamlined Data Handling**: Automatically share and merge variables between linked Agents.
+- **Enhanced Workflow Management**: Maintain clean, organized flows without unnecessary complexity.
+
+> **Note**: Ensure variable names are consistent across Agents to fully utilize the pre-fill and merging features.
+
+---
+
+### Validation and Testing
+
+Before deploying your linked logic block, confirm the following:
+
+1. Variable sharing works as expected, with no mismatched or missing data.
+2. The **Merge Answers** feature combines data correctly across Agents.
+3. The Jump to agent flow is reusable and functions seamlessly within various contexts.
