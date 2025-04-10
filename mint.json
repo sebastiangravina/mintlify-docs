@@ -142,6 +142,7 @@
       "pages": [
         "editor/agent-settings/overview",
         "editor/agent-settings/agent-settings",
+        "editor/agent-settings/agent-branding",
         "editor/agent-settings/advanced-settings"
       ]
     },
