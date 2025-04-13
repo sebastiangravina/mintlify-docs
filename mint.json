@@ -202,11 +202,14 @@
       "pages": [
         "workspace/general",
         "workspace/billing",
-        "workspace/domains",
+        "workspace/customDomains",
         "workspace/tags",
-        "workspace/add-members-and-guests",
-        "workspace/preferences"
+        "workspace/add-members-and-guests"
       ]
+    },
+    {
+      "group": "Account",
+      "pages": ["account/general", "account/notifications", "account/apikey"]
     },
     {
       "group": "Guides",
