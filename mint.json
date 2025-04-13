@@ -49,6 +49,15 @@
       "pages": ["get-started/introduction"]
     },
     {
+      "group": "Agent",
+      "pages": [
+        "editor/agent-settings/overview",
+        "editor/agent-settings/agent-settings",
+        "editor/agent-settings/agent-branding",
+        "editor/agent-settings/advanced-settings"
+      ]
+    },
+    {
       "group": "Flow",
       "pages": [
         "editor/graph",
@@ -135,15 +144,6 @@
         "editor/publish",
         "editor/context-menu",
         "editor/export-import"
-      ]
-    },
-    {
-      "group": "Agent",
-      "pages": [
-        "editor/agent-settings/overview",
-        "editor/agent-settings/agent-settings",
-        "editor/agent-settings/agent-branding",
-        "editor/agent-settings/advanced-settings"
       ]
     },
     {
