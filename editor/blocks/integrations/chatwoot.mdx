@@ -7,14 +7,36 @@ The Chatwoot integration block allows you to open a Chatwoot widget, enabling us
 
 To use this integration, ensure the following prerequisites are met:
 
-1. **Chatwoot Account**: Create an account on [Chatwoot](https://www.chatwoot.com).
-2. **Website Inbox**: Set up a "Website" inbox in your Chatwoot account.
+**Chatwoot Account**: Create an account on [Chatwoot](https://www.chatwoot.com).
+**Website Inbox**: Set up a "Website" inbox in your Chatwoot account.
+
+
 
 ### Steps to Create a Website Inbox
 
 1. Log in to your Chatwoot account.
-2. Navigate to the **Inbox Settings**.
-3. Select "Website" as the type and complete the configuration.
+2. Navigate to the **Settings**.
+3. Select **Inboxes*  and click on **Add Inbox**.
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/blocks/integrations/chatwoot/chatwoot-setup-add-inbox.png" alt="Release0.com - Chatwoot setup add inbox" />
+</Frame>
+
+4. Then in the **Choose channel** section, select **Website**.
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/blocks/integrations/chatwoot/chatwoot-setup-select-website.png" alt="Release0.com - Chatwoot setup choose channel" />
+</Frame>
+
+5. Fill in the required details, such as the inbox name and website URL.
+6. Click on **Create Inbox** to finalize the setup.
+7. Then copy your **Website Token** from the **Inbox Settings**. This will be used to connect your **Chatwoot block** in your agent flow with your Chatwoot.
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/blocks/integrations/chatwoot/chatwoot-setup-inbox-ready.png" alt="Release0.com - Chatwoot setup create inbox" />
+</Frame>
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/blocks/integrations/chatwoot/chatwoot-setup-block.png" alt="Release0.com - Chatwoot setup block" />
+</Frame>
 
 ---
 
@@ -23,6 +45,10 @@ To use this integration, ensure the following prerequisites are met:
 ### 1. Insert a Chatwoot Block
 
 Place the **Chatwoot Block** in your **Agent Dialog** wherever you want the widget to be triggered.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/chatwoot/open-chatwoot.png" alt="Release0.com - Open chatwoot" />
+</Frame>
 
 ### 2. Obtain Your Website Token
 
@@ -53,6 +79,11 @@ You can link the current **Result URL** to the Chatwoot conversation by adding t
 - Key: Agent_result_url
 - Description: Release0 result URL that points the user on Release0, before triggering the Chatwoot widget
 - Type: Link
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/chatwoot/chatwoot-custom-attributes.png" alt="Release0.com - Chatwoot custom attributes" />
+</Frame>
+
 
 ---
 
