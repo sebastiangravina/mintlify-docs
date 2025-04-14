@@ -214,6 +214,7 @@
     {
       "group": "Guides",
       "pages": [
+        "guides/create-first-agent",
         "guides/how-to-get-help",
         "guides/mailer-lite",
         "guides/rtl",
