@@ -2,23 +2,42 @@
 title: Publish
 icon: globe
 ---
+
+While you initially create your Agent, it is in a **draft** state. This means that only you can see it and interact with it. To make your Agent available to the public, you need to **Publish** it.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/publish/publish-button.png" alt="Release0.com - Publish Button" />
+</Frame>
+
+
 Once you *Publish* your Agent, its **public URL** will become active, allowing you to share it with anyone and start collecting responses. 
 
 > **Note**: Any changes you make to the Agent will not be visible to users unless you click the **Publish** button again.
 
+### Publishing Your Agent
+
+Once you click on the **Publish** button, you will be directed to the **agent configuration** dialog. Here, you can set the following options regarding your agents publication:
+- Agent public link. Here you can select the public domain and define the unique URL for your agent. You can use the default domain or connect your own. Plesae see the [Custom Domain](/workspace/customDomains) documentation for more details.
+- Agent path. This is the unique path for your agent. It will be used in the public URL of your agent. For example, if you set the path to `my-agent`, the public URL will be `https://r0.ar/my-agent`. Please make sure not to use spaces or special characters in the path exceprt for dashes.
+- Agent name. This is the name of your agent. It will be used in the public web of your agent. For example you can set the name to `My Agent`, and it will be displayed as `My Agent` in the public web of your agent.
+
+> Note: There are additional settings you can configure in the **Agent Configuration** dialog. For more information on these settings, please refer to the [Agent Configuration](/editor/agent-settings/agent-settings) documentation.
+
+After making the necesary chanes to your agent settigns, yoy can click on **Save and Publsh** and  your Agent will be published and available to the public. You will see a confirmation message indicating that your Agent has been successfully published.
+
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/publish/publish-agent-dialog.png" alt="Release0.com - Publish agent dialog" />
+</Frame>
+
+
+Now you can share the public URL of your Agent with anyone, and they will be able to access it without needing to log in or create an account.
+
 ---
 
-### Options in the Publish Menu
+### Additional options
 
-When you click the drop-down next to the **Publish** button, you will see the following options:
+You can check the agent [Advanced Setting](/editor/agent-settings/advanced-settings) and [Branding Settings](/editor/agent-settings/agent-branding) documentation for more information on how to customize your agent's functionality.
 
-1. **Restore Published Version**  
-   Revert the Agent to its last published version. This action will discard any unpublished changes.
+For changes to your agents appearance, you can check the [Theme](/theme/overview) documentation for more information on how to customize your agent's appearance.
 
-2. **Close Agent to New Responses**  
-   Temporarily close the Agent to new interactions. Users attempting to access it will see the message:  
-   _“This Agent is now closed.”_
 
-3. **Unpublish Agent**  
-   Mark the Agent as unpublished. Users attempting to access it will see the message:  
-   _“The Agent you’re looking for doesn’t exist.”_
