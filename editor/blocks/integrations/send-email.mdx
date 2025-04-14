@@ -19,6 +19,34 @@ If you're on the **Free plan**, you need to configure your own SMTP account to s
 If you're on a **Paid plan**, you can send emails directly from `notifications@release0.com` without any additional setup.
 
 ---
+## Confioguration Steps using Resend as SMTP providers
+
+**Create an Account**: Sign up for a free account on [Resend](https://resend.com/).
+
+**Create an API Key**: After signing up, navigate to the **API Keys** section in your Resend dashboard and click on **Create API key**.
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/blocks/integrations/email/resend-api-key.png" alt="Release0.com - Resend API Key" />
+</Frame>
+Make sure you copy the API key, as you will need it in the next step.
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/email/resend-api-key-2.png" alt="Release0.com - Resend API Key" />
+</Frame>
+
+Now head back to your Release0 agent and open the **Email Block**. In the block configuration click on **Add SMTP Account* In the **SMTP Settings** and fill in the Resend provider information:
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/email/resend-setup.png" alt="Release0.com - Resend SMTP Setup" />
+</Frame>
+- **From email**: The email address you want to use as the sender. This should be a verified email address in your Resend account.
+- **From name**: The name you want to appear as the sender. This can be your company name or any other name you prefer.
+- **SMTP Host**: `smtp.resend.com`
+- **SMTP Username**: Type in *Resend*
+- **SMTP Password**: Your Resend API key.
+- **SMTP Port**: `465`
+
+> - **Note**: Make sure to enable **Secure** connection (SSL) in the SMTP settings.
+
+When you are done, click on **Create** to save your SMTP settings.
+
 
 ## Default Email Content
 
