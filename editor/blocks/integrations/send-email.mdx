@@ -3,7 +3,6 @@ title: Email
 ---
 The **Email** block allows you to send email notifications when specific events occur, such as a user completing your bot. You can also use it to send a recap email to the user.
 
----
 
 ## Configuring the Email Block
 
@@ -18,7 +17,6 @@ If you're on the **Free plan**, you need to configure your own SMTP account to s
 
 If you're on a **Paid plan**, you can send emails directly from `notifications@release0.com` without any additional setup.
 
----
 ## Confioguration Steps using Resend as SMTP providers
 
 **Create an Account**: Sign up for a free account on [Resend](https://resend.com/).
@@ -41,9 +39,14 @@ Now head back to your Release0 agent and open the **Email Block**. In the block 
 - **SMTP Host**: `smtp.resend.com`
 - **SMTP Username**: Type in *Resend*
 - **SMTP Password**: Your Resend API key.
-- **SMTP Port**: `465`
+- **SMTP Port**: `465` (For encrypted/TLS connections use 2465, 587 or 2587)
 
-> - **Note**: Make sure to enable **Secure** connection (SSL) in the SMTP settings.
+> ⚠️ **Important:**
+Make sure you fill in the  **From:**  of the destiantion email **before** configuring the SMTP settings. This is the email address where you want to receive notifications. You can use a variable to dynamically set the destination email based on user input.
+If this is not configured before setting up the SMTP settings, the setup process will fail since the test conenction email sill not be triggered.
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/email/smtp-setup-2.png" alt="Release0.com - Resend SMTP Setup" />
+</Frame>
 
 When you are done, click on **Create** to save your SMTP settings.
 
@@ -65,13 +68,11 @@ By default, the email sent contains a summary of the user's responses. For examp
 
 You can customize this content to include your own text or HTML for a fully branded email experience.
 
----
 
 ## Adding Attachments
 
 You can include attachments in your email using the **Attachments** option. Ensure the attachments are linked to a **File Upload input block** in your flow.
 
----
 
 ## Troubleshooting
 
@@ -79,4 +80,5 @@ If you're not receiving the expected emails:
 1. **Check the logs** in your dashboard for errors.
 2. Verify that your SMTP credentials are configured correctly (for Free plan users).
 3. Ensure the recipient email address is valid.
+4. Make sure you fill in the  **From:**  of the destiantion email **before** configuring the SMTP settings. Otherwise, you will receceive an error message '*Invalid Configuration. We couldn't send the latest email with your configuration*'.
 
