@@ -44,9 +44,17 @@ It is a unique internal identifier for your workspace. It is used to identify yo
 Use this option to permanently delete your workspace. This action is irreversible and will delete all data associated with the workspace, including agents, members, and settings. This action cannot be undone so be careful when using it.
 
 
-## Credentials
+## Workspace Credentials
 
-This is where you can find your API keys and other credentials for your workspace. You can also create new API keys and manage existing ones.
+**Workspace Credentials** are used to securely connect Release0 agents with external services, such as APIs or third-party platforms.
+
+When you create a new credential in your agent, it is automatically stored as a *workspace-level credential*. This means:
+
+- It is shared across all agents in the workspace.
+- All workspace members can use it in their flows.
+- You only need to manage the credential in one place.
+
+**Note**: These credentials are isolated per workspace and never shared across organizations.
 
 To add a new credential click on the **Add Credential** button, select the name of the service from the dropdown list and fill in the required information.
 
@@ -88,5 +96,5 @@ Administrators have full management access to the workspace. They can:
 To delete a workspace, navigate to the general tab under workspace settings and proceed with the deletion:
 
 <Frame style={{ maxWidth: '800px' }}>
-  <img src="/images/workspace/workspace-delete.png" alt="Workspace delete" />
+  <img src="/images/workspace/workspace-delete.png" alt="Release0.com -  Workspace delete" />
 </Frame>

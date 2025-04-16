@@ -2,32 +2,41 @@
 title: Export / Import an Agent
 icon: file-export
 ---
-An Agent flow can be exported to a JSON file using the **menu button** at the top-right corner of the builder.
 
+You can export and import full Agent flows to back up, duplicate, or share agents—even across different [workspaces](/workspace/general).
 
 ## Exporting an Agent Flow
 
-1. Open the builder for the Agent you want to export.
+1. Open the builder for the agent you want to export.
 2. Click the **menu button** (three dots) in the top-right corner.
 3. Select **Export** from the dropdown menu.
-4. Save the JSON file to your preferred location.
+4. Save the file to your preferred location.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/workspace/agent-export.png" alt="Release0.com - Export agent" /> 
+</Frame>
+
 
 ## Importing an Agent Flow
 
-An exported Agent flow can be imported when creating a new Agent. Follow these steps:
+You can import an existing agent flow when creating a new agent. Follow these steps:
 
-1. Navigate to the Agent creation page.
-2. Select the option **Import a file**.
-3. Upload the previously exported JSON file.
-4. Review the imported flow to ensure it matches your expectations.
+1. Go to the agent creation page.
+2. Choose **Import a file**.
+3. Upload the previously exported file.
+4. Review the imported flow to ensure everything is correctly configured.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/workspace/agent-import.png" alt="Release0.com - Import agent" />
+</Frame>
 
 
 ### Validation and Testing
 
-Before deploying the imported Agent, ensure:
+Before deploying the imported agent, ensure:
 
 - All flows are correctly mapped and functional.
-- No missing or improperly linked nodes are present.
-- The Agent dialog behaves as expected during testing.
+- There are no missing or broken connections.
+- The agent dialog performs as expected in test runs.
 
-By following these steps, you can effectively manage and reuse Agent flows in your projects.
+By following these steps, you can easily manage and reuse agent flows across different projects and [workspaces](/workspace/general).
