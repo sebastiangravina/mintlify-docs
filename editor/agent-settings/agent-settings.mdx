@@ -1,129 +1,116 @@
 ---
-title: Agent Configuration
-icon: robot
+title: Agent Configuration  
+icon: robot  
 ---
 
 The **Agent Configuration** screen allows you to configure various aspects of your agent, including its name, URL, access settings, and more. Below are the available configuration options:
 
 <Frame style={{ maxWidth: '800px' }}>
-  <img src="/images/agent-settings/agent-settings.png" alt="Release0.com -  Agent configuration" />
+  <img src="/images/agent-settings/agent-settings.png" alt="Release0.com - Agent configuration" />
 </Frame>
 
 ### How to access Agent Configuration?
 
-There are two ways to access the Agent Configuration::
-- **From the Agent List**: Click on the three dots next to the agent name and select **Configuration**.
-<Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/agent-settings/agent-3dot-settings.png" alt="Release0.com -  Agent 3 dot config" />
-</Frame>
-- **From the Flow Editor**: Click on the agent name at the top left of the flow editor.
-<Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/agent-settings/click-agent-name.png" alt="Release0.com -  Agent click name config" />
-</Frame>
-### Agent Public Domain
-- A dropdown selection where you can choose the domain under which your agent will be publicly accessible.
-- Example: `https://r0.com/my-workspace/`
+There are two ways to access the Agent Configuration:
 
-You can also add your own custom domain to your workspace to use it for your agent. Please see the [Custom Domain](/workspace/customDomains) documentation for more information.
+- **From the Agent List**: Click on the three dots next to the agent name and select **Configuration**.  
+  <Frame style={{ maxWidth: '600px' }}>
+    <img src="/images/agent-settings/agent-3dot-settings.png" alt="Release0.com - Agent 3 dot config" />
+  </Frame>
+
+- **From the Flow Editor**: Click on the agent name at the top left of the flow editor.  
+  <Frame style={{ maxWidth: '600px' }}>
+    <img src="/images/agent-settings/click-agent-name.png" alt="Release0.com - Agent click name config" />
+  </Frame>
+
+---
 
 ### Agent URL
-- The unique URL slug for your agent.
-- Example: `https://r0.com/my-workspace/my-agent`
+
+Your agent’s public URL is made up of two parts:
+
+1. **Domain** – The base domain under which your agent will be published.  
+2. **Agent Slug** – A customizable path segment that uniquely identifies your agent.
+
+> Example URLs:
+> 
+> - `https://r0.ar/your-workspace-slug/nps-agent`  
+> - `https://release0.ar/your-team/support-agent`  
+> - `https://chat.mybrand.com/support-bot`  
+> - `https://bot.mycompany.ai/assistant`
+
+To generate a valid public URL, the agent must be [**published**](/editor/publish). Unpublished agents cannot be accessed via their public link.
+
+### Custom Domains
+
+If you're using a **custom domain**, your agent URL will be cleaner and more direct — it won't include your workspace slug.
+
+> **Note**: The **workspace slug is only required** when using Release0-managed domains like `r0.ar` or `release0.ar`.
+
+#### Example URLs
+
+- **Using a custom domain (no workspace slug):**  
+  `https://chat.acme.com/faq-agent`  
+  `https://support.yourbrand.ai/sales-bot`  
+  `https://agents.mycompany.com/helpdesk`
+
+- **Using a Release0 domain (with workspace slug):**  
+  `https://r0.ar/my-workspace/my-agent`  
+  `https://release0.ar/team-alpha/feedback-bot`
+
+To use your own domain, see the [Custom Domains](/workspace/customDomains) documentation for full setup instructions.
+
+---
 
 ### Agent Name
+
 - The display name for your agent.
 - This is visible to users and in the agent link preview.
+- There are no strict limits, but short, descriptive names work best.
+
+---
 
 ### Agent Icon
-- The icon that represents your agent.
-- You can choose from a set of emojis, upload a custom image or link your image from a URL.
-- The icon will be displayed in the agent link preview and in the agent list.
 
-To change the icon, click on the current icon and select a new one from the emoji picker or upload an image. You can also paste a URL to an image.
+- The icon that represents your agent.
+- You can choose from a set of emojis, upload a custom image, or paste a URL.
+- The icon is shown in the agent list and in link previews.
+- Recommended image size: **512x512px** (square).
+
+To change it, click the current icon and select a new one from the emoji picker, or upload/link an image.
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/agent-settings/agent-icon.png" alt="Release0.com -  Agent icon" />
+  <img src="/images/agent-settings/agent-icon.png" alt="Release0.com - Agent icon" />
 </Frame>
 
-
+---
 
 ### Tags
+
 - Add relevant tags to help categorize your agent.
-- Example: `Support, AI Assistant, Chatbot`
+- Tags are useful for organizing agents and filtering them in dashboards.
+- Example: `Support`, `AI Assistant`, `Chatbot`
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/agent-settings/agent-tags.png" alt="Release0.com -  Agent tags" />
+  <img src="/images/agent-settings/agent-tags.png" alt="Release0.com - Agent tags" />
 </Frame>
 
 For more information on how to use tags, please refer to the [Tags](/workspace/tags) documentation.
 
+---
+
 ### Description
-- A short description of your agent that will be used in link previews and for internal identification.
+
+- A short description of your agent.
+- Used in link previews, agent list, and internal dashboards.
 - Example: *"A smart customer support agent for handling inquiries."*
 
-
-### QR Code
-- Automatically generates a QR code for easy access to your agent.
-- Users can scan the QR code to open the agent directly.
-
-The agent QR code is located in the agent configuration menu. 
-<Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/agent-settings/qr-code-dialog.png" alt="Release0.com -  Agent qr" />
-</Frame>
-
-You can click the pen icon 🖊️ to edit the QR code settings.
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/agent-settings/agent-qr-code-edit.png" alt="Release0.com -  Agent qr edit" />
-</Frame>
-
-This will open a dialog where you can customize the QR code design.
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/agent-settings/qr-code-design.png" alt="Release0.com -  Agent qr design" />
-</Frame>
-
-### Agent Link Preview (For Social Networks)
-- Customize how your agent appears when shared on social media platforms.  
-- Set the preview image, title, and description to control the link preview.
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/agent-settings/agent-link-preview.png" alt="Release0.com -  Agent link preview" />
-</Frame>
-
-### Agent Expiration
-- Set an optional expiration date for your agent. 
-- After the expiration date, the agent will no longer be accessible.
-
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/agent-settings/agent-expiration.png" alt="Release0.com -  Agent expiration" />
-</Frame>
-
-Agent expiration date field supports relative dates such as *in 2 weeks* or *in 3 days*.
-You can customize the expiration message that will be shown to users when the agent expires. You can even rediret them to a custom URL once the agent expires.
-
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/agent-settings/agent-expiration-dialog.png" alt="Release0.com -  Agent expiration dialog" />
-</Frame>
-
-
-### Agent Password
-- Optionally secure your agent with a password to restrict access.
-- Users will need to enter the password before interacting with the agent.
-
-In order to set you agent password, click on the **Password** button located at the agent **Configuration**. 
-
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/agent-settings/agent-password.png" alt="Release0.com -  Agent password" />
-</Frame>
-
-This will open a dialog where you can enter the password. Users will need to enter this password to access the agent.
-<Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/agent-settings/agent-password-dialog.png" alt="Release0.com -  Agent password dialog" />
-</Frame>
-
+---
 
 ### Save and Publish
-- **Save**: Stores your changes without making the agent or the new changes live.
-- **Publish**: Saves an deploys the agent and makes it publicly accessible with the selected settings.
 
-> **Note**: Always verify your agent settings before publishing to ensure proper accessibility and security. Making URL changes after publishing may affect the agent's availability.
+- **Save**: Stores your configuration changes without making the agent public.
+- **Publish**: Deploys the agent and makes it publicly accessible with the current settings.
 
-
+> **Note**: Always review your settings before publishing.  
+> URL changes after publishing may break existing links.
