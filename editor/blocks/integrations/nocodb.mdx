@@ -5,7 +5,6 @@ title: NocoDB
 ## Overview
 This guide explains how to use the **NocoDB** block to interact with your NocoDB tables in an Agent Dialog. You can create, update, or retrieve data from your NocoDB tables. This includes identifying the **Table ID** and configuring the **Search Records** action effectively.
 
----
 
 ## How to Find Your Table ID
 To locate your **Table ID** in NocoDB:
@@ -14,13 +13,11 @@ To locate your **Table ID** in NocoDB:
 3. Click on the **three dots** icon (`...`) next to the table name.
 4. Find the **Table ID** in the pop-up menu (as shown in the image). Copy it for use.
 
-### Example
-| Action       | Step                                                                 |
-|--------------|----------------------------------------------------------------------|
-| Locate Table | Go to your dashboard and identify the table in the sidebar.          |
-| Access ID    | Click the three dots and find the **Table ID** in the dropdown menu. |
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/nocodb/nocodb-table-id.png" alt="Release0.com - NocoDB Table ID" />
+</Frame>
 
----
+
 
 ## Using the Search Records Action
 The **Search Records** action in NocoDB allows you to retrieve specific records from your tables. This action requires:
@@ -56,10 +53,7 @@ The **Search Records** action in NocoDB allows you to retrieve specific records 
 - Search for a record matching the email.
 - Map the **Name** field to a variable.
 
-### Visual Representation
-The second image shows how this configuration looks in the Agent Dialog editor.
 
----
 
 ## Validation and Testing
 Before deploying, ensure:

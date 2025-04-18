@@ -12,27 +12,38 @@ When a **Pixel Block** is added to your flow:
 
 1. **Initialization**:  
    The Meta Pixel is initialized, and a `PageView` event is automatically tracked as soon as the page loads.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images//blocks/integrations/meta-pixel/meta-pixel-config.png" alt="Release0.com - Meta Pixel Integration" />
+</Frame>
    
 2. **Event Tracking**:  
    Specific events, such as a form submission or a button click, are tracked when the block is executed.
 
----
-
 ## **Configuration Steps**
 
-### 1. **Adding the Pixel ID**
+### 1. **Finding my Meta Pixel ID**
+   - Go to your [Meta Events Manager](https://www.facebook.com/events_manager/) and select the Pixel you want to use.
+   - Copy the **Pixel ID** from the settings page.
+
+### 2. **Adding the Pixel ID**
    - Enter your **Meta Pixel ID** (e.g., `73627907634`) into the input field in the configuration box.
    - This ID connects your Agent flow to your Meta Ads account for event tracking.
 
-### 2. **Event Tracking**
+### 3. **Event Tracking**
    - Toggle the **"Track event"** option to enable event tracking.
    - Specify the event name (e.g., `Lead`) in the dropdown or input field. 
    - Optionally, click **Add parameter** to pass additional data (like user information) with the event.
 
-### 3. **Collecting User Inputs**
-   Use the **Collect** block (e.g., *Collect Name*) to gather data from the user. This data can be associated with the event being tracked.
 
----
+### 4. **How to checkl if the Pixel is working**
+   - Use the [Meta Events Manager](https://www.facebook.com/events_manager/) to verify that your Pixel is firing correctly.
+   - Select your Pixel and navigate to the **Test Events** tab.
+   - Check for the `PageView` event in the **Events Received** section for any custom events you have set up.
+
+<Frame style={{ maxWidth: '800px' }}>
+     <img src="/images//blocks/integrations/meta-pixel/meta-pixel-events.png" alt="Release0.com - Meta Pixel Event Tracking" />
+   </Frame> 
 
 ## **Example Use Case**
 
@@ -50,7 +61,6 @@ In the example image:
 - The `Lead` event is tracked whenever the block is executed.
 - Optional parameters can include user data (e.g., `Name` or `Email`).
 
----
 
 ## **Best Practices**
 

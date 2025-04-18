@@ -2161,11 +2161,13 @@
                               "HOBBY",
                               "PRO",
                               "BUSINESS",
-                              "BUSINESS_PLUS",
-                              "BUSINESS_EXTRA",
-                              "BUSINESS_MAX",
+                              "ADVANCED",
                               "ENTERPRISE",
-                              "CUSTOM"
+                              "CUSTOM_APPSUMO_TIER1",
+                              "CUSTOM_APPSUMO_TIER2",
+                              "CUSTOM_APPSUMO_TIER3",
+                              "CUSTOM_APPSUMO_TIER4",
+                              "CUSTOM_APPSUMO_TIER5"
                             ]
                           },
                           "slug": {
@@ -2295,11 +2297,13 @@
                             "HOBBY",
                             "PRO",
                             "BUSINESS",
-                            "BUSINESS_PLUS",
-                            "BUSINESS_EXTRA",
-                            "BUSINESS_MAX",
+                            "ADVANCED",
                             "ENTERPRISE",
-                            "CUSTOM"
+                            "CUSTOM_APPSUMO_TIER1",
+                            "CUSTOM_APPSUMO_TIER2",
+                            "CUSTOM_APPSUMO_TIER3",
+                            "CUSTOM_APPSUMO_TIER4",
+                            "CUSTOM_APPSUMO_TIER5"
                           ]
                         },
                         "stripeId": {
@@ -2328,46 +2332,11 @@
                           "type": "string",
                           "nullable": true
                         },
-                        "credentials": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "customDomains": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "members": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "agents": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "invitations": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "themeTemplates": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "tags": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "domain": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "registeredDomain": {
-                          "type": "array",
-                          "items": {}
-                        },
                         "chatUsage": {
                           "type": "number"
                         },
-                        "claimableCustomPlan": {
+                        "redeemedCoupons": {
+                          "type": "string",
                           "nullable": true
                         }
                       },
@@ -2386,7 +2355,8 @@
                         "billingCycleStart",
                         "paymentFailedAt",
                         "stripeConnectId",
-                        "chatUsage"
+                        "chatUsage",
+                        "redeemedCoupons"
                       ]
                     }
                   },
@@ -2505,34 +2475,9 @@
                         },
                         "plan": {
                           "type": "string",
-                          "enum": [
-                            "HOBBY",
-                            "PRO",
-                            "BUSINESS",
-                            "BUSINESS_PLUS",
-                            "BUSINESS_EXTRA",
-                            "BUSINESS_MAX",
-                            "ENTERPRISE",
-                            "CUSTOM"
-                          ]
+                          "description": "Plan name"
                         },
                         "stripeId": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "chatsLimitFirstEmailSentAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "chatsLimitSecondEmailSentAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "storageLimitFirstEmailSentAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "storageLimitSecondEmailSentAt": {
                           "type": "string",
                           "nullable": true
                         },
@@ -2561,46 +2506,11 @@
                           "type": "string",
                           "nullable": true
                         },
-                        "credentials": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "customDomains": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "members": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "agents": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "invitations": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "themeTemplates": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "tags": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "domain": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "registeredDomain": {
-                          "type": "array",
-                          "items": {}
-                        },
                         "chatUsage": {
                           "type": "number"
                         },
-                        "claimableCustomPlan": {
+                        "redeemedCoupons": {
+                          "type": "string",
                           "nullable": true
                         }
                       },
@@ -2613,10 +2523,6 @@
                         "slug",
                         "plan",
                         "stripeId",
-                        "chatsLimitFirstEmailSentAt",
-                        "chatsLimitSecondEmailSentAt",
-                        "storageLimitFirstEmailSentAt",
-                        "storageLimitSecondEmailSentAt",
                         "isQuarantined",
                         "isSuspended",
                         "isPastDue",
@@ -2624,7 +2530,8 @@
                         "billingCycleStart",
                         "paymentFailedAt",
                         "stripeConnectId",
-                        "chatUsage"
+                        "chatUsage",
+                        "redeemedCoupons"
                       ]
                     }
                   },
@@ -2726,7 +2633,8 @@
                   "slug": {
                     "type": "string"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           }
@@ -5985,7 +5893,7 @@
         }
       }
     },
-    "/v1/agents/{agentId}/publicAgent": {
+    "/v1/agents/{agentId}/publishedAgent": {
       "get": {
         "operationId": "agent-getPublishedAgent",
         "summary": "Get published agent",
@@ -6035,7 +5943,8 @@
                           "5": "#/components/schemas/publicAgentV5",
                           "6": "#/components/schemas/publicAgentV6"
                         }
-                      }
+                      },
+                      "title": "Public Agent"
                     }
                   },
                   "required": [
@@ -13795,11 +13704,13 @@
                             "HOBBY",
                             "PRO",
                             "BUSINESS",
-                            "BUSINESS_PLUS",
-                            "BUSINESS_EXTRA",
-                            "BUSINESS_MAX",
+                            "ADVANCED",
                             "ENTERPRISE",
-                            "CUSTOM"
+                            "CUSTOM_APPSUMO_TIER1",
+                            "CUSTOM_APPSUMO_TIER2",
+                            "CUSTOM_APPSUMO_TIER3",
+                            "CUSTOM_APPSUMO_TIER4",
+                            "CUSTOM_APPSUMO_TIER5"
                           ]
                         },
                         "stripeId": {
@@ -13847,46 +13758,11 @@
                           "type": "string",
                           "nullable": true
                         },
-                        "credentials": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "customDomains": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "members": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "agents": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "invitations": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "themeTemplates": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "tags": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "domain": {
-                          "type": "array",
-                          "items": {}
-                        },
-                        "registeredDomain": {
-                          "type": "array",
-                          "items": {}
-                        },
                         "chatUsage": {
                           "type": "number"
                         },
-                        "claimableCustomPlan": {
+                        "redeemedCoupons": {
+                          "type": "string",
                           "nullable": true
                         }
                       },
@@ -13910,7 +13786,8 @@
                         "billingCycleStart",
                         "paymentFailedAt",
                         "stripeConnectId",
-                        "chatUsage"
+                        "chatUsage",
+                        "redeemedCoupons"
                       ]
                     },
                     "checkoutUrl": {

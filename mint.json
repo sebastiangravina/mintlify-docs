@@ -254,7 +254,7 @@
         "api-reference/agent/update",
         "api-reference/agent/delete",
         "api-reference/agent/get-published-bot",
-        "api-reference/w/publish",
+        "api-reference/agent/publish",
         "api-reference/agent/unpublish"
       ]
     },
