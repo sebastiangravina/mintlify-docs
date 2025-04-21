@@ -237,10 +237,8 @@
       "group": "Chat",
       "pages": [
         "api-reference/chat/start-chat",
-        "api-reference/chat/start-preview-chat",
         "api-reference/chat/continue-chat",
         "api-reference/chat/save-logs",
-        "api-reference/chat/generate-upload-url",
         "api-reference/chat/update-agent-in-session"
       ]
     },
