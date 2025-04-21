@@ -5,7 +5,6 @@ icon: code
 
 The **Run script** block allows you to execute JavaScript code within your project. Below are its functionalities, limitations, and examples to guide proper usage.
 
----
 
 ## Key Features
 
@@ -14,7 +13,6 @@ The **Run script** block allows you to execute JavaScript code within your proje
 
 > **Note**: Use `console.log({{My variable}})` instead of `console.log("{{My variable}}")`.
 
----
 
 ## `setVariable` Function
 
@@ -34,7 +32,6 @@ if ({{My variable}} === 'foo') {
 > - The `setVariable` function is **only available in scripts executed on the server**.
 > - It **will not work** if the **Execute on client?** option is checked.
 
----
 
 ## Server-Side Script Limitations
 
@@ -63,7 +60,6 @@ const data = JSON.parse(response);
 
 > **Note**: Avoid using `await response.text()` or `await response.json()`.
 
----
 
 ## Client-Side Script Execution
 

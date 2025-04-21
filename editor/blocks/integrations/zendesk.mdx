@@ -7,7 +7,6 @@ title: Zendesk
 - Admin access to your Zendesk account.
 - Familiarity with embedding JavaScript snippets in your website or configuring SDKs in mobile apps.
 
----
 
 ## 1. Obtaining the Zendesk Signing Key (Key ID and Secret Key)
 
@@ -26,7 +25,6 @@ A **signing key** is required for visitor authentication when using the Web Widg
 
 > **Note**: Refer to the [Zendesk documentation](https://developer.zendesk.com/documentation/zendesk-web-widget-sdks/sdks/web/enabling_auth_visitors/#generating-a-signing-key) for more details.
 
----
 
 ## 2. Finding the Web Widget Key
 
@@ -43,7 +41,6 @@ The **Web Widget Key** is needed to configure the Web Widget for your website. I
    ```
 5. Copy the **key** value (`k338c615-1ccb-...` in this example).
 
----
 
 ## 3. Embedding the Web Widget
 
@@ -77,7 +74,6 @@ Before deploying the Web Widget:
    - Confirm the JWT token is generated and passed correctly.
 3. Test the chat functionality on the website or mobile app.
 
----
 
 ## Example JWT Token Generation
 
@@ -103,11 +99,9 @@ console.log('JWT Token:', token);
 
 > **Note**: Use a secure backend to generate JWT tokens. Avoid generating them on the client-side.
 
----
 
 ### References
 - [Zendesk Developer Documentation](https://developer.zendesk.com/documentation/)
 - [JSON Web Token (JWT)](https://jwt.io/)
 
---- 
 
