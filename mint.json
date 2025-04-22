@@ -55,10 +55,10 @@
         "editor/agent-settings/agent-settings",
         "editor/agent-settings/agent-expiration",
         "editor/agent-settings/agent-password",
+        "editor/agent-settings/agent-unpublish",
         "editor/agent-settings/agent-link-preview",
         "editor/agent-settings/agent-qr-code-generator",
         "editor/agent-settings/agent-branding",
-        "editor/agent-settings/agent-unpublish",
         "editor/agent-settings/advanced-settings"
       ]
     },

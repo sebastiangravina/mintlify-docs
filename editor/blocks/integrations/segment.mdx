@@ -67,12 +67,12 @@ Send a page view event to Segment using this action.
    - Check the Segment dashboard to verify the event was received successfully.
    - You can use ther [Segment’s Debugger](https://segment.com/docs/connections/sources/debugger/) to validate the events sent.
 
-In the following example, we will configure the **Identify** action to send user information to Segment.
+In the following example, we will configure the **Track** action to send user information to Segment.
 
 - Create a new block group and collet user data (Name, UserName, and Email)
 - We can use a random variable to create a random userID.
 - Add user input blocks to collect user data.
-- Add the Segment block and select the **Identify** action.
+- Add the Segment block and select the **Track** action.
 - Fill in the required parameters:
   - **User ID**: Use the variable that holds the random user ID.
   - **Email**: Use the variable that holds the user’s email address.
@@ -80,6 +80,8 @@ In the following example, we will configure the **Identify** action to send user
 <Frame style={{ maxWidth: '500px' }}>
   <img src="/images/blocks/integrations/segment/segment-config.png" alt="Release0.com - Segment block configuration" />
 </Frame>
+
+Here is an overview of a simple flow that collects user data and sends it to Segment using the **Track** action.
 
 <Frame style={{ maxWidth: '800px' }}>
   <img src="/images/blocks/integrations/segment/segment-flow-sample.png" alt="Release0.com - Segment block sample" />
@@ -91,7 +93,7 @@ Once configured, the Segment block will send the user information to Segment usi
   <img src="/images/blocks/integrations/segment/segment-agent-sample.png" alt="Release0.com - Segment block configuration sample" />
 </Frame>
 
-When we run the scenario, the Segment block will send the user information to Segment using the **Identify** action.
+When we run the scenario, the Segment block will send the user information to Segment using the **Track** action.
 And once we check the Segment dashboard, we can see the event was received successfully.
 
 <Frame style={{ maxWidth: '800px' }}>

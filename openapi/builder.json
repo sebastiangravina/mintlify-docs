@@ -2280,6 +2280,9 @@
                         "updatedAt": {
                           "type": "string"
                         },
+                        "lastActivityAt": {
+                          "type": "string"
+                        },
                         "name": {
                           "type": "string"
                         },
@@ -2344,6 +2347,7 @@
                         "id",
                         "createdAt",
                         "updatedAt",
+                        "lastActivityAt",
                         "name",
                         "icon",
                         "slug",
@@ -2462,6 +2466,9 @@
                         "updatedAt": {
                           "type": "string"
                         },
+                        "lastActivityAt": {
+                          "type": "string"
+                        },
                         "name": {
                           "type": "string"
                         },
@@ -2518,6 +2525,7 @@
                         "id",
                         "createdAt",
                         "updatedAt",
+                        "lastActivityAt",
                         "name",
                         "icon",
                         "slug",
@@ -6345,6 +6353,10 @@
                             "type": "string",
                             "nullable": true
                           },
+                          "description": {
+                            "type": "string",
+                            "nullable": true
+                          },
                           "isPublished": {
                             "type": "boolean"
                           },
@@ -6398,6 +6410,7 @@
                           "theme",
                           "settings",
                           "icon",
+                          "description",
                           "isPublished"
                         ],
                         "title": "Agent V6"
@@ -8123,6 +8136,10 @@
                             "type": "string",
                             "nullable": true
                           },
+                          "description": {
+                            "type": "string",
+                            "nullable": true
+                          },
                           "isPublished": {
                             "type": "boolean"
                           },
@@ -8176,6 +8193,7 @@
                           "theme",
                           "settings",
                           "icon",
+                          "description",
                           "isPublished"
                         ],
                         "title": "Agent V5"
@@ -13687,6 +13705,9 @@
                         "updatedAt": {
                           "type": "string"
                         },
+                        "lastActivityAt": {
+                          "type": "string"
+                        },
                         "name": {
                           "type": "string"
                         },
@@ -13770,6 +13791,7 @@
                         "id",
                         "createdAt",
                         "updatedAt",
+                        "lastActivityAt",
                         "name",
                         "icon",
                         "slug",
