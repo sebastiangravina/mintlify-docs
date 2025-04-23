@@ -173,9 +173,12 @@
               ]
             },
             "integrations/web/wordpress",
+            "integrations/web/shopify",
+            "integrations/web/wix",
             "integrations/web/iframe",
             "integrations/web/script",
             "integrations/web/webflow",
+            "integrations/web/google-tag-manager",
             "integrations/web/custom-domain"
           ]
         },

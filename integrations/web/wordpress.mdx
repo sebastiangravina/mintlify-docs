@@ -2,37 +2,41 @@
 title: WordPress
 ---
 
-The **WordPress plugin** allows seamless embedding of agents into your WordPress site. Follow these steps to get started.
+The **[WordPress plugin](https://wordpress.org/plugins/release0/)** allows seamless embedding of agents into your WordPress site. Follow these steps to get started.
 
 ### Prerequisites
 
 Before using the plugin, you need to:
 1. Create and publish your first agent on [release0.com](https://release0.com).
-2. Generate the initialization snippet from the **Share** tab of your agent.
+2. Generate the initialization snippet from the **Integrations** tab of your agent's **flow editor**.
 
----
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/integrations/wordpress-integration-menu.png" alt="Release0.com - WordPress" />
+</Frame>
 
 ## Agent Settings
 
 ### Embedding Options
 
 1. **Generate Initialization Snippet**:  
-   - Go to the **Share** tab of your agent.
+   - Go to the **Integrations** tab of your agent's **flow editor**.
    - Click on the **WordPress** button to configure the embed code.
 
 2. **Embedding Modes**:
    - **Standard Container**: Paste the shortcode anywhere on your site.
-   - **Popup or agent Dialog**: Use the following format:
-     ```javascript
-     agent.initPopup({
-       agent: "customer-support-copy-eOgcOzw",
-       autoShowDelay: 0,
-     });
-     ```
+   <Frame style={{ maxWidth: '400px' }}>
+   <img src="/images/integrations/wordpress-standard-container.png" alt="Release0.com - WordPress Standard Container" />
+   </Frame>
+   - **Popup or agent Dialog**: Use the following format
+   <Frame style={{ maxWidth: '400px' }}>
+   <img src="/images/integrations/wordpress-popup.png" alt="Release0.com - WordPress Popup" />
+   </Frame>
+   - **Bubble** or Chat Bubble: Use the following format
+   <Frame style={{ maxWidth: '400px' }}>
+   <img src="/images/integrations/wordpress-bubble.png" alt="Release0.com - WordPress Bubble" />
+   </Frame>
 
-> **Note**: You can customize this snippet from the **Share** tab of your agent.
-
----
+> **Note**: You can customize this snippet from the **Integrations** tab of your agent's **flow editor**.
 
 ### Excluded Pages
 
@@ -47,7 +51,6 @@ To exclude the a from specific pages, provide a comma-separated list of page pat
 | `/app?param=*`   | Excludes `/app` with any `param` query value.                     |
 | `/app/*?param=*` | Excludes all `/app/` pages with any `param` query value.          |
 
----
 
 ### Personalizing the User Experience
 
@@ -60,11 +63,8 @@ Enhance user experience by injecting WordPress-specific variables directly into 
 
 > **Note**: Incorrect syntax, such as `wp Email` or `WP email`, will not work.
 
----
 
 ## Troubleshooting
-
-### Common Issues and Fixes
 
 #### LiteSpeed Cache Issues
 1. **Localize Resources**:
@@ -79,11 +79,3 @@ Enhance user experience by injecting WordPress-specific variables directly into 
 
 #### Script Defer Issues
 - If a plugin adds the `defer` attribute to external scripts, add an exception for `agent` in the plugin's configuration.
-
----
-
-### Further Support
-
-If your agent still isn’t showing:
-1. Review the steps above.
-2. Use the **agent aialog** on the bottom-right corner of the [release0.com](https://release0.com) application to contact support.

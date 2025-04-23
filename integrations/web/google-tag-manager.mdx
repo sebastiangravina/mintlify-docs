@@ -1,0 +1,27 @@
+---
+title: Google Tag Manager
+---
+Integrating your agent with Google Tag Manager (GTM) allows you to track user interactions and events on your website. This integration helps you gather valuable data about user behavior, which can be used to improve your marketing strategies and enhance the overall user experience.
+### Prerequisites
+- A Google Tag Manager account.
+- A Release0 account.
+- An agent created and published on [release0.com](https://release0.com).
+### Steps to Integrate Google Tag Manager with Release0
+1. **Create a Google Tag Manager Account**: If you don't have a GTM account, create one by visiting the [Google Tag Manager website](https://tagmanager.google.com/).
+2. **Create a New Container**: In your GTM account, create a new container for your website. This container will hold all the tags, triggers, and variables you want to use.
+3. **Create a Google TAG**: On your GTM account dashboard, click on Add a new tag.
+4. Choose Custom HTML tag type
+5. Check Support document.write
+6. Paste the code snippet provided by Release0 in the HTML text area.
+7. On your web page, you need to have an element on which the agent will go:
+```html
+<agent-standard style="width: 100%; height: 600px; "></agent-standard>
+```
+8. **Set Up Triggers**: Set up triggers to determine when the tag should fire. For example, you can set it to fire on all pages or specific pages where you want to track user interactions.
+9. **Publish Your Container**: After setting up your tags and triggers, publish your GTM container to make the changes live on your website.
+10. **Test the Integration**: Visit your website and check if the agent is loading correctly. You can use the GTM preview mode to debug and ensure that the tags are firing as expected.
+11. **Monitor User Interactions**: Use Google Analytics or other tracking tools to monitor user interactions with your agent. You can set up events to track specific actions, such as button clicks or form submissions.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/integrations/google-tag-manager-integration.png" alt="Release0.com - Google Tag Manager" />
+</Frame>
