@@ -178,7 +178,10 @@
             "integrations/web/iframe",
             "integrations/web/script",
             "integrations/web/webflow",
+            "integrations/web/notion",
+            "integrations/web/flutterflow",
             "integrations/web/google-tag-manager",
+            "integrations/web/framer",
             "integrations/web/custom-domain"
           ]
         },
