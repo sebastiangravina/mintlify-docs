@@ -10562,6 +10562,9 @@
                           "agentId": {
                             "type": "string"
                           },
+                          "workspaceId": {
+                            "type": "string"
+                          },
                           "variables": {
                             "type": "array",
                             "items": {
@@ -10613,11 +10616,121 @@
                             "type": "string",
                             "nullable": true
                           },
+                          "updatedAt": {
+                            "anyOf": [
+                              {
+                                "type": "string"
+                              },
+                              {
+                                "type": "string",
+                                "format": "date-time"
+                              }
+                            ]
+                          },
+                          "metadata": {
+                            "type": "object",
+                            "properties": {
+                              "ip": {
+                                "type": "string"
+                              },
+                              "location": {
+                                "type": "object",
+                                "properties": {
+                                  "continent": {
+                                    "type": "string"
+                                  },
+                                  "country": {
+                                    "type": "string"
+                                  },
+                                  "region": {
+                                    "type": "string"
+                                  },
+                                  "city": {
+                                    "type": "string"
+                                  },
+                                  "latitude": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "number"
+                                      }
+                                    ]
+                                  },
+                                  "longitude": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string"
+                                      },
+                                      {
+                                        "type": "number"
+                                      }
+                                    ]
+                                  },
+                                  "vercel_region": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "device": {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string"
+                                  },
+                                  "vendor": {
+                                    "type": "string"
+                                  },
+                                  "model": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "browser": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "version": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "os": {
+                                "type": "object",
+                                "properties": {
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "version": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "bot": {
+                                "type": "boolean"
+                              },
+                              "qr": {
+                                "type": "boolean"
+                              },
+                              "referer": {
+                                "type": "string"
+                              }
+                            }
+                          },
                           "answers": {
                             "type": "array",
                             "items": {
                               "type": "object",
                               "properties": {
+                                "createdAt": {
+                                  "type": "string"
+                                },
                                 "blockId": {
                                   "type": "string"
                                 },
@@ -10632,6 +10745,7 @@
                                 }
                               },
                               "required": [
+                                "createdAt",
                                 "blockId",
                                 "content"
                               ]
@@ -10641,11 +10755,8 @@
                         "required": [
                           "id",
                           "createdAt",
-                          "agentId",
-                          "variables",
                           "isCompleted",
                           "hasStarted",
-                          "isArchived",
                           "lastChatSessionId",
                           "answers"
                         ]
@@ -10863,6 +10974,9 @@
                         "agentId": {
                           "type": "string"
                         },
+                        "workspaceId": {
+                          "type": "string"
+                        },
                         "variables": {
                           "type": "array",
                           "items": {
@@ -10914,11 +11028,121 @@
                           "type": "string",
                           "nullable": true
                         },
+                        "updatedAt": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "string",
+                              "format": "date-time"
+                            }
+                          ]
+                        },
+                        "metadata": {
+                          "type": "object",
+                          "properties": {
+                            "ip": {
+                              "type": "string"
+                            },
+                            "location": {
+                              "type": "object",
+                              "properties": {
+                                "continent": {
+                                  "type": "string"
+                                },
+                                "country": {
+                                  "type": "string"
+                                },
+                                "region": {
+                                  "type": "string"
+                                },
+                                "city": {
+                                  "type": "string"
+                                },
+                                "latitude": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "number"
+                                    }
+                                  ]
+                                },
+                                "longitude": {
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "number"
+                                    }
+                                  ]
+                                },
+                                "vercel_region": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "device": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string"
+                                },
+                                "vendor": {
+                                  "type": "string"
+                                },
+                                "model": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "browser": {
+                              "type": "object",
+                              "properties": {
+                                "name": {
+                                  "type": "string"
+                                },
+                                "version": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "os": {
+                              "type": "object",
+                              "properties": {
+                                "name": {
+                                  "type": "string"
+                                },
+                                "version": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "url": {
+                              "type": "string"
+                            },
+                            "bot": {
+                              "type": "boolean"
+                            },
+                            "qr": {
+                              "type": "boolean"
+                            },
+                            "referer": {
+                              "type": "string"
+                            }
+                          }
+                        },
                         "answers": {
                           "type": "array",
                           "items": {
                             "type": "object",
                             "properties": {
+                              "createdAt": {
+                                "type": "string"
+                              },
                               "blockId": {
                                 "type": "string"
                               },
@@ -10933,6 +11157,7 @@
                               }
                             },
                             "required": [
+                              "createdAt",
                               "blockId",
                               "content"
                             ]
@@ -10942,11 +11167,8 @@
                       "required": [
                         "id",
                         "createdAt",
-                        "agentId",
-                        "variables",
                         "isCompleted",
                         "hasStarted",
-                        "isArchived",
                         "lastChatSessionId",
                         "answers"
                       ]
@@ -13296,100 +13518,6 @@
         }
       }
     },
-    "/v1/billing/subscription/portal": {
-      "get": {
-        "operationId": "billing-getBillingPortalUrl",
-        "summary": "Get Stripe billing portal URL",
-        "tags": [
-          "Billing"
-        ],
-        "security": [
-          {
-            "Authorization": []
-          }
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "workspaceId",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "billingPortalUrl": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "billingPortalUrl"
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid input data",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.BAD_REQUEST"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Authorization not provided",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.UNAUTHORIZED"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Insufficient access",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.FORBIDDEN"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.NOT_FOUND"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/billing/invoices": {
       "get": {
         "operationId": "billing-listInvoices",
@@ -13514,365 +13642,7 @@
         }
       }
     },
-    "/v1/billing/subscription/checkout": {
-      "post": {
-        "operationId": "billing-createCheckoutSession",
-        "summary": "Create checkout session to create a new subscription",
-        "tags": [
-          "Billing"
-        ],
-        "security": [
-          {
-            "Authorization": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "email": {
-                    "type": "string"
-                  },
-                  "company": {
-                    "type": "string"
-                  },
-                  "workspaceId": {
-                    "type": "string"
-                  },
-                  "plan": {
-                    "type": "string",
-                    "enum": [
-                      "HOBBY",
-                      "PRO"
-                    ]
-                  },
-                  "returnUrl": {
-                    "type": "string"
-                  },
-                  "vat": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "type": "string"
-                      },
-                      "value": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "type",
-                      "value"
-                    ]
-                  }
-                },
-                "required": [
-                  "email",
-                  "company",
-                  "workspaceId",
-                  "plan",
-                  "returnUrl"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "checkoutUrl": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "checkoutUrl"
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid input data",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.BAD_REQUEST"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Authorization not provided",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.UNAUTHORIZED"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Insufficient access",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.FORBIDDEN"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v1/billing/subscription": {
-      "patch": {
-        "operationId": "billing-updateSubscription",
-        "summary": "Update subscription",
-        "tags": [
-          "Billing"
-        ],
-        "security": [
-          {
-            "Authorization": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "returnUrl": {
-                    "type": "string"
-                  },
-                  "workspaceId": {
-                    "type": "string"
-                  },
-                  "plan": {
-                    "type": "string",
-                    "enum": [
-                      "HOBBY",
-                      "PRO"
-                    ]
-                  }
-                },
-                "required": [
-                  "returnUrl",
-                  "workspaceId",
-                  "plan"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "workspace": {
-                      "type": "object",
-                      "nullable": true,
-                      "properties": {
-                        "id": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "createdAt": {
-                          "type": "string"
-                        },
-                        "updatedAt": {
-                          "type": "string"
-                        },
-                        "lastActivityAt": {
-                          "type": "string"
-                        },
-                        "name": {
-                          "type": "string"
-                        },
-                        "icon": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "slug": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "plan": {
-                          "type": "string",
-                          "enum": [
-                            "HOBBY",
-                            "PRO",
-                            "BUSINESS",
-                            "ADVANCED",
-                            "ENTERPRISE",
-                            "CUSTOM_APPSUMO_TIER1",
-                            "CUSTOM_APPSUMO_TIER2",
-                            "CUSTOM_APPSUMO_TIER3",
-                            "CUSTOM_APPSUMO_TIER4",
-                            "CUSTOM_APPSUMO_TIER5"
-                          ]
-                        },
-                        "stripeId": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "chatsLimitFirstEmailSentAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "chatsLimitSecondEmailSentAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "storageLimitFirstEmailSentAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "storageLimitSecondEmailSentAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "isQuarantined": {
-                          "type": "boolean"
-                        },
-                        "isSuspended": {
-                          "type": "boolean"
-                        },
-                        "isPastDue": {
-                          "type": "boolean"
-                        },
-                        "isVerified": {
-                          "type": "boolean",
-                          "nullable": true
-                        },
-                        "billingCycleStart": {
-                          "type": "number",
-                          "nullable": true
-                        },
-                        "paymentFailedAt": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "stripeConnectId": {
-                          "type": "string",
-                          "nullable": true
-                        },
-                        "chatUsage": {
-                          "type": "number"
-                        },
-                        "redeemedCoupons": {
-                          "type": "string",
-                          "nullable": true
-                        }
-                      },
-                      "required": [
-                        "id",
-                        "createdAt",
-                        "updatedAt",
-                        "lastActivityAt",
-                        "name",
-                        "icon",
-                        "slug",
-                        "plan",
-                        "stripeId",
-                        "chatsLimitFirstEmailSentAt",
-                        "chatsLimitSecondEmailSentAt",
-                        "storageLimitFirstEmailSentAt",
-                        "storageLimitSecondEmailSentAt",
-                        "isQuarantined",
-                        "isSuspended",
-                        "isPastDue",
-                        "isVerified",
-                        "billingCycleStart",
-                        "paymentFailedAt",
-                        "stripeConnectId",
-                        "chatUsage",
-                        "redeemedCoupons"
-                      ]
-                    },
-                    "checkoutUrl": {
-                      "type": "string",
-                      "nullable": true
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid input data",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.BAD_REQUEST"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Authorization not provided",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.UNAUTHORIZED"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Insufficient access",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.FORBIDDEN"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.NOT_FOUND"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
-                }
-              }
-            }
-          }
-        }
-      },
       "get": {
         "operationId": "billing-getSubscription",
         "summary": "List invoices",
@@ -14095,106 +13865,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error.NOT_FOUND"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/billing/subscription/custom-checkout": {
-      "post": {
-        "operationId": "billing-createCustomCheckoutSession",
-        "summary": "Create custom checkout session to make a workspace pay for a custom plan",
-        "tags": [
-          "Billing"
-        ],
-        "security": [
-          {
-            "Authorization": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "email": {
-                    "type": "string"
-                  },
-                  "workspaceId": {
-                    "type": "string"
-                  },
-                  "returnUrl": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "email",
-                  "workspaceId",
-                  "returnUrl"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "checkoutUrl": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "checkoutUrl"
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid input data",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.BAD_REQUEST"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Authorization not provided",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.UNAUTHORIZED"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Insufficient access",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.FORBIDDEN"
                 }
               }
             }

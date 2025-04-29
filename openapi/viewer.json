@@ -1112,6 +1112,9 @@
                       "markdown"
                     ],
                     "default": "richText"
+                  },
+                  "request": {
+                    "description": "The original HTTP request object"
                   }
                 }
               }
