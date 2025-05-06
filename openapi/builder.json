@@ -2341,6 +2341,18 @@
                         "redeemedCoupons": {
                           "type": "string",
                           "nullable": true
+                        },
+                        "extras": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "addons": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
                         }
                       },
                       "required": [
@@ -2360,7 +2372,9 @@
                         "paymentFailedAt",
                         "stripeConnectId",
                         "chatUsage",
-                        "redeemedCoupons"
+                        "redeemedCoupons",
+                        "extras",
+                        "addons"
                       ]
                     }
                   },
@@ -2519,6 +2533,18 @@
                         "redeemedCoupons": {
                           "type": "string",
                           "nullable": true
+                        },
+                        "extras": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "addons": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
                         }
                       },
                       "required": [
@@ -2539,7 +2565,9 @@
                         "paymentFailedAt",
                         "stripeConnectId",
                         "chatUsage",
-                        "redeemedCoupons"
+                        "redeemedCoupons",
+                        "extras",
+                        "addons"
                       ]
                     }
                   },
@@ -3438,6 +3466,9 @@
                             "type": "string",
                             "nullable": true
                           },
+                          "createdAt": {
+                            "type": "string"
+                          },
                           "updatedAt": {
                             "type": "string"
                           },
@@ -3471,12 +3502,6 @@
                               "guest"
                             ]
                           },
-                          "completedResultsCount": {
-                            "type": "number"
-                          },
-                          "startedResultsCount": {
-                            "type": "number"
-                          },
                           "tags": {
                             "type": "array",
                             "items": {
@@ -3487,6 +3512,7 @@
                         "required": [
                           "name",
                           "icon",
+                          "createdAt",
                           "updatedAt",
                           "id",
                           "url",
@@ -3495,8 +3521,6 @@
                           "isPublished",
                           "domainId",
                           "accessRight",
-                          "completedResultsCount",
-                          "startedResultsCount",
                           "tags"
                         ]
                       }
@@ -6031,10 +6055,10 @@
           {
             "in": "path",
             "name": "agentId",
-            "description": "[🚀 Where can I find my agent’s ID? 👉 Check this guide! 🔍✨](../how-to#how-to-find-my-agentid)",
+            "description": "[🚀 Where can I find my agent's ID? 👉 Check this guide! 🔍✨](../how-to#how-to-find-my-agentid)",
             "schema": {
               "type": "string",
-              "description": "[🚀 Where can I find my agent’s ID? 👉 Check this guide! 🔍✨](../how-to#how-to-find-my-agentid)"
+              "description": "[🚀 Where can I find my agent's ID? 👉 Check this guide! 🔍✨](../how-to#how-to-find-my-agentid)"
             },
             "required": true
           }
@@ -6349,6 +6373,9 @@
                           "settings": {
                             "$ref": "#/components/schemas/settings"
                           },
+                          "isPublished": {
+                            "type": "boolean"
+                          },
                           "icon": {
                             "type": "string",
                             "nullable": true
@@ -6356,9 +6383,6 @@
                           "description": {
                             "type": "string",
                             "nullable": true
-                          },
-                          "isPublished": {
-                            "type": "boolean"
                           },
                           "tags": {
                             "type": "array",
@@ -6409,9 +6433,9 @@
                           "variables",
                           "theme",
                           "settings",
+                          "isPublished",
                           "icon",
-                          "description",
-                          "isPublished"
+                          "description"
                         ],
                         "title": "Agent V6"
                       },
@@ -8132,6 +8156,9 @@
                           "settings": {
                             "$ref": "#/components/schemas/settings"
                           },
+                          "isPublished": {
+                            "type": "boolean"
+                          },
                           "icon": {
                             "type": "string",
                             "nullable": true
@@ -8139,9 +8166,6 @@
                           "description": {
                             "type": "string",
                             "nullable": true
-                          },
-                          "isPublished": {
-                            "type": "boolean"
                           },
                           "tags": {
                             "type": "array",
@@ -8192,9 +8216,9 @@
                           "variables",
                           "theme",
                           "settings",
+                          "isPublished",
                           "icon",
-                          "description",
-                          "isPublished"
+                          "description"
                         ],
                         "title": "Agent V5"
                       }
@@ -22695,6 +22719,13 @@
           "updatedAt": {
             "type": "string"
           },
+          "publishedAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPublished": {
+            "type": "boolean"
+          },
           "icon": {
             "type": "string",
             "nullable": true
@@ -22749,9 +22780,6 @@
           "isClosed": {
             "type": "boolean"
           },
-          "isPublished": {
-            "type": "boolean"
-          },
           "domainId": {
             "type": "string",
             "nullable": true
@@ -22788,6 +22816,8 @@
           "settings",
           "createdAt",
           "updatedAt",
+          "publishedAt",
+          "isPublished",
           "icon",
           "description",
           "publicId",
@@ -22796,7 +22826,6 @@
           "resultsTablePreferences",
           "isArchived",
           "isClosed",
-          "isPublished",
           "domainId",
           "url",
           "whatsAppCredentialsId",
@@ -24534,6 +24563,13 @@
           "updatedAt": {
             "type": "string"
           },
+          "publishedAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPublished": {
+            "type": "boolean"
+          },
           "icon": {
             "type": "string",
             "nullable": true
@@ -24588,9 +24624,6 @@
           "isClosed": {
             "type": "boolean"
           },
-          "isPublished": {
-            "type": "boolean"
-          },
           "domainId": {
             "type": "string",
             "nullable": true
@@ -24627,6 +24660,8 @@
           "settings",
           "createdAt",
           "updatedAt",
+          "publishedAt",
+          "isPublished",
           "icon",
           "description",
           "publicId",
@@ -24635,7 +24670,6 @@
           "resultsTablePreferences",
           "isArchived",
           "isClosed",
-          "isPublished",
           "domainId",
           "url",
           "whatsAppCredentialsId",
