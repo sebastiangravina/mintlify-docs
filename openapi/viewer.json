@@ -2285,301 +2285,6 @@
         }
       }
     },
-    "/v1/agents/{agentId}/blocks/{blockId}/storage/upload-url": {
-      "get": {
-        "operationId": "getUploadUrl",
-        "summary": "Get upload URL for a file",
-        "description": "Used for the web client to get the bucket upload file.",
-        "tags": [
-          "Deprecated"
-        ],
-        "deprecated": true,
-        "parameters": [
-          {
-            "in": "path",
-            "name": "agentId",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          },
-          {
-            "in": "path",
-            "name": "blockId",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          },
-          {
-            "in": "query",
-            "name": "filePath",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          },
-          {
-            "in": "query",
-            "name": "fileType",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "presignedUrl": {
-                      "type": "string"
-                    },
-                    "hasReachedStorageLimit": {
-                      "type": "boolean"
-                    }
-                  },
-                  "required": [
-                    "presignedUrl",
-                    "hasReachedStorageLimit"
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid input data",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.BAD_REQUEST"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.NOT_FOUND"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v1/generate-upload-url": {
-      "post": {
-        "operationId": "generateUploadUrlV1",
-        "summary": "Generate upload URL",
-        "description": "Used to upload anything from the client to S3 bucket",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "filePathProps": {
-                    "anyOf": [
-                      {
-                        "type": "object",
-                        "properties": {
-                          "agentId": {
-                            "type": "string"
-                          },
-                          "blockId": {
-                            "type": "string"
-                          },
-                          "resultId": {
-                            "type": "string"
-                          },
-                          "fileName": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "agentId",
-                          "blockId",
-                          "resultId",
-                          "fileName"
-                        ]
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "sessionId": {
-                            "type": "string"
-                          },
-                          "fileName": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "sessionId",
-                          "fileName"
-                        ]
-                      }
-                    ]
-                  },
-                  "fileType": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "filePathProps"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "presignedUrl": {
-                      "type": "string"
-                    },
-                    "formData": {
-                      "type": "object",
-                      "additionalProperties": {}
-                    },
-                    "fileUrl": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "presignedUrl",
-                    "formData",
-                    "fileUrl"
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid input data",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.BAD_REQUEST"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/v2/generate-upload-url": {
-      "post": {
-        "operationId": "generateUploadUrlV2",
-        "summary": "Generate upload URL",
-        "description": "Used to upload anything from the client to S3 bucket",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "sessionId": {
-                    "type": "string"
-                  },
-                  "fileName": {
-                    "type": "string"
-                  },
-                  "fileType": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "sessionId",
-                  "fileName"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "presignedUrl": {
-                      "type": "string"
-                    },
-                    "formData": {
-                      "type": "object",
-                      "additionalProperties": {}
-                    },
-                    "fileUrl": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "presignedUrl",
-                    "formData",
-                    "fileUrl"
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid input data",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.BAD_REQUEST"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/v3/generate-upload-url": {
       "post": {
         "operationId": "generateUploadUrl",
@@ -14138,48 +13843,6 @@
         "description": "Can only be provided if current input block is a text input that allows audio clips",
         "title": "Audio"
       },
-      "error.NOT_FOUND": {
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "description": "The error message",
-            "example": "Not found"
-          },
-          "code": {
-            "type": "string",
-            "description": "The error code",
-            "example": "NOT_FOUND"
-          },
-          "issues": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "message": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "message"
-              ]
-            },
-            "description": "An array of issues that were responsible for the error",
-            "example": []
-          }
-        },
-        "required": [
-          "message",
-          "code"
-        ],
-        "title": "Error",
-        "description": "The error information",
-        "example": {
-          "code": "NOT_FOUND",
-          "message": "Not found",
-          "issues": []
-        }
-      },
       "error.UNAUTHORIZED": {
         "type": "object",
         "properties": {
@@ -14261,6 +13924,48 @@
         "example": {
           "code": "FORBIDDEN",
           "message": "Insufficient access",
+          "issues": []
+        }
+      },
+      "error.NOT_FOUND": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The error message",
+            "example": "Not found"
+          },
+          "code": {
+            "type": "string",
+            "description": "The error code",
+            "example": "NOT_FOUND"
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "message"
+              ]
+            },
+            "description": "An array of issues that were responsible for the error",
+            "example": []
+          }
+        },
+        "required": [
+          "message",
+          "code"
+        ],
+        "title": "Error",
+        "description": "The error information",
+        "example": {
+          "code": "NOT_FOUND",
+          "message": "Not found",
           "issues": []
         }
       }

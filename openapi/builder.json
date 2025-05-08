@@ -3490,6 +3490,10 @@
                           "isPublished": {
                             "type": "boolean"
                           },
+                          "publishedAt": {
+                            "type": "string",
+                            "nullable": true
+                          },
                           "domainId": {
                             "type": "string",
                             "nullable": true
@@ -3519,6 +3523,7 @@
                           "description",
                           "publicId",
                           "isPublished",
+                          "publishedAt",
                           "domainId",
                           "accessRight",
                           "tags"
