@@ -3,6 +3,16 @@ title: Make.com
 ---
 The **Make.com** integration block allows you to trigger a scenario at a specific moment in your flow and return data to enhance automation.
 
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/j-rrpIJq96Q"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+></iframe>
+
 ## Prerequisites
 - An active account on [Make.com](https://www.make.com).
 
@@ -19,46 +29,25 @@ The **Make.com** integration block allows you to trigger a scenario at a specifi
 </Frame>
 
 3. **Open Make.com and configure the Release0 module**  
-   - Go to [Make.com](https://www.make.com) and select the **Release0** module.
+   - Go to [Make.com](https://www.make.com) 
+   - Create a new scenario or open an existing one.
+   - Click on the **+** icon to add a new module.
+   - Search for **Release0** in the module search bar.
+   - Select the **Release0** app from the list.
+   - Choose the **Watch Agents** action.
    - Click **Create a connection** to begin the setup.
 
-4. **Enter your Release0 credentials in Make**
+4. **Enter your Release0 API Key in Make**
    - In the connection dialog, input:
-     - **Email**: Your Release0 account email.
-     - **Password**: The API key token you generated in Step 3.
+     - **Name**: A name for your connection (e.g., `Release0 Integration`).
+     - **API Key**: The API key you generated in Release0.
+   - **Agent ID**: The ID of the agent you want to connect to. You can find this in your agent's settings on Release0. 
+   - **Block ID**: The ID of the  block where your Make.com block is located.
 
 5. **Save the connection**  
    Click **Save** to finalize the integration.
+6. **Test the connection**
 
-> **Note**: You can now use Make.com to trigger and automate workflows in Release0 using this connection.
-
-## Steps to Trigger a Scenario
-
-1. **Insert the Make.com block**  
-   Place the Make.com block at the desired point in your flow where the scenario should be triggered.
-
-2. **Set Up the Scenario in Make.com**  
-   - Follow the instructions on [Make.com](https://www.make.com) to create and enable your scenario.  
-   - Ensure the scenario is properly configured to receive incoming requests.
-
-3. **Test the Scenario**  
-   - Return to your flow on release0.com.  
-   - Click on your Make.com block and select **"Test the request"**.  
-   - This will trigger the scenario on Make.com for validation purposes.
-
-## Returning Data from Make.com
-
-To pass data back to your flow:  
-
-1. **Add a "Webhook Response" Module**  
-   At the end of your scenario in Make.com, include a "Webhook Response" module to send the desired data back.
-
-2. **Validate the Data Flow**  
-   Test your integration to ensure data is returned correctly and appears in your flow as expected.
-
-> **Note**: Properly configure your Make.com scenario to handle requests and responses to avoid errors during testing or deployment.
-
----
 
 ### Validation and Testing
 
@@ -68,4 +57,3 @@ Before deploying your Make.com integration, ensure:
 - The Make.com block triggers the scenario as expected.  
 - Returned data is validated and correctly utilized in your flow.
 
-For any issues, refer to Make.com's [documentation](https://www.make.com/help) or your flow's debug logs for troubleshooting.
