@@ -14,11 +14,15 @@ To use the **Request Payment** Input Block, you must first connect your Stripe a
    - **Account Name**: Enter any name of your choice (does not need to match your Stripe account).
    - **Test Keys**:
      - Find your test keys here: [Stripe Test Keys](https://dashboard.stripe.com/test/apikeys).
-     - These keys are used for testing purposes during preview.
+     - These keys are used for testing purposes during preview. You can use a test card to simulate payments.
+     - Example test card: `4242 4242 4242 4242` with any future expiration date and any CVC.
+     - The test keys (test mode) will be uised only when launching your workflow in preview mode. The published link will use the live keys.
    - **Live Keys**:
      - Find your live keys here: [Stripe Live Keys](https://dashboard.stripe.com/apikeys).
-     - These keys will be used for published workflows.
-   - If you want to use test keys in a published agent, also enter them in the live key fields.
+     - These keys will be used for published workflows. Only the published link will use the live keys.
+   
+   
+> **Note**: If you want to use **test keys** in a published agent, also enter them in the **live key** fields.
 
 
 <Frame style={{ maxWidth: '400px' }}>
