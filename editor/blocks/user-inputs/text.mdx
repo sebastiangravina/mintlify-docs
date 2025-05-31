@@ -19,6 +19,17 @@ The **Text** User Input Block enables you to collect text-based responses from y
 - **Configuration**: Enable long text input in the block's settings.  
 - **Use Case**: Ideal for detailed responses, such as descriptions, opinions, or open-ended questions.
 
+### Password Type Input
+- **Purpose**: Allows users to enter sensitive information securely, such as passwords.
+- **Configuration**: Set the input type to "password" in the block settings.
+- **Use Case**: Useful for scenarios where users need to provide confidential information, like account credentials or secure notes.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/blocks/inputs/password-type.png" alt="Release0.com - Password type" />
+</Frame>
+
+> **Note**: When using the password input type (or any other input types), you can define the variable in a way that it will not be stored in the results table, ensuring that sensitive information is not exposed. In order to do this just start the **variable name** with **secure_**. Any variables that start with this prefix will not be stored in the results table. For example `secure_password` will not be stored in the results table, but you can still use it in your flow logic.
+
 ### Allow Attachments
 - **Purpose**: Lets users attach files (e.g., documents, images) to their responses.  
 - **How It Works**:  
@@ -56,11 +67,15 @@ The **Text** User Input Block enables you to collect text-based responses from y
    - "Describe your experience with our product."  
    - "Provide any additional details about your request."
 
-3. **Attachments**:  
+3. **Password Input**:
+    - "Please enter your account password."  
+    - "Set a new password for your account."
+
+4. **Attachments**:  
    - "Please upload a copy of your resume."  
    - "Attach a photo of the issue."
 
-4. **Audio Clips**:  
+5. **Audio Clips**:  
    - "Record and send us your feedback."  
    - "Describe the problem using voice notes."
 
