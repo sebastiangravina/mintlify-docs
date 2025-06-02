@@ -3831,6 +3831,18 @@
                             "items": {
                               "type": "string"
                             }
+                          },
+                          "sharing": {
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/sharing"
+                              }
+                            ],
+                            "nullable": true
+                          },
+                          "shareId": {
+                            "type": "string",
+                            "nullable": true
                           }
                         },
                         "title": "Agent V6"
@@ -5628,6 +5640,18 @@
                             "items": {
                               "type": "string"
                             }
+                          },
+                          "sharing": {
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/sharing"
+                              }
+                            ],
+                            "nullable": true
+                          },
+                          "shareId": {
+                            "type": "string",
+                            "nullable": true
                           }
                         },
                         "title": "Agent V5"
@@ -6395,6 +6419,18 @@
                               "type": "string"
                             }
                           },
+                          "sharing": {
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/sharing"
+                              }
+                            ],
+                            "nullable": true
+                          },
+                          "shareId": {
+                            "type": "string",
+                            "nullable": true
+                          },
                           "resultsTablePreferences": {
                             "type": "object",
                             "nullable": true,
@@ -6440,7 +6476,9 @@
                           "settings",
                           "isPublished",
                           "icon",
-                          "description"
+                          "description",
+                          "sharing",
+                          "shareId"
                         ],
                         "title": "Agent V6"
                       },
@@ -8178,6 +8216,18 @@
                               "type": "string"
                             }
                           },
+                          "sharing": {
+                            "allOf": [
+                              {
+                                "$ref": "#/components/schemas/sharing"
+                              }
+                            ],
+                            "nullable": true
+                          },
+                          "shareId": {
+                            "type": "string",
+                            "nullable": true
+                          },
                           "resultsTablePreferences": {
                             "type": "object",
                             "nullable": true,
@@ -8223,7 +8273,9 @@
                           "settings",
                           "isPublished",
                           "icon",
-                          "description"
+                          "description",
+                          "sharing",
+                          "shareId"
                         ],
                         "title": "Agent V5"
                       }
@@ -10763,6 +10815,9 @@
                                 "blockId": {
                                   "type": "string"
                                 },
+                                "isSecure": {
+                                  "type": "boolean"
+                                },
                                 "content": {
                                   "type": "string"
                                 },
@@ -11174,6 +11229,9 @@
                               },
                               "blockId": {
                                 "type": "string"
+                              },
+                              "isSecure": {
+                                "type": "boolean"
                               },
                               "content": {
                                 "type": "string"
@@ -15028,6 +15086,9 @@
                 "type": "string"
               },
               "isLong": {
+                "type": "boolean"
+              },
+              "isPassword": {
                 "type": "boolean"
               },
               "audioClip": {
@@ -22806,6 +22867,18 @@
             "items": {
               "type": "string"
             }
+          },
+          "sharing": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/sharing"
+              }
+            ],
+            "nullable": true
+          },
+          "shareId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "required": [
@@ -22834,7 +22907,9 @@
           "domainId",
           "url",
           "whatsAppCredentialsId",
-          "riskLevel"
+          "riskLevel",
+          "sharing",
+          "shareId"
         ],
         "title": "Agent V6"
       },
@@ -24650,6 +24725,18 @@
             "items": {
               "type": "string"
             }
+          },
+          "sharing": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/sharing"
+              }
+            ],
+            "nullable": true
+          },
+          "shareId": {
+            "type": "string",
+            "nullable": true
           }
         },
         "required": [
@@ -24678,9 +24765,29 @@
           "domainId",
           "url",
           "whatsAppCredentialsId",
-          "riskLevel"
+          "riskLevel",
+          "sharing",
+          "shareId"
         ],
         "title": "Agent V5"
+      },
+      "sharing": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "requirePassword": {
+            "type": "boolean"
+          },
+          "password": {
+            "type": "string"
+          },
+          "allowExport": {
+            "type": "boolean"
+          }
+        },
+        "title": "Sharing"
       },
       "publicAgentV6": {
         "type": "object",

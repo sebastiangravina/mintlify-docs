@@ -205,7 +205,8 @@
       "pages": [
         "submission/overview",
         "submission/analytics",
-        "submission/realtime"
+        "submission/realtime",
+        "submission/shared-dashboard"
       ]
     },
     {

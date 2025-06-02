@@ -4275,6 +4275,9 @@
               "isLong": {
                 "type": "boolean"
               },
+              "isPassword": {
+                "type": "boolean"
+              },
               "audioClip": {
                 "type": "object",
                 "properties": {
