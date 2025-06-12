@@ -2167,7 +2167,12 @@
                               "CUSTOM_APPSUMO_TIER2",
                               "CUSTOM_APPSUMO_TIER3",
                               "CUSTOM_APPSUMO_TIER4",
-                              "CUSTOM_APPSUMO_TIER5"
+                              "CUSTOM_APPSUMO_TIER5",
+                              "CUSTOM_APPSUMO_TIER6",
+                              "CUSTOM_APPSUMO_TIER7",
+                              "CUSTOM_APPSUMO_TIER8",
+                              "CUSTOM_APPSUMO_TIER9",
+                              "CUSTOM_APPSUMO_TIER10"
                             ]
                           },
                           "slug": {
@@ -2306,7 +2311,12 @@
                             "CUSTOM_APPSUMO_TIER2",
                             "CUSTOM_APPSUMO_TIER3",
                             "CUSTOM_APPSUMO_TIER4",
-                            "CUSTOM_APPSUMO_TIER5"
+                            "CUSTOM_APPSUMO_TIER5",
+                            "CUSTOM_APPSUMO_TIER6",
+                            "CUSTOM_APPSUMO_TIER7",
+                            "CUSTOM_APPSUMO_TIER8",
+                            "CUSTOM_APPSUMO_TIER9",
+                            "CUSTOM_APPSUMO_TIER10"
                           ]
                         },
                         "stripeId": {
