@@ -19,6 +19,17 @@ Then clik on **Advanced Settings**. This will open a new dialog displaying an ad
 
 When this option is enabled, the user will be remembered if the user comes back after exiting the chat.
 
+This setting enables the chat session to be saved in the user’s browser storage. If a user answers a question and later closes the chat, the conversation will resume from the same point when they return.
+
+You can choose between two storage options:
+
+- **Local Storage**: The session is saved in the user’s browser and will persist across sessions, but only on the same device and browser.
+- **Session Storage**: The session is also stored in the user’s browser, but it is cleared once the browser tab or window is closed.
+
+This is ideal for scenarios where you want to maintain the context of the conversation, such as in customer support or interactive agents. It allows users to return to their previous conversations without losing any context.
+
+> **Note**: If you publish a new version of your Agent, any saved sessions will be automatically reset. This means that if a user has a stored session and the bot is updated in the meantime, refreshing or reopening the chat will restart the conversation from the beginning.
+
 ### Prefill fields
 
 When this option is enabled, the agent will pre-fill input fields when the associated variables have a value.
@@ -26,11 +37,15 @@ When this option is enabled, the agent will pre-fill input fields when the assoc
 ### Hide query parameters on agent start
 
 When this option is enabled, the agent will automatically hide the URL query parameters whern it starts.
+This is useful when you want to keep the URL clean and prevent users from seeing or modifying the query parameters that might be used to pre-fill fields or pass other information to the agent.
 
 ## Google Tag Manager
 
 Enter your Google Tag Manager id to better track your agent conversion flow.
+This allows you to integrate your agent with Google Tag Manager, enabling you to track user interactions, conversions, and other metrics related to your agent's performance.
+This is particularly useful for analyzing user behavior, optimizing the agent's performance, and improving the overall user experience.
 
 ### Allowed origins
 
 When this option is enabled, your agent will only work when invoked from a sepcific website origins. **By default your agent can be executed on any website**. This can prevet people from intancing your agent from other websites. Typically to prefent including your agent on another site by an iFrame method.
+This is useful when you want to restrict the usage of your agent to specific domains or applications, ensuring that it is only accessible in trusted environments.
