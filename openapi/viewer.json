@@ -3977,6 +3977,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/zendeskBlock"
+                    },
+                    {
+                      "$ref": "#/components/schemas/user-infoBlock"
                     }
                   ],
                   "discriminator": {
@@ -3995,7 +3998,8 @@
                       "nocodb": "#/components/schemas/nocodbBlock",
                       "segment": "#/components/schemas/segmentBlock",
                       "groq": "#/components/schemas/groqBlock",
-                      "zendesk": "#/components/schemas/zendeskBlock"
+                      "zendesk": "#/components/schemas/zendeskBlock",
+                      "user-info": "#/components/schemas/user-infoBlock"
                     }
                   }
                 }
@@ -9899,6 +9903,280 @@
           "type"
         ],
         "title": "Zendesk"
+      },
+      "user-infoBlock": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "outgoingEdgeId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "user-info"
+            ]
+          },
+          "options": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Get Network Info"
+                    ]
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "IP",
+                            "IP (Raw)",
+                            "Referer",
+                            "Referer (Raw)",
+                            "User Agent",
+                            "User Agent (Raw)",
+                            "Host",
+                            "Network Data",
+                            "Network Data (GDPR Safe)",
+                            "Network Data (Raw)"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Get Location Info"
+                    ]
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Country",
+                            "Country (Raw)",
+                            "City",
+                            "City (Raw)",
+                            "Continent",
+                            "Continent (Raw)",
+                            "Region",
+                            "Region (Raw)",
+                            "Latitude",
+                            "Latitude (Raw)",
+                            "Longitude",
+                            "Longitude (Raw)",
+                            "Is EU Country",
+                            "Location Data",
+                            "Location Data (Raw)"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Get Device Info"
+                    ]
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Device Type",
+                            "Device Vendor",
+                            "Device Model",
+                            "Device Data"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Get Browser Info"
+                    ]
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Browser Name",
+                            "Browser Version",
+                            "Browser Language",
+                            "Browser Language Code",
+                            "Browser Language Region",
+                            "OS Name",
+                            "OS Version"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Get Screen Info"
+                    ]
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Screen Resolution",
+                            "Viewport Size",
+                            "Screen Data"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Get Connection Info"
+                    ]
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Connection Type",
+                            "Connection Effective Type",
+                            "Connection Data"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "User Info"
       },
       "event": {
         "type": "object",

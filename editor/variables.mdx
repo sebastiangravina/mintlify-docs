@@ -46,12 +46,12 @@ Hello, John!
 
 ### Secured Varfiables
 
-There are cases where you might want to store sensitive information, such as passwords or personal identifiers. To ensure these variables are not stored in the results table, prefix the variable name with `secure_`. For example:
+There are cases where you might want to store sensitive information, such as passwords or personal identifiers. To ensure these variables are not stored in the Submission section, prefix the variable name with `secure_`. For example:
 
 ```plaintext
 secure_Password
 ```
-This variable will not be saved in the results table, but you can still use it in your flow logic.
+This variable will not be saved in the [Submission table](/submission/overview), but you can still use it in your flow logic.
 
 It can be used incombination with the  **[Text input block with Password enabled](/editor/blocks/user-inputs/text#password-type-input)** to collect sensitive information securely.
 
@@ -81,7 +81,7 @@ Variables can also be formatted directly when referenced. Using JavaScript, you 
 You can manage variables by accessing the **Variables Panel** in the editor (top-right corner). In this panel, you can:
 
 - **Rename**, **edit**, or **delete** variables.
-- Enable the option to **save variables in the results table** for tracking.
+- Enable the option to **save variables in the [Submission table](/submission/overview)** for tracking.
 
 <Frame style={{ maxWidth: '400px' }}>
   <img src="/images/blocks/variables-pannel.png" alt="Release0.com - Created Variables" />
@@ -90,7 +90,7 @@ You can manage variables by accessing the **Variables Panel** in the editor (top
 
 ### Viewing Variables in Results
 
-Variables saved to the results will appear in the **Results Page** under dedicated columns.
+Variables saved to the results will appear in the **[Submission table](/submission/overview)** under dedicated columns.
 
 ## Prefilled Variables
 
@@ -134,7 +134,7 @@ To make a variable hidden:
 1. Declare it in the **Variables Panel** or dropdown.
 2. Exclude it from visible dialogs.
 
-These values will still appear in the **Results Page** for analysis.
+These values will still appear in the **[Submission table](/submission/overview)** for analysis.
 
 ## Valid Value Types
 
@@ -177,4 +177,4 @@ This ensures clean and meaningful variable usage.
 Before deploying your Agent:
 1. Ensure all variables are correctly saved and referenced.
 2. Validate inline transformations with JavaScript.
-3. Check the **Results Page** for proper tracking.
+3. Check the **[Submission table](/submission/overview)** for proper tracking.
