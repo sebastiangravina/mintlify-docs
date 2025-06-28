@@ -1,6 +1,7 @@
 ---
 title: 'Generate upload URL'
 openapi: POST /v2/generate-upload-url
+description: "API endpoint to generate a pre-signed URL for secure file uploads within chat sessions."
 ---
 
 The `presignedUrl` and `formData` fields can be then used to upload the file to the S3 bucket, directly from the browser if necessary. Here is an example:

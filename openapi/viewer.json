@@ -9955,10 +9955,7 @@
                             "Referer (Raw)",
                             "User Agent",
                             "User Agent (Raw)",
-                            "Host",
-                            "Network Data",
-                            "Network Data (GDPR Safe)",
-                            "Network Data (Raw)"
+                            "Host"
                           ]
                         },
                         "variableId": {
@@ -10004,9 +10001,7 @@
                             "Latitude (Raw)",
                             "Longitude",
                             "Longitude (Raw)",
-                            "Is EU Country",
-                            "Location Data",
-                            "Location Data (Raw)"
+                            "Is EU Country"
                           ]
                         },
                         "variableId": {
@@ -10042,8 +10037,7 @@
                           "enum": [
                             "Device Type",
                             "Device Vendor",
-                            "Device Model",
-                            "Device Data"
+                            "Device Model"
                           ]
                         },
                         "variableId": {
@@ -10084,78 +10078,6 @@
                             "Browser Language Region",
                             "OS Name",
                             "OS Version"
-                          ]
-                        },
-                        "variableId": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "required": [
-                  "action"
-                ]
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "credentialsId": {
-                    "type": "string"
-                  },
-                  "action": {
-                    "type": "string",
-                    "enum": [
-                      "Get Screen Info"
-                    ]
-                  },
-                  "responseMapping": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "item": {
-                          "type": "string",
-                          "enum": [
-                            "Screen Resolution",
-                            "Viewport Size",
-                            "Screen Data"
-                          ]
-                        },
-                        "variableId": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "required": [
-                  "action"
-                ]
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "credentialsId": {
-                    "type": "string"
-                  },
-                  "action": {
-                    "type": "string",
-                    "enum": [
-                      "Get Connection Info"
-                    ]
-                  },
-                  "responseMapping": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "item": {
-                          "type": "string",
-                          "enum": [
-                            "Connection Type",
-                            "Connection Effective Type",
-                            "Connection Data"
                           ]
                         },
                         "variableId": {
