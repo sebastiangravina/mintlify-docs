@@ -30,19 +30,10 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-    {
-      "name": "Release0 Home",
-      "icon": "house",
-      "url": "https://release0.com/home"
-    }
-  ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": [
-        "get-started/introduction"
-      ]
+      "pages": ["get-started/introduction"]
     },
     {
       "group": "Agent",
@@ -150,10 +141,7 @@
     },
     {
       "group": "Theme",
-      "pages": [
-        "theme/overview",
-        "theme/font"
-      ]
+      "pages": ["theme/overview", "theme/font"]
     },
     {
       "group": "Integrations",
@@ -196,9 +184,7 @@
         {
           "group": "API",
           "icon": "code-simple",
-          "pages": [
-            "integrations/api/overview"
-          ]
+          "pages": ["integrations/api/overview"]
         }
       ]
     },
@@ -223,11 +209,7 @@
     },
     {
       "group": "Account",
-      "pages": [
-        "account/general",
-        "account/notifications",
-        "account/apikey"
-      ]
+      "pages": ["account/general", "account/notifications", "account/apikey"]
     },
     {
       "group": "Guides",
@@ -241,17 +223,11 @@
     },
     {
       "group": "Misc",
-      "pages": [
-        "faq",
-        "report-abuse"
-      ]
+      "pages": ["faq", "report-abuse"]
     },
     {
       "group": "Get started",
-      "pages": [
-        "api-reference/authentication",
-        "api-reference/how-to"
-      ]
+      "pages": ["api-reference/authentication", "api-reference/how-to"]
     },
     {
       "group": "Chat",
@@ -287,9 +263,7 @@
     },
     {
       "group": "Analytics",
-      "pages": [
-        "api-reference/analytics/get-stats"
-      ]
+      "pages": ["api-reference/analytics/get-stats"]
     },
     {
       "group": "Workspace",
