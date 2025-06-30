@@ -28,17 +28,27 @@ This guide explains how to use the **Supabase** block to interact with your Post
 To connect Release0 with Supabase, you'll need:
 
 ### 1. Supabase Project URL
-Your project URL can be found in your Supabase dashboard under **Settings > API**. It follows this format:
+Your project URL can be found in your Supabase dashboard under **Settings > Data Key**. It follows this format:
 ```
 https://your-project-id.supabase.co
 ```
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/supabase/supabase-api-settings.jpg" alt="Release0.com - Supabase project URL" />
+</Frame>
+
 
 ### 2. Service Role API Key
 You'll need the `service_role` key (not the `anon` key) for full database access:
 
 1. Go to your Supabase dashboard
-2. Navigate to **Settings > API**
+2. Navigate to **Settings > API Keys**
 3. Copy the **service_role** key under "Project API keys"
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/integrations/supabase/supabase-api-key.jpg" alt="Release0.com - Supabase api key" />
+</Frame>
+
 
 <Warning>
 The service_role key has full access to your database. Keep it secure and never expose it in client-side code.

@@ -95,11 +95,12 @@
                 "editor/blocks/logic/jump",
                 "editor/blocks/logic/script-block",
                 "editor/blocks/logic/set-variable",
-                "editor/blocks/logic/redirect"
+                "editor/blocks/logic/redirect",
+                "editor/blocks/logic/user-info"
               ]
             },
             {
-              "group": "AI block integrations",
+              "group": "AI Block Integrations",
               "pages": [
                 "editor/blocks/ai-agents/anthropic",
                 "editor/blocks/ai-agents/chatnode",
