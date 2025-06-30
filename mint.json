@@ -86,7 +86,7 @@
               ]
             },
             {
-              "group": "Logic",
+              "group": "Logic & Enrichment",
               "pages": [
                 "editor/blocks/logic/ab-test",
                 "editor/blocks/logic/condition",
@@ -99,26 +99,7 @@
               ]
             },
             {
-              "group": "Block Integrations",
-              "pages": [
-                "editor/blocks/integrations/chatwoot",
-                "editor/blocks/integrations/send-email",
-                "editor/blocks/integrations/google-analytics",
-                "editor/blocks/integrations/google-sheets",
-                "editor/blocks/integrations/make-com",
-                "editor/blocks/integrations/pabbly-connect",
-                "editor/blocks/integrations/meta-pixel",
-                "editor/blocks/integrations/http-request",
-                "editor/blocks/integrations/zapier",
-                "editor/blocks/integrations/cal",
-                "editor/blocks/integrations/nocodb",
-                "editor/blocks/integrations/qr",
-                "editor/blocks/integrations/segment",
-                "editor/blocks/integrations/zendesk"
-              ]
-            },
-            {
-              "group": "Ai Agents",
+              "group": "AI block integrations",
               "pages": [
                 "editor/blocks/ai-agents/anthropic",
                 "editor/blocks/ai-agents/chatnode",
@@ -129,6 +110,26 @@
                 "editor/blocks/ai-agents/openrouter",
                 "editor/blocks/ai-agents/openAi",
                 "editor/blocks/ai-agents/together"
+              ]
+            },
+            {
+              "group": "Block Integrations",
+              "pages": [
+                "editor/blocks/integrations/supabase",
+                "editor/blocks/integrations/google-sheets",
+                "editor/blocks/integrations/nocodb",
+                "editor/blocks/integrations/send-email",
+                "editor/blocks/integrations/make-com",
+                "editor/blocks/integrations/zapier",
+                "editor/blocks/integrations/pabbly-connect",
+                "editor/blocks/integrations/http-request",
+                "editor/blocks/integrations/google-analytics",
+                "editor/blocks/integrations/meta-pixel",
+                "editor/blocks/integrations/cal",
+                "editor/blocks/integrations/qr",
+                "editor/blocks/integrations/segment",
+                "editor/blocks/integrations/chatwoot",
+                "editor/blocks/integrations/zendesk"
               ]
             }
           ]

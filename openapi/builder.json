@@ -12081,6 +12081,40 @@
                               "workspaceId",
                               "name"
                             ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "data": {
+                                "type": "object",
+                                "properties": {
+                                  "url": {
+                                    "type": "string"
+                                  },
+                                  "apiKey": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "supabase"
+                                ]
+                              },
+                              "workspaceId": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "data",
+                              "type",
+                              "workspaceId",
+                              "name"
+                            ]
                           }
                         ]
                       },
@@ -12202,6 +12236,7 @@
                 "segment",
                 "smtp",
                 "stripe",
+                "supabase",
                 "together-ai",
                 "whatsApp",
                 "zendesk"
@@ -12241,6 +12276,7 @@
                               "segment",
                               "smtp",
                               "stripe",
+                              "supabase",
                               "together-ai",
                               "whatsApp",
                               "zendesk"
@@ -13029,6 +13065,40 @@
                             "type": "string",
                             "enum": [
                               "zendesk"
+                            ]
+                          },
+                          "workspaceId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "data",
+                          "type",
+                          "workspaceId"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "url": {
+                                "type": "string"
+                              },
+                              "apiKey": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "supabase"
                             ]
                           },
                           "workspaceId": {
@@ -17287,6 +17357,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/user-infoBlock"
+                    },
+                    {
+                      "$ref": "#/components/schemas/supabaseBlock"
                     }
                   ],
                   "discriminator": {
@@ -17306,7 +17379,8 @@
                       "segment": "#/components/schemas/segmentBlock",
                       "groq": "#/components/schemas/groqBlock",
                       "zendesk": "#/components/schemas/zendeskBlock",
-                      "user-info": "#/components/schemas/user-infoBlock"
+                      "user-info": "#/components/schemas/user-infoBlock",
+                      "supabase": "#/components/schemas/supabaseBlock"
                     }
                   }
                 }
@@ -21945,6 +22019,304 @@
           "type"
         ],
         "title": "User Info"
+      },
+      "supabaseBlock": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "outgoingEdgeId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "supabase"
+            ]
+          },
+          "options": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Create Row"
+                    ]
+                  },
+                  "table": {
+                    "type": "string"
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "key": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Row Created",
+                            "Table Name"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Get Rows"
+                    ]
+                  },
+                  "table": {
+                    "type": "string"
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "returnType": {
+                    "type": "string",
+                    "enum": [
+                      "All",
+                      "First",
+                      "Last",
+                      "Random"
+                    ]
+                  },
+                  "filter": {
+                    "type": "object",
+                    "properties": {
+                      "comparisons": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "input": {
+                              "type": "string"
+                            },
+                            "operator": {
+                              "type": "string",
+                              "enum": [
+                                "Equal to",
+                                "Not equal",
+                                "Contains",
+                                "Greater than",
+                                "Greater than or equal",
+                                "Less than",
+                                "Less than or equal",
+                                "Is set",
+                                "Is empty",
+                                "Starts with",
+                                "Ends with",
+                                "In",
+                                "Not in"
+                              ]
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "joiner": {
+                        "type": "string",
+                        "enum": [
+                          "AND",
+                          "OR"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "comparisons"
+                    ]
+                  },
+                  "select": {
+                    "type": "string"
+                  },
+                  "limit": {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {}
+                    ]
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Row Found",
+                            "Table Name",
+                            "Row Count"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Delete Rows"
+                    ]
+                  },
+                  "table": {
+                    "type": "string"
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "filter": {
+                    "type": "object",
+                    "properties": {
+                      "comparisons": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "input": {
+                              "type": "string"
+                            },
+                            "operator": {
+                              "type": "string",
+                              "enum": [
+                                "Equal to",
+                                "Not equal",
+                                "Contains",
+                                "Greater than",
+                                "Greater than or equal",
+                                "Less than",
+                                "Less than or equal",
+                                "Is set",
+                                "Is empty",
+                                "Starts with",
+                                "Ends with",
+                                "In",
+                                "Not in"
+                              ]
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "joiner": {
+                        "type": "string",
+                        "enum": [
+                          "AND",
+                          "OR"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "comparisons"
+                    ]
+                  },
+                  "limit": {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {}
+                    ]
+                  },
+                  "confirmDelete": {
+                    "type": "boolean"
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Deleted Rows",
+                            "Table Name",
+                            "Deleted Count"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "Supabase"
       },
       "error.BAD_REQUEST": {
         "type": "object",
