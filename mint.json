@@ -108,7 +108,7 @@
                 "editor/blocks/ai-agents/elevenlabs",
                 "editor/blocks/ai-agents/groq",
                 "editor/blocks/ai-agents/mistralAI",
-                "editor/blocks/ai-agents/OpenRouter",
+                "editor/blocks/ai-agents/openRouter",
                 "editor/blocks/ai-agents/openAi",
                 "editor/blocks/ai-agents/together"
               ]
