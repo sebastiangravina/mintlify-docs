@@ -5,7 +5,8 @@
   "theme": "venus",
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/logo/light.svg",
+    "href": "https://release0.com/home"
   },
   "favicon": "favicon.svg",
   "colors": {
@@ -16,10 +17,6 @@
       "from": "#0D9373",
       "to": "#07C983"
     }
-  },
-  "topbarCtaButton": {
-    "name": "Home",
-    "url": "https://release0.com/"
   },
   "primaryTab": {
     "name": "Learn"
