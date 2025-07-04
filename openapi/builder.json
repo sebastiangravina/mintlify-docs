@@ -6081,7 +6081,7 @@
     "/v1/agents/{agentId}/publish": {
       "post": {
         "operationId": "agent-publishAgent",
-        "summary": "Publish a agent",
+        "summary": "Publish an agent",
         "tags": [
           "Agents"
         ],
@@ -6170,7 +6170,7 @@
     "/v1/agents/{agentId}/unpublish": {
       "post": {
         "operationId": "agent-unpublishAgent",
-        "summary": "Unpublish a agent",
+        "summary": "Unpublish an agent",
         "tags": [
           "Agents"
         ],

@@ -27,6 +27,13 @@
       "url": "api-reference"
     }
   ],
+  "anchors": [
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://release0.com/discord"
+    }
+  ],
   "navigation": [
     {
       "group": "Get Started",
@@ -278,7 +285,10 @@
   ],
   "footerSocials": {
     "website": "https://release0.com",
-    "twitter": "https://x.com/Release0com"
+    "twitter": "https://release0.com/x",
+    "discord": "https://release0.com/discord",
+    "youtube": "https://release0.com/youtube",
+    "facebook": "https://release0.com/facebook"
   },
   "redirects": [
     {
