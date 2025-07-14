@@ -8,7 +8,7 @@ description: Collect structured address inputs with Google Maps Autocomplete, al
 The **Address** User Input Block enhances user experience by allowing users to **autocomplete address inputs** using the **Google Maps API**. This is particularly useful for agents that need structured location data such as street addresses, cities, or postal codes.
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/blocks/inputs/address-agent-live.gif" alt="Release0.com - Search Address Agrent" / >
+  <img src="/images/blocks/inputs/address-agent-live.gif" alt="Release0.com - Search Address Agent" / >
 </Frame>
 
 ---
@@ -53,6 +53,7 @@ The **Address** User Input Block enhances user experience by allowing users to *
   <img src="/images/blocks/inputs/address.png" alt="Release0.com - Address input block" / >
 </Frame>
 
+> **Note**: After changing your Google Maps API key, you need to wait for **5 minutes** for the changes to take effect.
 
 ### 3. Save Address to a Variable
 
@@ -74,7 +75,7 @@ Once selected, the variable `user_address` will store something like:
 `"742 West Evergreen Street, Springfield, Misuri, EE. UU."`
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/blocks/inputs/address-agent.png" alt="Release0.com - Search Address Agrent" / >
+  <img src="/images/blocks/inputs/address-agent.png" alt="Release0.com - Search Address Agent" / >
 </Frame>
 
 ---
@@ -94,17 +95,3 @@ Once selected, the variable `user_address` will store something like:
 - The accuracy and format of address results depend on Google's database.
 - Not suited for offline or custom location lists.
 
----
-
-## Styling and Customization
-
-The input field inherits the default styles of Release0 but can be customized via theming options.
-
----
-
-## Troubleshooting
-
-1. **No suggestions appearing**: Check if your Google API key is valid and has the Places API enabled.
-2. **CORS or Network Errors**: Ensure the domain hosting the agent is allowed in your Google Cloud API settings.
-
----

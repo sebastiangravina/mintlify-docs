@@ -234,6 +234,9 @@
                                   "$ref": "#/components/schemas/address"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/password"
+                                },
+                                {
                                   "$ref": "#/components/schemas/autocomplete"
                                 },
                                 {
@@ -270,6 +273,7 @@
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
                                   "address input": "#/components/schemas/address",
+                                  "password input": "#/components/schemas/password",
                                   "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
@@ -293,6 +297,9 @@
                                 },
                                 {
                                   "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/password"
                                 },
                                 {
                                   "$ref": "#/components/schemas/autocomplete"
@@ -331,6 +338,7 @@
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
                                   "address input": "#/components/schemas/address",
+                                  "password input": "#/components/schemas/password",
                                   "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
@@ -764,6 +772,9 @@
                                   "$ref": "#/components/schemas/address"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/password"
+                                },
+                                {
                                   "$ref": "#/components/schemas/autocomplete"
                                 },
                                 {
@@ -800,6 +811,7 @@
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
                                   "address input": "#/components/schemas/address",
+                                  "password input": "#/components/schemas/password",
                                   "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
@@ -823,6 +835,9 @@
                                 },
                                 {
                                   "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/password"
                                 },
                                 {
                                   "$ref": "#/components/schemas/autocomplete"
@@ -861,6 +876,7 @@
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
                                   "address input": "#/components/schemas/address",
+                                  "password input": "#/components/schemas/password",
                                   "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
@@ -1264,6 +1280,9 @@
                                   "$ref": "#/components/schemas/address"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/password"
+                                },
+                                {
                                   "$ref": "#/components/schemas/autocomplete"
                                 },
                                 {
@@ -1298,6 +1317,7 @@
                                   "choice input": "#/components/schemas/buttonsInput",
                                   "email input": "#/components/schemas/email",
                                   "address input": "#/components/schemas/address",
+                                  "password input": "#/components/schemas/password",
                                   "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
@@ -1631,6 +1651,9 @@
                                   "$ref": "#/components/schemas/address"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/password"
+                                },
+                                {
                                   "$ref": "#/components/schemas/autocomplete"
                                 },
                                 {
@@ -1665,6 +1688,7 @@
                                   "choice input": "#/components/schemas/buttonsInput",
                                   "email input": "#/components/schemas/email",
                                   "address input": "#/components/schemas/address",
+                                  "password input": "#/components/schemas/password",
                                   "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
@@ -2109,6 +2133,9 @@
                                   "$ref": "#/components/schemas/address"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/password"
+                                },
+                                {
                                   "$ref": "#/components/schemas/autocomplete"
                                 },
                                 {
@@ -2143,6 +2170,7 @@
                                   "choice input": "#/components/schemas/buttonsInput",
                                   "email input": "#/components/schemas/email",
                                   "address input": "#/components/schemas/address",
+                                  "password input": "#/components/schemas/password",
                                   "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
@@ -3492,6 +3520,9 @@
                       "$ref": "#/components/schemas/address"
                     },
                     {
+                      "$ref": "#/components/schemas/password"
+                    },
+                    {
                       "$ref": "#/components/schemas/autocomplete"
                     },
                     {
@@ -3528,6 +3559,7 @@
                       "text input": "#/components/schemas/textInput",
                       "email input": "#/components/schemas/email",
                       "address input": "#/components/schemas/address",
+                      "password input": "#/components/schemas/password",
                       "autocomplete input": "#/components/schemas/autocomplete",
                       "number input": "#/components/schemas/numberInput",
                       "url input": "#/components/schemas/url",
@@ -4485,7 +4517,13 @@
               "restrictToList": {
                 "type": "boolean"
               },
+              "includePostalCode": {
+                "type": "boolean"
+              },
               "credentialsId": {
+                "type": "string"
+              },
+              "language": {
                 "type": "string"
               }
             }
@@ -4496,6 +4534,59 @@
           "type"
         ],
         "title": "Address"
+      },
+      "password": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "outgoingEdgeId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "password input"
+            ]
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "variableId": {
+                "type": "string"
+              },
+              "labels": {
+                "type": "object",
+                "properties": {
+                  "placeholder": {
+                    "type": "string"
+                  },
+                  "button": {
+                    "type": "string"
+                  }
+                }
+              },
+              "isRequired": {
+                "type": "boolean"
+              },
+              "passwords": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "retryMessageContent": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "Password"
       },
       "autocomplete": {
         "type": "object",
@@ -11522,6 +11613,9 @@
                             "$ref": "#/components/schemas/address"
                           },
                           {
+                            "$ref": "#/components/schemas/password"
+                          },
+                          {
                             "$ref": "#/components/schemas/autocomplete"
                           },
                           {
@@ -11558,6 +11652,7 @@
                             "text input": "#/components/schemas/textInput",
                             "email input": "#/components/schemas/email",
                             "address input": "#/components/schemas/address",
+                            "password input": "#/components/schemas/password",
                             "autocomplete input": "#/components/schemas/autocomplete",
                             "number input": "#/components/schemas/numberInput",
                             "url input": "#/components/schemas/url",
