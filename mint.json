@@ -89,7 +89,8 @@
                 "editor/blocks/user-inputs/fileUpload",
                 "editor/blocks/user-inputs/rating",
                 "editor/blocks/user-inputs/website",
-                "editor/blocks/user-inputs/collect-payment"
+                "editor/blocks/user-inputs/collect-payment",
+                "editor/blocks/user-inputs/password"
               ]
             },
             {
