@@ -79,6 +79,7 @@
                 "editor/blocks/user-inputs/text",
                 "editor/blocks/user-inputs/email",
                 "editor/blocks/user-inputs/number",
+                "editor/blocks/user-inputs/address",
                 "editor/blocks/user-inputs/buttons-choice",
                 "editor/blocks/user-inputs/picture-choice",
                 "editor/blocks/user-inputs/date",
