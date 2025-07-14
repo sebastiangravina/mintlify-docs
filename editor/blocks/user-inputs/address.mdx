@@ -1,0 +1,108 @@
+---
+sidebarTitle: Address
+title: How to use the Address block to autocomplete location inputs.
+icon: map-pin
+description: Collect structured address inputs with Google Maps Autocomplete, allowing users to search for locations easily in your chatbot agent.
+---
+
+The **Address** User Input Block enhances user experience by allowing users to **autocomplete address inputs** using the **Google Maps API**. This is particularly useful for agents that need structured location data such as street addresses, cities, or postal codes.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/blocks/inputs/address-agent-live.gif" alt="Release0.com - Search Address Agrent" / >
+</Frame>
+
+---
+
+## Key Features
+
+- **Google Maps Autocomplete**: Suggests locations as users type.
+- **Structured Output**: Captures formatted address and geographic components.
+- **Custom Variable**: Save the selected address in your desired variable.
+
+---
+
+## How It Works
+
+1. The block renders a text input powered by Google Places Autocomplete.
+2. As the user types, location suggestions appear.
+3. When the user selects a suggestion, the formatted address is saved in the specified variable.
+
+---
+
+## Setup Instructions
+
+### 1. Add the Address Input Block
+
+- Drag and drop the **Address** input block into your flow.
+- Configure the **Prompt** to ask users for their location (e.g., "Can you provide your address?").
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/blocks/inputs/address-drag.png" alt="Release0.com - Add Address input block" / >
+</Frame>
+
+### 2. Google Maps API Key
+
+- This block requires a valid **Google Maps JavaScript API key**. We provide a limietd number of free requests, but you will need to set up you own key for production use.
+- Go to the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/credentials) to generate an API key.
+- Ensure your key has the **Places API** enabled.
+- Add your key to the environment or agent settings under **Google Maps API Key**.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/blocks/inputs/address.png" alt="Release0.com - Address input block" / >
+</Frame>
+
+
+### 3. Save Address to a Variable
+
+- Assign a variable name to store the selected address.
+- This variable will contain the full address string returned by Google.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/blocks/inputs/address-variable.png" alt="Release0.com - Save Address variable" / >
+</Frame>
+
+---
+
+## Example Configuration
+
+- **Prompt**: `"Where should we send your delivery?"`
+- **Variable**: `user_address`
+
+Once selected, the variable `user_address` will store something like:  
+`"742 West Evergreen Street, Springfield, Misuri, EE. UU."`
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/blocks/inputs/address-agent.png" alt="Release0.com - Search Address Agrent" / >
+</Frame>
+
+---
+
+## Use Cases
+
+- Delivery address collection
+- Event location input
+- Property lookup
+- Booking/reservation systems
+
+---
+
+## Limitations
+
+- Requires an active Google Maps API key.
+- The accuracy and format of address results depend on Google's database.
+- Not suited for offline or custom location lists.
+
+---
+
+## Styling and Customization
+
+The input field inherits the default styles of Release0 but can be customized via theming options.
+
+---
+
+## Troubleshooting
+
+1. **No suggestions appearing**: Check if your Google API key is valid and has the Places API enabled.
+2. **CORS or Network Errors**: Ensure the domain hosting the agent is allowed in your Google Cloud API settings.
+
+---

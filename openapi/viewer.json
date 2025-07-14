@@ -231,6 +231,12 @@
                                   "$ref": "#/components/schemas/email"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/autocomplete"
+                                },
+                                {
                                   "$ref": "#/components/schemas/numberInput"
                                 },
                                 {
@@ -263,6 +269,8 @@
                                 "mapping": {
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
+                                  "address input": "#/components/schemas/address",
+                                  "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
                                   "phone number input": "#/components/schemas/phoneNumberInput",
@@ -282,6 +290,12 @@
                                 },
                                 {
                                   "$ref": "#/components/schemas/email"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/autocomplete"
                                 },
                                 {
                                   "$ref": "#/components/schemas/numberInput"
@@ -316,6 +330,8 @@
                                 "mapping": {
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
+                                  "address input": "#/components/schemas/address",
+                                  "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
                                   "phone number input": "#/components/schemas/phoneNumberInput",
@@ -745,6 +761,12 @@
                                   "$ref": "#/components/schemas/email"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/autocomplete"
+                                },
+                                {
                                   "$ref": "#/components/schemas/numberInput"
                                 },
                                 {
@@ -777,6 +799,8 @@
                                 "mapping": {
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
+                                  "address input": "#/components/schemas/address",
+                                  "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
                                   "phone number input": "#/components/schemas/phoneNumberInput",
@@ -796,6 +820,12 @@
                                 },
                                 {
                                   "$ref": "#/components/schemas/email"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/autocomplete"
                                 },
                                 {
                                   "$ref": "#/components/schemas/numberInput"
@@ -830,6 +860,8 @@
                                 "mapping": {
                                   "text input": "#/components/schemas/textInput",
                                   "email input": "#/components/schemas/email",
+                                  "address input": "#/components/schemas/address",
+                                  "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
                                   "phone number input": "#/components/schemas/phoneNumberInput",
@@ -1229,6 +1261,12 @@
                                   "$ref": "#/components/schemas/email"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/autocomplete"
+                                },
+                                {
                                   "$ref": "#/components/schemas/numberInput"
                                 },
                                 {
@@ -1259,6 +1297,8 @@
                                   "text input": "#/components/schemas/textInput",
                                   "choice input": "#/components/schemas/buttonsInput",
                                   "email input": "#/components/schemas/email",
+                                  "address input": "#/components/schemas/address",
+                                  "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
                                   "phone number input": "#/components/schemas/phoneNumberInput",
@@ -1588,6 +1628,12 @@
                                   "$ref": "#/components/schemas/email"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/autocomplete"
+                                },
+                                {
                                   "$ref": "#/components/schemas/numberInput"
                                 },
                                 {
@@ -1618,6 +1664,8 @@
                                   "text input": "#/components/schemas/textInput",
                                   "choice input": "#/components/schemas/buttonsInput",
                                   "email input": "#/components/schemas/email",
+                                  "address input": "#/components/schemas/address",
+                                  "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
                                   "phone number input": "#/components/schemas/phoneNumberInput",
@@ -2058,6 +2106,12 @@
                                   "$ref": "#/components/schemas/email"
                                 },
                                 {
+                                  "$ref": "#/components/schemas/address"
+                                },
+                                {
+                                  "$ref": "#/components/schemas/autocomplete"
+                                },
+                                {
                                   "$ref": "#/components/schemas/numberInput"
                                 },
                                 {
@@ -2088,6 +2142,8 @@
                                   "text input": "#/components/schemas/textInput",
                                   "choice input": "#/components/schemas/buttonsInput",
                                   "email input": "#/components/schemas/email",
+                                  "address input": "#/components/schemas/address",
+                                  "autocomplete input": "#/components/schemas/autocomplete",
                                   "number input": "#/components/schemas/numberInput",
                                   "url input": "#/components/schemas/url",
                                   "phone number input": "#/components/schemas/phoneNumberInput",
@@ -3433,6 +3489,12 @@
                       "$ref": "#/components/schemas/email"
                     },
                     {
+                      "$ref": "#/components/schemas/address"
+                    },
+                    {
+                      "$ref": "#/components/schemas/autocomplete"
+                    },
+                    {
                       "$ref": "#/components/schemas/numberInput"
                     },
                     {
@@ -3465,6 +3527,8 @@
                     "mapping": {
                       "text input": "#/components/schemas/textInput",
                       "email input": "#/components/schemas/email",
+                      "address input": "#/components/schemas/address",
+                      "autocomplete input": "#/components/schemas/autocomplete",
                       "number input": "#/components/schemas/numberInput",
                       "url input": "#/components/schemas/url",
                       "phone number input": "#/components/schemas/phoneNumberInput",
@@ -4286,6 +4350,9 @@
               "isPassword": {
                 "type": "boolean"
               },
+              "isRequired": {
+                "type": "boolean"
+              },
               "audioClip": {
                 "type": "object",
                 "properties": {
@@ -4367,6 +4434,9 @@
               },
               "retryMessageContent": {
                 "type": "string"
+              },
+              "isRequired": {
+                "type": "boolean"
               }
             }
           }
@@ -4376,6 +4446,137 @@
           "type"
         ],
         "title": "Email"
+      },
+      "address": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "outgoingEdgeId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "address input"
+            ]
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "variableId": {
+                "type": "string"
+              },
+              "labels": {
+                "type": "object",
+                "properties": {
+                  "placeholder": {
+                    "type": "string"
+                  },
+                  "button": {
+                    "type": "string"
+                  }
+                }
+              },
+              "isRequired": {
+                "type": "boolean"
+              },
+              "restrictToList": {
+                "type": "boolean"
+              },
+              "credentialsId": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "Address"
+      },
+      "autocomplete": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "outgoingEdgeId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "autocomplete input"
+            ]
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "variableId": {
+                "type": "string"
+              },
+              "labels": {
+                "type": "object",
+                "properties": {
+                  "placeholder": {
+                    "type": "string"
+                  },
+                  "button": {
+                    "type": "string"
+                  }
+                }
+              },
+              "isRequired": {
+                "type": "boolean"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "value"
+                  ]
+                }
+              },
+              "maxSuggestions": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 20
+              },
+              "enableFuzzySearch": {
+                "type": "boolean"
+              },
+              "minSearchLength": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 10
+              },
+              "keyVariableId": {
+                "type": "string"
+              },
+              "restrictToList": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "Autocomplete"
       },
       "numberInput": {
         "type": "object",
@@ -4432,6 +4633,9 @@
                   },
                   {}
                 ]
+              },
+              "isRequired": {
+                "type": "boolean"
               }
             }
           }
@@ -4476,6 +4680,9 @@
               },
               "retryMessageContent": {
                 "type": "string"
+              },
+              "isRequired": {
+                "type": "boolean"
               }
             }
           }
@@ -4523,6 +4730,9 @@
               },
               "defaultCountryCode": {
                 "type": "string"
+              },
+              "isRequired": {
+                "type": "boolean"
               }
             }
           }
@@ -5083,6 +5293,9 @@
                 "type": "string"
               },
               "isMultipleChoice": {
+                "type": "boolean"
+              },
+              "showTitle": {
                 "type": "boolean"
               },
               "isSearchable": {
@@ -10211,6 +10424,16 @@
                       "Random"
                     ]
                   },
+                  "orderBy": {
+                    "type": "string"
+                  },
+                  "orderDirection": {
+                    "type": "string",
+                    "enum": [
+                      "asc",
+                      "desc"
+                    ]
+                  },
                   "filter": {
                     "type": "object",
                     "properties": {
@@ -10277,9 +10500,112 @@
                         "item": {
                           "type": "string",
                           "enum": [
-                            "Row Found",
+                            "Rows Found",
                             "Table Name",
-                            "Row Count"
+                            "Rows Count"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Update Rows"
+                    ]
+                  },
+                  "table": {
+                    "type": "string"
+                  },
+                  "schema": {
+                    "type": "string"
+                  },
+                  "filter": {
+                    "type": "object",
+                    "properties": {
+                      "comparisons": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "input": {
+                              "type": "string"
+                            },
+                            "operator": {
+                              "type": "string",
+                              "enum": [
+                                "Equal to",
+                                "Not equal",
+                                "Contains",
+                                "Greater than",
+                                "Greater than or equal",
+                                "Less than",
+                                "Less than or equal",
+                                "Is set",
+                                "Is empty",
+                                "Starts with",
+                                "Ends with",
+                                "In",
+                                "Not in"
+                              ]
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "joiner": {
+                        "type": "string",
+                        "enum": [
+                          "AND",
+                          "OR"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "comparisons"
+                    ]
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "key": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Updated Rows",
+                            "Table Name",
+                            "Updated Count"
                           ]
                         },
                         "variableId": {
@@ -10357,17 +10683,6 @@
                     "required": [
                       "comparisons"
                     ]
-                  },
-                  "limit": {
-                    "anyOf": [
-                      {
-                        "type": "number"
-                      },
-                      {}
-                    ]
-                  },
-                  "confirmDelete": {
-                    "type": "boolean"
                   },
                   "responseMapping": {
                     "type": "array",
@@ -11204,6 +11519,12 @@
                             "$ref": "#/components/schemas/email"
                           },
                           {
+                            "$ref": "#/components/schemas/address"
+                          },
+                          {
+                            "$ref": "#/components/schemas/autocomplete"
+                          },
+                          {
                             "$ref": "#/components/schemas/numberInput"
                           },
                           {
@@ -11236,6 +11557,8 @@
                           "mapping": {
                             "text input": "#/components/schemas/textInput",
                             "email input": "#/components/schemas/email",
+                            "address input": "#/components/schemas/address",
+                            "autocomplete input": "#/components/schemas/autocomplete",
                             "number input": "#/components/schemas/numberInput",
                             "url input": "#/components/schemas/url",
                             "phone number input": "#/components/schemas/phoneNumberInput",
@@ -13151,6 +13474,9 @@
                 "type": "string"
               },
               "isMultipleChoice": {
+                "type": "boolean"
+              },
+              "showTitle": {
                 "type": "boolean"
               },
               "isSearchable": {
