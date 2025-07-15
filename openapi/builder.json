@@ -12185,6 +12185,37 @@
                               "workspaceId",
                               "name"
                             ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "data": {
+                                "type": "object",
+                                "properties": {
+                                  "webhookUrl": {
+                                    "type": "string"
+                                  }
+                                }
+                              },
+                              "type": {
+                                "type": "string",
+                                "enum": [
+                                  "discord"
+                                ]
+                              },
+                              "workspaceId": {
+                                "type": "string"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "data",
+                              "type",
+                              "workspaceId",
+                              "name"
+                            ]
                           }
                         ]
                       },
@@ -12296,6 +12327,7 @@
                 "anthropic",
                 "chat-node",
                 "dify-ai",
+                "discord",
                 "elevenlabs",
                 "google maps",
                 "google sheets",
@@ -12337,6 +12369,7 @@
                               "anthropic",
                               "chat-node",
                               "dify-ai",
+                              "discord",
                               "elevenlabs",
                               "google maps",
                               "google sheets",
@@ -13205,6 +13238,37 @@
                             "type": "string",
                             "enum": [
                               "supabase"
+                            ]
+                          },
+                          "workspaceId": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "data",
+                          "type",
+                          "workspaceId"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "data": {
+                            "type": "object",
+                            "properties": {
+                              "webhookUrl": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "discord"
                             ]
                           },
                           "workspaceId": {
@@ -17686,6 +17750,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/supabaseBlock"
+                    },
+                    {
+                      "$ref": "#/components/schemas/discordBlock"
                     }
                   ],
                   "discriminator": {
@@ -17706,7 +17773,8 @@
                       "groq": "#/components/schemas/groqBlock",
                       "zendesk": "#/components/schemas/zendeskBlock",
                       "user-info": "#/components/schemas/user-infoBlock",
-                      "supabase": "#/components/schemas/supabaseBlock"
+                      "supabase": "#/components/schemas/supabaseBlock",
+                      "discord": "#/components/schemas/discordBlock"
                     }
                   }
                 }
@@ -22748,6 +22816,160 @@
           "type"
         ],
         "title": "Supabase"
+      },
+      "discordBlock": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "outgoingEdgeId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "discord"
+            ]
+          },
+          "options": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Send Message"
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "Info",
+                      "Success",
+                      "Warning",
+                      "Error"
+                    ]
+                  },
+                  "headline": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "footer": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "type": "string",
+                    "enum": [
+                      "Send Message (Advanced)"
+                    ]
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "footer": {
+                    "type": "string"
+                  },
+                  "color": {
+                    "type": "string"
+                  },
+                  "link": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "author": {
+                    "type": "string"
+                  },
+                  "authorIcon": {
+                    "type": "string"
+                  },
+                  "authorUrl": {
+                    "type": "string"
+                  },
+                  "image": {
+                    "type": "string"
+                  },
+                  "thumbnail": {
+                    "type": "string"
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "field": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        },
+                        "inline": {
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "type": "string",
+                          "enum": [
+                            "Message",
+                            "Thread ID"
+                          ]
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "Discord"
       },
       "error.BAD_REQUEST": {
         "type": "object",
