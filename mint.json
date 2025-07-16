@@ -124,20 +124,21 @@
             {
               "group": "Block Integrations",
               "pages": [
-                "editor/blocks/integrations/supabase",
-                "editor/blocks/integrations/google-sheets",
-                "editor/blocks/integrations/nocodb",
-                "editor/blocks/integrations/send-email",
-                "editor/blocks/integrations/make-com",
-                "editor/blocks/integrations/zapier",
-                "editor/blocks/integrations/pabbly-connect",
-                "editor/blocks/integrations/http-request",
                 "editor/blocks/integrations/google-analytics",
-                "editor/blocks/integrations/meta-pixel",
                 "editor/blocks/integrations/cal",
+                "editor/blocks/integrations/chatwoot",
+                "editor/blocks/integrations/discord",
+                "editor/blocks/integrations/send-email",
+                "editor/blocks/integrations/google-sheets",
+                "editor/blocks/integrations/http-request",
+                "editor/blocks/integrations/make-com",
+                "editor/blocks/integrations/nocodb",
+                "editor/blocks/integrations/pabbly-connect",
+                "editor/blocks/integrations/meta-pixel",
                 "editor/blocks/integrations/qr",
                 "editor/blocks/integrations/segment",
-                "editor/blocks/integrations/chatwoot",
+                "editor/blocks/integrations/supabase",
+                "editor/blocks/integrations/zapier",
                 "editor/blocks/integrations/zendesk"
               ]
             }
