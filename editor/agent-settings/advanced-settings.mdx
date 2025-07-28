@@ -47,7 +47,14 @@ Enter your Google Tag Manager id to better track your agent conversion flow.
 This allows you to integrate your agent with Google Tag Manager, enabling you to track user interactions, conversions, and other metrics related to your agent's performance.
 This is particularly useful for analyzing user behavior, optimizing the agent's performance, and improving the overall user experience.
 
-### Allowed origins
+## Allowed origins
 
 When this option is enabled, your agent will only work when invoked from a sepcific website origins. **By default your agent can be executed on any website**. This can prevet people from intancing your agent from other websites. Typically to prefent including your agent on another site by an iFrame method.
 This is useful when you want to restrict the usage of your agent to specific domains or applications, ensuring that it is only accessible in trusted environments.
+
+## Custom head code
+
+You can custom code to be included in the head of your agent. This code will be added at the buttom of the agent head section, just before the closing `</head>` tag. Only meta and script tags are allowed.
+This feature is useful for adding custom scripts, styles, or other resources that you want to load when the agent is initialized. For example, you can include custom analytics scripts, CSS styles, or any other head elements that are necessary for your agent's functionality.
+
+Check out our blog post featuring a use case of how to use this feature to save session data in your agent to remmeber a user across sessions: [How to remember users across sessions](https://release0.com/blog/release0-session-manager-guide/).
