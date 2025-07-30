@@ -55,7 +55,7 @@ Send a page view event to Segment using this action.
 - **Category**: A category name for the page.
 - **Properties**: Additional properties related to the page view.
 
-### How to comfigure the Segment Block?
+### How to Configure the Segment Block
 
 1. **Add the Segment Block**:  
    Drag and drop the Segment block into your flow.
@@ -67,11 +67,11 @@ Send a page view event to Segment using this action.
 3. **Test the Block**:
    - Use the **Test** button to send a test event to Segment.
    - Check the Segment dashboard to verify the event was received successfully.
-   - You can use ther [Segment’s Debugger](https://segment.com/docs/connections/sources/debugger/) to validate the events sent.
+   - You can use the [Segment Debugger](https://segment.com/docs/connections/sources/debugger/) to validate the events sent.
 
 In the following example, we will configure the **Track** action to send user information to Segment.
 
-- Create a new block group and collet user data (Name, UserName, and Email)
+- Create a new block group and collect user data (Name, Username, and Email).
 - We can use a random variable to create a random userID.
 - Add user input blocks to collect user data.
 - Add the Segment block and select the **Track** action.
@@ -105,7 +105,7 @@ And once we check the Segment dashboard, we can see the event was received succe
 If we check the source debugger, we can see the event details and the properties sent to Segment.
 
 <Frame style={{ maxWidth: '800px' }}>
-  <img src="/images/blocks/integrations/segment/segment-source-debbuger.png" alt="Release0.com - Segment debugger" />
+  <img src="/images/blocks/integrations/segment/segment-source-debugger.png" alt="Release0.com - Segment debugger" />
 </Frame>
 
 

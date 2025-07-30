@@ -79,9 +79,9 @@ The **Search Records** action in NocoDB allows you to retrieve specific records 
 
 #### Workflow Example
 
-In this simple example we are going to create a work order record for a repair company. To keep the example simple we will only ask for the user name, email and serial number of the device.
+In this simple example we are going to create a work order record for a repair company. To keep the example simple we will only ask for the user name, email, and serial number of the device.
 
-The first step is to create a **Text Block** to greet the user and ask for their name, emial and serial number.
+The first step is to create a **Text Block** to greet the user and ask for their name, email, and serial number.
 
 <Frame style={{ maxWidth: '800px' }}>
   <img src="/images/blocks/integrations/nocodb/collect-data.png" alt="Release0.com - NocoDB Text Block" />
@@ -117,7 +117,7 @@ Then we complete the records creation with a confirmation message.
   <img src="/images/blocks/integrations/nocodb/create-record.png" alt="Release0.com - NocoDB Confirmation Message" />
 </Frame>
 
-We cant test this scenario by running the agent and entering the data. 
+We can test this scenario by running the agent and entering the data. 
 
 <Frame style={{ maxWidth: '800px' }}>
   <img src="/images/blocks/integrations/nocodb/order-creation-test.png" alt="Release0.com - NocoDB Table Records" />
@@ -162,7 +162,7 @@ For this scenario we add a new NocoDB block and select the **I want to search fo
 
 In the NocoDB configuration block we will enter the search field as the serial field from our NodoDB table and map it to the serial variable we have taken from the input field.
 
-Next we will fill in the **Response Mapping** to map the variables we created in the previous step to look for the record we want to seach for.
+Next we will fill in the **Response Mapping** to map the variables we created in the previous step to look for the record we want to search for.
 
 <Frame style={{ maxWidth: '400px' }}>
   <img src="/images/blocks/integrations/nocodb/order-search-config.png" alt="Release0.com - NocoDB Search Record" />

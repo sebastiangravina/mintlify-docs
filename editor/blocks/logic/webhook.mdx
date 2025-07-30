@@ -2,7 +2,7 @@
 sidebarTitle: Webhook
 title: How to use the Webhook block
 icon: webhook
-description: The Webhook block pauses conversations while waiting for external system callbacks, ideal for handling long-running processes and API requests in your chatbot agent.
+description: The Webhook block pauses conversations while waiting for external system callbacks, ideal for handling long-running processes and API requests in your chatbot agent flow.
 ---
 The **Webhook** Block allows you to pause a conversation while waiting for an external system to call back a specified webhook URL. This is particularly useful for handling **long-running processes**, such as background tasks or external API requests, that may take time to complete.
 
@@ -59,7 +59,7 @@ https://release0.com/api/v1/agents/{agentId}/blocks/{blockId}/results/{resultId}
    - Ensure the webhook is authenticated before triggering any requests. Refer to the **API authentication** documentation for setup.
 
 4. **Trigger External Process**:
-   - Upon reaching the Webhook block, the bot sends the request and waits for the external system to call the webhook URL to resume the conversation.
+   - When the flow reaches the Webhook block, the bot triggers the external process and waits for the external system to call the webhook URL before resuming the conversation.
 
 5. **Resume Flow**:
    - Once the webhook is called successfully, the bot resumes the conversation with the user.
@@ -88,5 +88,5 @@ curl -X POST "https://release0.com/api/v1/agents/{agentId}/blocks/{blockId}/web/
 ```bash
 curl -X POST "https://release0.com/api/v1/agents/{agentId}/blocks/{blockId}/results/{resultId}/executeWebhook" \
 -H "Authorization: Bearer YOUR_API_KEY" \
--d '{"status": "success", "message": "Process completed"}'
+-d '{"status": "success", "message": "The process has been completed successfully"}'
 ```

@@ -34,7 +34,7 @@ Make sure you copy the API key, as you will need it in the next step.
 
 Make sure your domain is verified in your Resend account. You can do this by going to the **Domains** section in your Resend dashboard and following the instructions to verify your domain. for more information on how to verify your domain, please refer to the [Resend documentation](https://resend.com/docs/dashboard/domains/introduction).
 
-Now head back to your Release0 agent and open the **Email Block**. In the block configuration click on **Add SMTP Account* In the **SMTP Settings** and fill in the Resend provider information:
+Now head back to your Release0 agent and open the **Email Block**. In the block configuration, click on **Add SMTP Account** in the **SMTP Settings** and fill in the Resend provider information:
 <Frame style={{ maxWidth: '400px' }}>
   <img src="/images/blocks/integrations/email/resend-setup.png" alt="Release0.com - Resend SMTP Setup" />
 </Frame>
@@ -46,8 +46,8 @@ Now head back to your Release0 agent and open the **Email Block**. In the block 
 - **SMTP Port**: `465` (For encrypted/TLS connections use 2465, 587 or 2587)
 
 > ⚠️ **Important:**
-Make sure you fill in the  **From:**  of the destiantion email **before** configuring the SMTP settings. This is the email address where you want to receive notifications. You can use a variable to dynamically set the destination email based on user input.
-If this is not configured before setting up the SMTP settings, the setup process will fail since the test conenction email sill not be triggered.
+Make sure you fill in the **From** field for the destination email **before** configuring the SMTP settings. This is the email address where you want to receive notifications. You can use a variable to dynamically set the destination email based on user input.
+If this is not configured before setting up the SMTP settings, the setup process will fail since the test connection email will not be triggered.
 <Frame style={{ maxWidth: '400px' }}>
   <img src="/images/blocks/integrations/email/smtp-setup-2.png" alt="Release0.com - Resend SMTP Setup" />
 </Frame>
@@ -84,7 +84,8 @@ If you're not receiving the expected emails:
 1. **Check the logs** in your dashboard for errors.
 2. Verify that your SMTP credentials are configured correctly
 3. Ensure the recipient email address is valid.
-4. Make sure you fill in the  **From:**  of the destiantion email **before** configuring the SMTP settings. Otherwise, you will receceive an error message '*Invalid Configuration. We couldn't send the latest email with your configuration*'.
+4. Make sure you fill in the  **From:**  of the destiantion email **before** configuring the SMTP settings. Otherwise, you will receive an error message '*Invalid Configuration. We couldn't send the latest email with your configuration*'.
 5. Make sure you test your Email block **once you publish your agent**, Otherwise you will receive the error: *Emails are not sent in preview mode*
-6. Make sure yoy have added your domain to the **verified domains** in your SMTP provider. Otherwise, you will receive the error: *Invalid configuration*.
+6. Make sure you have added your domain to the **verified domains** in your SMTP provider. Otherwise, you will receive the error: *Invalid configuration*.
+
 
