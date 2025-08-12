@@ -37,7 +37,9 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["get-started/introduction"]
+      "pages": [
+        "get-started/introduction"
+      ]
     },
     {
       "group": "Agent",
@@ -112,12 +114,14 @@
               "pages": [
                 "editor/blocks/ai-agents/anthropic",
                 "editor/blocks/ai-agents/chatnode",
+                "editor/blocks/ai-agents/deepseek",
                 "editor/blocks/ai-agents/dify",
                 "editor/blocks/ai-agents/elevenlabs",
                 "editor/blocks/ai-agents/groq",
                 "editor/blocks/ai-agents/mistralAI",
                 "editor/blocks/ai-agents/openRouter",
                 "editor/blocks/ai-agents/openAi",
+                "editor/blocks/ai-agents/perplexity",
                 "editor/blocks/ai-agents/together"
               ]
             },
@@ -152,7 +156,10 @@
     },
     {
       "group": "Theme",
-      "pages": ["theme/overview", "theme/font"]
+      "pages": [
+        "theme/overview",
+        "theme/font"
+      ]
     },
     {
       "group": "Integrations",
@@ -195,7 +202,9 @@
         {
           "group": "API",
           "icon": "code-simple",
-          "pages": ["integrations/api/overview"]
+          "pages": [
+            "integrations/api/overview"
+          ]
         }
       ]
     },
@@ -220,7 +229,11 @@
     },
     {
       "group": "Account",
-      "pages": ["account/general", "account/notifications", "account/apikey"]
+      "pages": [
+        "account/general",
+        "account/notifications",
+        "account/apikey"
+      ]
     },
     {
       "group": "Guides",
@@ -234,11 +247,17 @@
     },
     {
       "group": "Misc",
-      "pages": ["faq", "report-abuse"]
+      "pages": [
+        "faq",
+        "report-abuse"
+      ]
     },
     {
       "group": "Get started",
-      "pages": ["api-reference/authentication", "api-reference/how-to"]
+      "pages": [
+        "api-reference/authentication",
+        "api-reference/how-to"
+      ]
     },
     {
       "group": "Chat",
@@ -274,7 +293,9 @@
     },
     {
       "group": "Analytics",
-      "pages": ["api-reference/analytics/get-stats"]
+      "pages": [
+        "api-reference/analytics/get-stats"
+      ]
     },
     {
       "group": "Workspace",
