@@ -147,6 +147,7 @@
           ]
         },
         "editor/variables",
+        "editor/sticky-note",
         "editor/publish",
         "editor/context-menu",
         "editor/export-import"
