@@ -237,7 +237,7 @@
     },
     {
       "group": "Misc",
-      "pages": ["faq", "report-abuse"]
+      "pages": ["faq", "support", "report-abuse"]
     },
     {
       "group": "Get started",
