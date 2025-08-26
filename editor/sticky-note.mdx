@@ -2,7 +2,7 @@
 sidebarTitle: Sticky Note
 title: How to Use Sticky Notes in Your Flow Editor
 icon: note
-description: Learn how to use sticky notes in your flow editor to organize and annotate your chatbot flows effectively. This guide covers creating, editing, and managing sticky notes for better workflow visualization.
+description: Learn how to use sticky notes in your Release0 flow editor to organize and annotate your chatbot flows effectively. This guide covers creating, editing, and managing sticky notes for better workflow visualization.
 ---
 Sticky Notes allow you to annotate and comment on your flow editor, making it easier to organize and understand complex chatbot flows. They are especially useful for collaboration, as they provide context and explanations for different parts of your flow.
 We recommend using Sticky Notes to better organize your flow and make it easier to understand for you and your team.
@@ -18,14 +18,19 @@ To create a Sticky Note, follow these steps:
 3. Click outside the sticky note to save your changes.
 
 ### Editing a Sticky Note
-To edit an existing Sticky Note, simply right-click on the note you want to edit. This will open the editing Menu (Edit, Change Colour, Delete).
- - Change Colour: You can change the color of the sticky note to categorize or prioritize different notes. Click on the color option and select your desired color.
- - Delete: If you no longer need a sticky note, you can delete it by selecting the delete option from the menu.
- - Edit: Click on the edit option to modify the content of the sticky note. Click outside the sticky note to save your changes.
 
 <Frame style={{ maxWidth: '400px' }}>
   <img src="/images/sticky-note/sticky-note-edit.png" alt="Release0.com - Sticky Note Edit" />
 </Frame>
+
+To edit an existing Sticky Note, simply right-click on the note you want to edit. This will open the editing Menu (Edit, Change Colour, Delete).
+ - Change Color: You can change the color of the sticky note to categorize or prioritize different notes. Click on the color option and select your desired color.
+ <Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/sticky-note/sticky-note-color.png" alt="Release0.com - Sticky Note color" />
+</Frame>
+ - Delete: If you no longer need a sticky note, you can delete it by selecting the delete option from the menu.
+ - Edit: Click on the edit option to modify the content of the sticky note. Click outside the sticky note to save your changes.
+
 
 ### Moving a Sticky Note
 You can move a Sticky Note by clicking and dragging it to your desired location within the flow editor. This allows you to organize your notes in a way that makes sense for your workflow.
@@ -41,10 +46,12 @@ Sticky Notes support Markdown formatting, allowing you to create rich text notes
 - **Bold**: `**text**`
 - *Italic*: `*text*`
 - [Link](http://example.com): `[Link](http://example.com)`
+- Image: `![Alt text](https://placehold.co/600x400)`
+- Embed a Youtube Video: `@[youtube](S6hfIxkdlRc)`
 - Bullet Points: `- Item 1`, `- Item 2`
 - Numbered List: `1. Item 1`, `2. Item 2`
 - Headings: `# Heading 1`, `## Heading 2`, `### Heading 3`
-- Blockquote: `> Quote`
+- Hightlight: `Hightlited Text`
 
 ```plaintext
 The text in double asterisks will be **bold**
@@ -69,8 +76,15 @@ Or created ordered lists with numbers:
 1. Item one
 2. Item two
 
-You can also link an image:
-![Alt text](https://example.com/image.jpg)
+Hightlight a text:
+`Hightlited Text`
+
+You can link an image:
+![Alt text](https://placehold.co/600x400)
+
+You can embed a Youtube video @[youtube](VIDEO-ID):
+@[youtube](S6hfIxkdlRc)
 ```
+
 
 Sticky Notes are a powerful tool to help you organize and annotate your flow editor. Use them to provide context, explanations, and reminders for yourself and your team.
