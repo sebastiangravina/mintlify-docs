@@ -37,7 +37,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["get-started/introduction"]
+      "pages": ["get-started/introduction", "support"]
     },
     {
       "group": "Agent",
