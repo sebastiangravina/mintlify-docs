@@ -8,8 +8,11 @@ This guide explains how to configure a chat completion flow with OpenAI’s GPT 
 ### **Prerequisites**:
 
 To integrate OpenAI with your agent, you’ll need an OpenAI account with API access. You can create an account at [OpenAI](https://platform.openai.com/signup).
-Once you have an account, you need to create an API key. You can do this by going to the [API keys](https://platform.openai.com/account/api-keys) section of your OpenAI account and clicking on the **Create API Key** button. This will generate a new API key that you can use to authenticate your requests to the OpenAI API.
+Once you have an account, you need to create an API key. You can do this by going to the [API keys](https://platform.openai.com/account/api-keys) section of your **OpenAI account** and clicking on the **Create API Key** button. This will generate a new API key that you can use to authenticate your requests to the OpenAI API.
 Once you have your API key, you can add it to your agent by configuring the  **OpenAI** block. Here you can enter your API key and select the OpenAI model you want to use.
+
+> **Note**: If you are using the family model **GPT-5**, there is an additional requirement you need to fullfill in your **OpenAI account**. Your organization must be verified to stream this model. Please go to: https://platform.openai.com/settings/organization/general and click on **Verify Organization**. If you just verified, it can take up to 15 minutes for access to propagate.
+
 
 <iframe
   width="560"
