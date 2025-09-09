@@ -45,6 +45,13 @@ Now head back to your Release0 agent and open the **Email Block**. In the block 
 - **SMTP Password**: Your Resend API key.
 - **SMTP Port**: `465` (For encrypted/TLS connections use 2465, 587 or 2587)
 
+### Resend SMTP Configuration Summary
+
+| **Type** | **Port** | **Security**                                      |
+|----------|------------|-------------------------------------------------|
+| SMTPS |	465, 2465 |	Implicit SSL/TLS (Immediately connects via SSL/TLS)                               |
+| STARTTLS |	25, 587, 2587 |	Explicit SSL/TLS (First connects via plaintext, then upgrades to SSL/TLS) |
+
 > ⚠️ **Important:**
 Make sure you fill in the **From** field for the destination email **before** configuring the SMTP settings. This is the email address where you want to receive notifications. You can use a variable to dynamically set the destination email based on user input.
 If this is not configured before setting up the SMTP settings, the setup process will fail since the test connection email will not be triggered.
