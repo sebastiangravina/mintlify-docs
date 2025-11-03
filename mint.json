@@ -139,6 +139,7 @@
                 "editor/blocks/integrations/meta-pixel",
                 "editor/blocks/integrations/qr",
                 "editor/blocks/integrations/segment",
+                "editor/blocks/integrations/smartsheet",
                 "editor/blocks/integrations/supabase",
                 "editor/blocks/integrations/zapier",
                 "editor/blocks/integrations/zendesk"
