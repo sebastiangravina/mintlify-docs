@@ -11076,10 +11076,10 @@
           {
             "in": "path",
             "name": "resultId",
-            "description": "The `resultId` is returned by the /startChat endpoint or you can find it by listing results with `/results` endpoint",
+            "description": "The `resultId` is returned by the /start endpoint or you can find it by listing results with `/results` endpoint",
             "schema": {
               "type": "string",
-              "description": "The `resultId` is returned by the /startChat endpoint or you can find it by listing results with `/results` endpoint"
+              "description": "The `resultId` is returned by the /start endpoint or you can find it by listing results with `/results` endpoint"
             },
             "required": true
           }

@@ -1089,9 +1089,9 @@
         }
       }
     },
-    "/v1/agents/{publicId}/startChat": {
+    "/v1/agents/{publicId}/start": {
       "post": {
-        "operationId": "startChat",
+        "operationId": "startAgent",
         "summary": "Start chat",
         "parameters": [
           {
@@ -1179,7 +1179,7 @@
                   "properties": {
                     "sessionId": {
                       "type": "string",
-                      "description": "To save and use for /continueChat requests."
+                      "description": "To save and use for /continue requests."
                     },
                     "resultId": {
                       "type": "string"
@@ -1516,7 +1516,7 @@
         }
       }
     },
-    "/v1/sessions/{sessionId}/continueChat": {
+    "/v1/sessions/{sessionId}/continue": {
       "post": {
         "operationId": "continueChat",
         "summary": "Continue chat",
@@ -1524,10 +1524,10 @@
           {
             "in": "path",
             "name": "sessionId",
-            "description": "The session ID you got from the [startChat](./start-chat) response.",
+            "description": "The session ID you got from the [startAgent](./start-chat) response.",
             "schema": {
               "type": "string",
-              "description": "The session ID you got from the [startChat](./start-chat) response."
+              "description": "The session ID you got from the [startAgent](./start-chat) response."
             },
             "required": true
           }
@@ -1885,9 +1885,9 @@
         }
       }
     },
-    "/v1/agents/{agentId}/preview/startChat": {
+    "/v1/agents/{agentId}/preview/start": {
       "post": {
-        "operationId": "startChatPreview",
+        "operationId": "startAgentPreview",
         "summary": "Start preview chat",
         "description": "Use this endpoint to test your agent. Responses won’t be saved, and certain actions, such as ‘Send email,’ will be skipped.",
         "parameters": [
@@ -2035,7 +2035,7 @@
                   "properties": {
                     "sessionId": {
                       "type": "string",
-                      "description": "To save and use for /continueChat requests."
+                      "description": "To save and use for /continue requests."
                     },
                     "agent": {
                       "type": "object",
