@@ -35,7 +35,7 @@ There are 3 ways to create an agent:
 When you select the **Use a template** option, you'll be presented with a list of available templates organized in categories. You can browse the categorized templates, preview their name, description, and thumbnail image, and select the one that best fits your needs. You can also see the template agent preview in the right panel to get a better idea of how it will look and function.
 
 ### Building an Agent from Scratch
-When you select the **Build from scratch** option, you'll be taken to the [flow editor](/editor/graph) where you can start building your agent from a blank canvas. You can add [blocks](/editor/blocks/overview), customize the flow, and configure settings as needed.
+When you select the **Build from scratch** option, you'll be taken to the [flow editor](/editor/graph) where you can start building your agent from a blank canvas. You can add [elements](/editor/elements/overview), customize the flow, and configure settings as needed.
 
 ### Importing an Agent
 Choosing the **Import an agent** option lets you select a file containing an existing agent from another workspace or account. Once you select the agent file, click on the **Open** button to start the process. Then you'll be taken to the flow editor where you can review and edit the imported agent.
@@ -46,11 +46,11 @@ Choosing the **Import an agent** option lets you select a file containing an exi
 Agents allow you to:
 
 - Guide users through [multi-step](/guides/create-first-agent) conversational flows
-- Collect input via [text](/editor/blocks/user-inputs/text), [numbers](/editor/blocks/user-inputs/number), [emails](/editor/blocks/user-inputs/email), [dates](/editor/blocks/user-inputs/date), [files](/editor/blocks/user-inputs/fileUpload), and more
-- Execute logic with conditions and [A/B tests](/editor/blocks/logic/ab-test)
-- Trigger external tools and APIs ([Google Sheets](/editor/blocks/integrations/google-sheets), [Zapier](/editor/blocks/integrations/zapier), [Stripe](/editor/blocks/user-inputs/collect-payment))
-- Display media: **[images](/editor/blocks/agent-dialog/image)**, **[videos](/editor/blocks/agent-dialog/video)**, **[audio](/editor/blocks/agent-dialog/audio)**, **[embeds](/editor/blocks/agent-dialog/embed)**
-- Integrate advanced AI: **[OpenAI](/editor/blocks/ai-agents/openAi)**, **[Dify.AI](/editor/blocks/ai-agents/dify)**, **[Mistral](/editor/blocks/ai-agents/mistralAI)**, **[Groq](/editor/blocks/ai-agents/groq)**, etc.
+- Collect input via [text](/editor/elements/user-inputs/text), [numbers](/editor/elements/user-inputs/number), [emails](/editor/elements/user-inputs/email), [dates](/editor/elements/user-inputs/date), [files](/editor/elements/user-inputs/fileUpload), and more
+- Execute logic with conditions and [A/B tests](/editor/elements/logic/ab-test)
+- Trigger external tools and APIs ([Google Sheets](/editor/elements/integrations/google-sheets), [Zapier](/editor/elements/integrations/zapier), [Stripe](/editor/elements/user-inputs/collect-payment))
+- Display media: **[images](/editor/elements/agent-dialog/image)**, **[videos](/editor/elements/agent-dialog/video)**, **[audio](/editor/elements/agent-dialog/audio)**, **[embeds](/editor/elements/agent-dialog/embed)**
+- Integrate advanced AI: **[OpenAI](/editor/elements/ai-agents/openAi)**, **[Dify.AI](/editor/elements/ai-agents/dify)**, **[Mistral](/editor/elements/ai-agents/mistralAI)**, **[Groq](/editor/elements/ai-agents/groq)**, etc.
 
 
 ## Configuration Options
@@ -88,15 +88,15 @@ Agents can be deployed via:
 
 Agents seamlessly connect with:
 
-- **[Google Sheets](/editor/blocks/integrations/google-sheets)**, **[Zapier](/editor/blocks/integrations/zapier)**, **[Make.com](/editor/blocks/integrations/make-com)**
-- **[Stripe](/editor/blocks/user-inputs/collect-payment)** (for payments)
-- **[Chatwoot](/editor/blocks/integrations/chatwoot)**, **[Cal.com](/editor/blocks/integrations/cal)**, **[Resend](/editor/blocks/integrations/send-email#configuration-steps-using-resend-as-smtp-providers)**, and more
-- Custom **[webhooks](/editor/blocks/integrations/http-request#5-optional%3A-call-a-webhook)** and **[HTTP requests](/editor/blocks/integrations/http-request)**
+- **[Google Sheets](/editor/elements/integrations/google-sheets)**, **[Zapier](/editor/elements/integrations/zapier)**, **[Make.com](/editor/elements/integrations/make-com)**
+- **[Stripe](/editor/elements/user-inputs/collect-payment)** (for payments)
+- **[Chatwoot](/editor/elements/integrations/chatwoot)**, **[Cal.com](/editor/elements/integrations/cal)**, **[Resend](/editor/elements/integrations/send-email#configuration-steps-using-resend-as-smtp-providers)**, and more
+- Custom **[webhooks](/editor/elements/integrations/http-request#5-optional%3A-call-a-webhook)** and **[HTTP requests](/editor/elements/integrations/http-request)**
 
 
-## Flow Building Blocks
+## Flow Building elements
 
-Release0 includes [40+ blocks](/editor/blocks/overview):
+Release0 includes [40+ elements](/editor/elements/overview):
 
 - `Text`, `Image`, `Video`, `Audio`
 - `User Input`: email, phone, number, date, etc.
@@ -110,7 +110,7 @@ Release0 includes [40+ blocks](/editor/blocks/overview):
 - [Real-time](/submission/realtime) and historical [analytics](/submission/analytics)
 - Track completion/drop-off rates
 - UTM capture for campaigns
-- Integration with [Google Analytics](/editor/agent-settings/advanced-settings#google-tag-manager) & [Meta Pixel](/editor/blocks/integrations/meta-pixel)
+- Integration with [Google Analytics](/editor/agent-settings/advanced-settings#google-tag-manager) & [Meta Pixel](/editor/elements/integrations/meta-pixel)
 
 
 ## Curious why conversational agents often outperform traditional forms?

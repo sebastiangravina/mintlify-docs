@@ -8,16 +8,16 @@ Variables act as **placeholders for content** that can be reused throughout your
 
 ## Saving an Answer in a Variable
 
-To store user input in a variable, configure your **[User Input block](/editor/blocks/user-inputs/text)** to save the response. This variable can then be reused elsewhere in your Agent Dialog. For example:
+To store user input in a variable, configure your **[User Input element](/editor/elements/user-inputs/text)** to save the response. This variable can then be reused elsewhere in your Agent Dialog. For example:
 
 ```plaintext
 {{MyVariable}}
 ```
 
-You can also **create**, **use** or **update** variables in most **Release0** blocks. For example if you agent requests the user to input his/her email address, you can enter the **[Email block](/editor/blocks/user-inputs/email)** and in its configuration, you can type Email in the "Save the answer in a variable". This will create a new variable called Email and save the user's input in it.
+You can also **create**, **use** or **update** variables in most **Release0** elements. For example if you agent requests the user to input his/her email address, you can enter the **[Email element](/editor/elements/user-inputs/email)** and in its configuration, you can type Email in the "Save the answer in a variable". This will create a new variable called Email and save the user's input in it.
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/blocks/email-variable.png" alt="Release0.com - Creating a Variable" />
+  <img src="/images/elements/email-variable.png" alt="Release0.com - Creating a Variable" />
 </Frame>
 
 
@@ -55,10 +55,10 @@ secure_Password
 ```
 This variable will not be saved in the [Submission table](/submission/overview), but you can still use it in your flow logic.
 
-It can be used incombination with the  **[Text input block with Password enabled](/editor/blocks/user-inputs/text#password-type-input)** to collect sensitive information securely.
+It can be used incombination with the  **[Text input element with Password enabled](/editor/elements/user-inputs/text#password-type-input)** to collect sensitive information securely.
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/blocks/inputs/password-type.png" alt="Release0.com - Password type" />
+  <img src="/images/elements/inputs/password-type.png" alt="Release0.com - Password type" />
 </Frame>
 
 
@@ -86,7 +86,7 @@ You can manage variables by accessing the **Variables Panel** in the editor (top
 - Enable the option to **save variables in the [Submission table](/submission/overview)** for tracking.
 
 <Frame style={{ maxWidth: '400px' }}>
-  <img src="/images/blocks/variables-pannel.png" alt="Release0.com - Created Variables" />
+  <img src="/images/elements/variables-pannel.png" alt="Release0.com - Created Variables" />
 </Frame>
 
 

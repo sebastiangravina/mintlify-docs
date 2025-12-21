@@ -25,9 +25,9 @@ Below is an example flow demonstrating dynamic avatar changes.
 
 #### Flow Structure
 
-1. **First Block**: Defines all the avatar URLs that can be used.
-2. **Second Block**: Starts the flow by assigning the avatar to the robot's avatar.
-3. **Final Block**: Updates the avatar to the cat's avatar.
+1. **First element**: Defines all the avatar URLs that can be used.
+2. **Second element**: Starts the flow by assigning the avatar to the robot's avatar.
+3. **Final element**: Updates the avatar to the cat's avatar.
 
 #### Example Configuration
 
@@ -35,7 +35,7 @@ Below is an example flow demonstrating dynamic avatar changes.
 {
   "flow": [
     {
-      "block": "Avatar Setup",
+      "element": "Avatar Setup",
       "actions": [
         {
           "type": "setVariable",
@@ -45,7 +45,7 @@ Below is an example flow demonstrating dynamic avatar changes.
       ]
     },
     {
-      "block": "Wizard Avatar",
+      "element": "Wizard Avatar",
       "actions": [
         {
           "type": "setVariable",
@@ -55,7 +55,7 @@ Below is an example flow demonstrating dynamic avatar changes.
       ]
     },
     {
-      "block": "Swordsmith Avatar",
+      "element": "Swordsmith Avatar",
       "actions": [
         {
           "type": "setVariable",

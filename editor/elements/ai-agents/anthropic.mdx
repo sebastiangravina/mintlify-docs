@@ -1,0 +1,81 @@
+---
+sidebarTitle: Anthropic
+title: How to integrate your agent with Anthropic
+description: Step-by-step guide to configure and use the Anthropic Claude AI integration element for AI-driven messages.
+---
+The **Anthropic** Integration element enables you to create and manage AI-driven messages in your agent using the **Claude AI** model. Below is a step-by-step guide to configuring and using this integration effectively.
+
+---
+
+## Features of the Anthropic Integration
+
+- **Dialogue Management**: Easily manage a sequence of user and assistant messages using the `Dialogue` message type.
+- **Chat History**: Seamlessly pass previous interactions to the Claude AI model for context-aware responses.
+- **Vision Support**: Automatically detects and processes image URLs provided in user messages (if supported by the model).
+
+---
+
+## Configuration Steps
+
+### 1. **Intro Message Setup**
+
+Use the **Intro Group** element to provide a welcome message to users. For example:
+
+```markdown
+Hello! I’m a bot that showcases the new Claude AI integration element by Anthropic.  
+To get started, just type something — anything.
+```
+
+---
+
+### 2. **User Input Collection**
+
+Set up the **User Input** element to collect and store messages from users. Steps:
+
+1. **Collect User Message**: Configure the element to receive and save the user’s input under a variable, e.g., `User Message`.
+2. **Append to Chat History**: Use the `Append {{User Message}}` action to ensure the user message is stored in the chat history.
+
+---
+
+### 3. **Creating AI Responses**
+
+The **AI Loop** element generates responses using the Claude AI model. Here’s how to configure it:
+
+1. **Select Claude Model**: Choose the desired Claude version (e.g., `claude-2.1`) from the dropdown menu.
+2. **Pass Messages**: Under the `Messages` section, use the `Dialogue` type to pass the `Chat History` containing user and assistant messages.
+3. **Save Response**: Save the assistant's response to a variable (e.g., `Assistant Message`) and append it to the chat history.
+
+---
+
+### 4. **Vision Support**
+
+Claude AI supports vision processing for image URLs in user messages. To use this feature:
+
+1. Ensure the message contains a valid image URL isolated from other text.
+2. The Claude AI model will process the image if it supports vision; otherwise, it will treat the URL as plain text.
+
+**Example User Message with Vision Support**:
+```plaintext
+What's in this picture?
+
+https://domain.com/image.png
+```
+
+> **Note**: Ensure the image URL is on a separate line for proper detection.
+
+---
+
+## Best Practices for Dialogue Management
+
+- **Sequence Setup**: When passing messages, structure them logically, starting with the user's message, followed by the assistant's responses.
+- **Saving Responses**: Always save the assistant’s response in a variable to update the chat history dynamically.
+
+---
+
+## Validation and Testing
+
+Before deploying the Anthropic Claude integration:
+
+- Verify that user inputs and assistant responses are correctly appended to the chat history.
+- Test image URL parsing and ensure vision-related responses are generated (if applicable).
+- Ensure smooth handover of the `Chat History` to the Claude AI element for context-aware replies.

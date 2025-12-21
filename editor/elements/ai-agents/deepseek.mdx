@@ -1,0 +1,44 @@
+---
+sidebarTitle: DeepSeek
+title: How to integrate your Agent with DeepSeek
+description: Enable advanced Ai models in your chatbot using DeepSeek integration.
+---
+Integrating Release0 with **DeepSeek** allows you to leverage advanced AI models for generating high-quality responses in your chatbot.
+DeepSeek is known for its capabilities in dialogue generation, multi-turn interactions, and context-aware responses.
+
+## Prerequisites
+Before integrating DeepSeek with Release0, ensure you have a **DeepSeek API key**.
+## Steps to Integrate
+
+### 1. Get Your DeepSeek API Key
+1. Sign up at [DeepSeek](https://platform.deepseek.com/api_keys).
+2. Navigate to **API Keys**.
+3. Generate and copy your **API key**.
+
+### 2. Configuring DeepSeekelement
+1. Copy the API key and paste it in the DeepSeek element.
+2. Select a model from the available list. For example `deepseek-chat`.
+3. Provide Messages:
+    - Create a variable for storing user input messages (e.g., `{{user-input}}`).
+    - Select the Message Type for example 'Dialogue'.
+    - Add the variable where the user input was captured (e.g., `{{user-input}}`).
+    - Set the 'starts by' to 'user'.
+    - In the 'Save response' section, create a variable for storing the assistant response (e.g., `{{Deepseek-response}}`).
+    - Add a text element to append the show response chat (e.g., `{{Deepseek-response}}`).
+<Frame style={{ maxWidth: '800px' }}>
+  <img src="/images/elements/integrations/deepseek/deepseek.png" alt="Release0.com - DeepSeek element" />
+</Frame>
+
+>**Note**: You need a valid payment method to generate the API key. You can start with as low as a $2 dollar credit.
+
+### Use case video example
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/APQ0cR-YkEc"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+></iframe>

@@ -88,8 +88,8 @@ This code is creating a container with a 100% width (will match parent width) an
      autoShowDelay?: number;
    };
    autoShowDelay?: number;
-   onNewInputBlock?: (inputBlock: any) => void;
-   onAnswer?: (answer: { message: string; blockId: string }) => void;
+   onNewInputelement?: (inputelement: any) => void;
+   onAnswer?: (answer: { message: string; elementId: string }) => void;
    onInit?: () => void;
    onEnd?: () => void;
    onNewLogs?: (
@@ -220,8 +220,8 @@ This will trigger the popup window automatically after **3 seconds**.
      autoShowDelay?: number;
    };
    autoShowDelay?: number;
-   onNewInputBlock?: (inputBlock: any) => void;
-   onAnswer?: (answer: { message: string; blockId: string }) => void;
+   onNewInputelement?: (inputelement: any) => void;
+   onAnswer?: (answer: { message: string; elementId: string }) => void;
    onInit?: () => void;
    onEnd?: () => void;
    onNewLogs?: (
@@ -340,8 +340,8 @@ This will display a bubble with a preview message after **5 seconds**.
      autoShowDelay?: number;
    };
    autoShowDelay?: number;
-   onNewInputBlock?: (inputBlock: any) => void;
-   onAnswer?: (answer: { message: string; blockId: string }) => void;
+   onNewInputelement?: (inputelement: any) => void;
+   onAnswer?: (answer: { message: string; elementId: string }) => void;
    onInit?: () => void;
    onEnd?: () => void;
    onNewLogs?: (
@@ -425,11 +425,12 @@ If you need to trigger events on your parent website when the user interact with
 ```js
 Agent.initStandard({
   agent: 'my-agent',
-  onNewInputBlock: (inputBlock) => {
-    console.log('New input block displayed', inputBlock.id)
+  onNewInputelement: (
+  ) => {
+    console.log('New input element displayed', inputelement.id)
   },
   onAnswer: (answer) => {
-    console.log('Answer received', answer.message, answer.blockId)
+    console.log('Answer received', answer.message, answer.elementId)
   },
   onInit: () => {
     console.log('Agent initialized')

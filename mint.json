@@ -60,89 +60,89 @@
       "pages": [
         "editor/graph",
         {
-          "group": "Blocks",
+          "group": "Elements",
           "icon": "block",
           "pages": [
-            "editor/blocks/overview",
+            "editor/elements/overview",
             {
               "group": "Agent Dialog",
               "pages": [
-                "editor/blocks/agent-dialog/text",
-                "editor/blocks/agent-dialog/image",
-                "editor/blocks/agent-dialog/video",
-                "editor/blocks/agent-dialog/embed",
-                "editor/blocks/agent-dialog/audio"
+                "editor/elements/agent-dialog/text",
+                "editor/elements/agent-dialog/image",
+                "editor/elements/agent-dialog/video",
+                "editor/elements/agent-dialog/embed",
+                "editor/elements/agent-dialog/audio"
               ]
             },
             {
               "group": "User Inputs",
               "pages": [
-                "editor/blocks/user-inputs/text",
-                "editor/blocks/user-inputs/email",
-                "editor/blocks/user-inputs/number",
-                "editor/blocks/user-inputs/address",
-                "editor/blocks/user-inputs/autocomplete",
-                "editor/blocks/user-inputs/buttons-choice",
-                "editor/blocks/user-inputs/picture-choice",
-                "editor/blocks/user-inputs/date",
-                "editor/blocks/user-inputs/phone",
-                "editor/blocks/user-inputs/fileUpload",
-                "editor/blocks/user-inputs/rating",
-                "editor/blocks/user-inputs/website",
-                "editor/blocks/user-inputs/collect-payment",
-                "editor/blocks/user-inputs/password"
+                "editor/elements/user-inputs/text",
+                "editor/elements/user-inputs/email",
+                "editor/elements/user-inputs/number",
+                "editor/elements/user-inputs/address",
+                "editor/elements/user-inputs/autocomplete",
+                "editor/elements/user-inputs/buttons-choice",
+                "editor/elements/user-inputs/picture-choice",
+                "editor/elements/user-inputs/date",
+                "editor/elements/user-inputs/phone",
+                "editor/elements/user-inputs/fileUpload",
+                "editor/elements/user-inputs/rating",
+                "editor/elements/user-inputs/website",
+                "editor/elements/user-inputs/collect-payment",
+                "editor/elements/user-inputs/password"
               ]
             },
             {
               "group": "Logic & Enrichment",
               "pages": [
-                "editor/blocks/logic/ab-test",
-                "editor/blocks/logic/condition",
-                "editor/blocks/logic/wait",
-                "editor/blocks/logic/link-to-agent",
-                "editor/blocks/logic/jump",
-                "editor/blocks/logic/script-block",
-                "editor/blocks/logic/set-variable",
-                "editor/blocks/logic/redirect",
-                "editor/blocks/logic/user-info"
+                "editor/elements/logic/ab-test",
+                "editor/elements/logic/condition",
+                "editor/elements/logic/wait",
+                "editor/elements/logic/link-to-agent",
+                "editor/elements/logic/jump",
+                "editor/elements/logic/script-element",
+                "editor/elements/logic/set-variable",
+                "editor/elements/logic/redirect",
+                "editor/elements/logic/user-info"
               ]
             },
             {
-              "group": "AI Block Integrations",
+              "group": "AI element Integrations",
               "pages": [
-                "editor/blocks/ai-agents/anthropic",
-                "editor/blocks/ai-agents/chatnode",
-                "editor/blocks/ai-agents/deepseek",
-                "editor/blocks/ai-agents/dify",
-                "editor/blocks/ai-agents/elevenlabs",
-                "editor/blocks/ai-agents/groq",
-                "editor/blocks/ai-agents/mistralAI",
-                "editor/blocks/ai-agents/openRouter",
-                "editor/blocks/ai-agents/openAi",
-                "editor/blocks/ai-agents/perplexity",
-                "editor/blocks/ai-agents/together"
+                "editor/elements/ai-agents/anthropic",
+                "editor/elements/ai-agents/chatnode",
+                "editor/elements/ai-agents/deepseek",
+                "editor/elements/ai-agents/dify",
+                "editor/elements/ai-agents/elevenlabs",
+                "editor/elements/ai-agents/groq",
+                "editor/elements/ai-agents/mistralAI",
+                "editor/elements/ai-agents/openRouter",
+                "editor/elements/ai-agents/openAi",
+                "editor/elements/ai-agents/perplexity",
+                "editor/elements/ai-agents/together"
               ]
             },
             {
-              "group": "Block Integrations",
+              "group": "element Integrations",
               "pages": [
-                "editor/blocks/integrations/google-analytics",
-                "editor/blocks/integrations/cal",
-                "editor/blocks/integrations/chatwoot",
-                "editor/blocks/integrations/discord",
-                "editor/blocks/integrations/send-email",
-                "editor/blocks/integrations/google-sheets",
-                "editor/blocks/integrations/http-request",
-                "editor/blocks/integrations/make-com",
-                "editor/blocks/integrations/nocodb",
-                "editor/blocks/integrations/pabbly-connect",
-                "editor/blocks/integrations/meta-pixel",
-                "editor/blocks/integrations/qr",
-                "editor/blocks/integrations/segment",
-                "editor/blocks/integrations/smartsheet",
-                "editor/blocks/integrations/supabase",
-                "editor/blocks/integrations/zapier",
-                "editor/blocks/integrations/zendesk"
+                "editor/elements/integrations/google-analytics",
+                "editor/elements/integrations/cal",
+                "editor/elements/integrations/chatwoot",
+                "editor/elements/integrations/discord",
+                "editor/elements/integrations/send-email",
+                "editor/elements/integrations/google-sheets",
+                "editor/elements/integrations/http-request",
+                "editor/elements/integrations/make-com",
+                "editor/elements/integrations/nocodb",
+                "editor/elements/integrations/pabbly-connect",
+                "editor/elements/integrations/meta-pixel",
+                "editor/elements/integrations/qr",
+                "editor/elements/integrations/segment",
+                "editor/elements/integrations/smartsheet",
+                "editor/elements/integrations/supabase",
+                "editor/elements/integrations/zapier",
+                "editor/elements/integrations/zendesk"
               ]
             }
           ]
@@ -301,8 +301,8 @@
   },
   "redirects": [
     {
-      "source": "editor/blocks/integrations/webhook",
-      "destination": "editor/blocks/integrations/http-request"
+      "source": "editor/elements/integrations/webhook",
+      "destination": "editor/elements/integrations/http-request"
     }
   ]
 }

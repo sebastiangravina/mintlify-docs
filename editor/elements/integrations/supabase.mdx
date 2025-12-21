@@ -1,0 +1,308 @@
+---
+sidebarTitle: Supabase
+title: How to integrate your Agent with Supabase
+description: Integrate Supabase with Release0 to create dynamic, data-driven chatbot interactions using PostgreSQL database management. Learn how to fetch, create, update, and delete records in your agent dialogs.
+---
+
+## Overview
+
+**Supabase** is an open-source backend-as-a-service that provides a PostgreSQL database with real-time capabilities, authentication, and APIs. When integrated with a **Release0 agent**, it enables powerful, data-driven interactions that enhance the functionality and personalization of your automated experiences.
+
+## Advantages of Using Supabase with Release0 Agent
+
+Connecting Supabase to your Release0 agent allows you to:
+- Store and retrieve user data in a robust PostgreSQL database
+- Create responsive flows with real-time database-driven logic
+- Adapt dialogs based on stored user preferences and history
+- **Create** new records (e.g., user registrations, form submissions)
+- **Read** data for personalization and decision-making
+- **Update** existing records based on conversation outcomes
+- **Delete** entries when necessary
+
+> **Example**: Store user preferences and retrieve them in future conversations using `{{user.preference_id}}`.
+
+This guide explains how to use the **Supabase** element to interact with your PostgreSQL tables in an Agent Dialog. You can perform full CRUD operations (Create, Read, Update, Delete) on your Supabase tables.
+
+## Setting Up Supabase Authentication
+
+To connect Release0 with Supabase, you'll need:
+
+### 1. Supabase Project URL
+Your project URL can be found in your Supabase dashboard under **Settings > Data API**. It follows this format:
+```
+https://your-project-id.supabase.co
+```
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/elements/integrations/supabase/supabase-api-settings.jpg" alt="Release0.com - Supabase Project URL" />
+</Frame>
+
+
+### 2. Service Role API Key
+You'll need the `service_role` key (not the `anon` key) for full database access:
+
+1. Go to your Supabase dashboard
+2. Navigate to **Settings > API Keys**
+3. Copy the **service_role** key under "Project API keys"
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/elements/integrations/supabase/supabase-api-key.jpg" alt="Release0.com - Supabase API Key" />
+</Frame>
+
+
+<Warning>
+The service_role key has full access to your database. Keep it secure and never expose it in client-side code.
+</Warning>
+
+## Available Actions
+
+The Supabase element provides four main actions:
+
+### 1. Create Row
+Add new records to your database tables.
+
+**Required Fields:**
+- **Table Name**: The name of the table to insert into
+- **Fields**: Key-value pairs for the data to insert
+
+**Optional Fields:**
+- **Schema**: Database schema (defaults to "public")
+- **Response Mapping**: Map returned data to variables
+
+### 2. Get Rows
+Retrieve records from your database tables with advanced filtering.
+
+**Required Fields:**
+- **Table Name**: The name of the table to query
+
+**Optional Fields:**
+- **Schema**: Database schema (defaults to "public")
+- **Return Type**: Choose "All", "First", "Last", or "Random"
+- **Order By Column**: Column to sort results
+- **Order Direction**: "asc" (ascending) or "desc" (descending)
+- **Filter Conditions**: Add WHERE conditions
+- **Select Columns**: Specify which columns to return (defaults to "*")
+- **Limit**: Maximum number of records to return
+- **Response Mapping**: Map returned data to variables
+
+### 3. Update Rows
+Modify existing records in your database tables.
+
+**Required Fields:**
+- **Table Name**: The name of the table to update
+- **Filter Conditions**: Conditions to identify which records to update
+- **Fields to Update**: Key-value pairs for the data to update
+
+**Optional Fields:**
+- **Schema**: Database schema (defaults to "public")
+- **Response Mapping**: Map updated data to variables
+
+### 4. Delete Rows
+Remove records from your database tables.
+
+**Required Fields:**
+- **Table Name**: The name of the table to delete from
+- **Filter Conditions**: Conditions to identify which records to delete
+
+**Optional Fields:**
+- **Schema**: Database schema (defaults to "public")
+- **Response Mapping**: Map deleted data to variables
+
+## Complete Workflow Example
+
+Let's create a customer support ticket system using Supabase integration.
+
+### Step 1: Create a Support Tickets Table
+
+First, create a table in your Supabase database with these columns:
+- **id**: Primary key (auto-increment)
+- **customer_name**: Text
+- **customer_email**: Text
+- **issue_type**: Text
+- **description**: Text
+- **status**: Text (default: "open")
+- **created_at**: Timestamp (default: now())
+- **priority**: Text (default: "medium")
+
+### Step 2: Collect Customer Information
+
+Create a **Text element** to collect the customer's information:
+
+```
+Hi! I'm here to help you create a support ticket. 
+
+Please provide the following information:
+- Your name: {{customer_name}}
+- Your email: {{customer_email}}  
+- Issue type: {{issue_type}}
+- Description of the problem: {{description}}
+- Priority level (low/medium/high): {{priority}}
+```
+
+### Step 3: Create the Support Ticket
+
+Add a **Supabase element** with the **Create Row** action:
+
+**Configuration:**
+- **Table Name**: `support_tickets`
+- **Fields**:
+  - `customer_name`: `{{customer_name}}`
+  - `customer_email`: `{{customer_email}}`
+  - `issue_type`: `{{issue_type}}`
+  - `description`: `{{description}}`
+  - `priority`: `{{priority}}`
+  - `status`: `open`
+
+**Response Mapping:**
+- Map "Row Created" to variable `{{ticket_data}}`
+- Map "Table Name" to variable `{{table_name}}`
+
+### Step 4: Confirmation Message
+
+Add another **Text element** to confirm ticket creation:
+
+```
+✅ Your support ticket has been created successfully!
+
+Ticket Details:
+- Ticket ID: {{ticket_data.id}}
+- Status: {{ticket_data.status}}
+- Priority: {{ticket_data.priority}}
+- Created: {{ticket_data.created_at}}
+
+We'll get back to you at {{customer_email}} soon!
+```
+
+### Step 5: Ticket Status Lookup
+
+Create a flow for customers to check their ticket status:
+
+**Text element** to collect ticket ID:
+```
+Please enter your ticket ID to check the status: {{ticket_id}}
+```
+
+**Supabase element** with **Get Rows** action:
+- **Table Name**: `support_tickets`
+- **Filter Conditions**: `id` equals `{{ticket_id}}`
+- **Return Type**: "First"
+
+**Response Mapping:**
+- Map "Rows Found" to variable `{{ticket_info}}`
+
+**Status Display element**:
+```
+📋 Ticket Status Report
+
+Ticket ID: {{ticket_info.id}}
+Customer: {{ticket_info.customer_name}}
+Issue Type: {{ticket_info.issue_type}}
+Status: {{ticket_info.status}}
+Priority: {{ticket_info.priority}}
+Created: {{ticket_info.created_at}}
+
+Description: {{ticket_info.description}}
+```
+
+### Step 6: Update Ticket Status (Admin Flow)
+
+For support staff to update ticket status:
+
+**Supabase element** with **Update Rows** action:
+- **Table Name**: `support_tickets`
+- **Filter Conditions**: `id` equals `{{ticket_id}}`
+- **Fields to Update**:
+  - `status`: `{{new_status}}`
+
+## Best Practices
+
+### Security
+- Always use the service_role key for server-side operations
+- Implement Row Level Security (RLS) policies in Supabase
+- Validate user inputs before database operations
+
+### Performance
+- Use specific column selection instead of `SELECT *` when possible
+- Add appropriate indexes for frequently filtered columns
+- Use pagination with LIMIT for large datasets
+
+### Error Handling
+- Always include filter conditions for UPDATE and DELETE operations
+- Test your database operations thoroughly before deployment
+- Use Response Mapping to capture and handle operation results
+
+### Data Validation
+- Validate required fields before database operations
+- Use appropriate data types in your Supabase schema
+- Implement constraints and default values in your database
+
+## Filter Conditions
+
+When using filters in Get Rows, Update Rows, or Delete Rows actions, you can use various operators:
+
+- **Equals**: Exact match
+- **Not Equals**: Exclude exact matches
+- **Greater Than**: Numeric/date comparisons
+- **Less Than**: Numeric/date comparisons
+- **Contains**: Text search within fields
+- **Starts With**: Text prefix matching
+- **Ends With**: Text suffix matching
+- **Is Empty**: Check for null/empty values
+- **Is Not Empty**: Check for non-null values
+
+## Response Mapping Options
+
+Each action provides different response mapping options:
+
+**Create Row:**
+- Row Created: The newly created record
+- Table Name: Name of the table
+
+**Get Rows:**
+- Rows Found: Array of matching records
+- Table Name: Name of the table
+- Rows Count: Number of records found
+
+**Update Rows:**
+- Updated Rows: Array of updated records
+- Table Name: Name of the table
+- Updated Count: Number of records updated
+
+**Delete Rows:**
+- Deleted Rows: Array of deleted records
+- Table Name: Name of the table
+- Deleted Count: Number of records deleted
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Authentication Errors**: Ensure you're using the service_role key, not the anon key
+2. **Table Not Found**: Verify table names are correct and case-sensitive
+3. **Permission Denied**: Check your RLS policies if enabled
+4. **Row Level Security (RLS) Policy Violations**: If you get an error like `"new row violates row-level security policy for table"` with a 401 Unauthorized status, you need to either:
+   - Disable RLS for your table (go to Authentication > Policies in Supabase dashboard)
+   - Create appropriate RLS policies that allow your service_role key to perform operations
+   - For testing purposes, you can temporarily disable RLS by running: `ALTER TABLE your_table_name DISABLE ROW LEVEL SECURITY;`
+5. **Filter Errors**: Ensure filter conditions use correct column names and data types
+
+### Debugging Tips
+
+- Use the browser's developer tools to inspect network requests
+- Check Supabase logs in your dashboard for detailed error messages
+- Test database operations directly in Supabase SQL editor first
+- Verify your table schema matches the data you're sending
+
+## Validation and Testing
+
+Before deploying your agent:
+
+1. **Test Each Operation**: Verify Create, Read, Update, and Delete operations work correctly
+2. **Validate Filters**: Ensure filter conditions return expected results
+3. **Check Response Mapping**: Confirm mapped variables contain the correct data
+4. **Test Error Scenarios**: Verify graceful handling of invalid inputs or database errors
+5. **Performance Testing**: Test with realistic data volumes
+
+With these configurations, your Release0 agent can perform sophisticated database operations using Supabase, creating dynamic and personalized user experiences.
+
+>💡 Want to see this in action? Check out our [How to Build Data-Driven Chatbots with Supabase Integration](https://release0.com/blog/how-to-build-data-driven-chatbots-with-supabase-integration) blog post for a real-world example and practical tips.

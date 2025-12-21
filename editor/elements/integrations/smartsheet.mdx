@@ -1,0 +1,70 @@
+---
+sidebarTitle: Smartsheet
+title: How to integrate your Agent with Smartsheet
+description: Integrate Smartsheet with Release0 to create dynamic, data-driven chatbot interactions to automate workflows. Learn how to fetch, create, update, and delete records in your agent dialogs.
+---
+
+## Overview
+
+Smartsheet is a powerful platform for work management and automation, enabling teams to collaborate, track projects, and streamline workflows. By integrating Smartsheet with your Release0 agent, you can create dynamic, data-driven chatbot interactions that automate tasks on your workflows.
+This guide will walk you through the steps to connect your Release0 agent with Smartsheet, allowing you to fetch, create, update, and delete records directly from your chatbot dialogs.
+
+## Prerequisites
+Before you begin, ensure you have the following:
+- A Smartsheet account with [access to the API](https://help.smartsheet.com/articles/2482389-generate-API-key).
+- An API access token from Smartsheet. You can generate one in your Smartsheet account settings under the "[API Access](https://help.smartsheet.com/articles/2482389-generate-API-key)" section.
+
+## Steps to Integrate Smartsheet with Release0
+1. **Obtain Smartsheet API Token**:
+   - Log in to your Smartsheet account.
+   - On the left Navigation Bar at the bottom, select Account (your profile image), then Personal Settings
+   - In the new window, navigate to the API Access tab and select Generate new access token.
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/elements/integrations/smartsheet/generate-api-token.png" alt="Release0.com - Smartsheet API Key" />
+</Frame>
+2. **Add the Smartsheet element to your Agent**:
+   - In the Release0 editor, navigate to the elements section and select Integrations.
+   - Find and add the Smartsheet element to your agent's dialog flow.
+3. **Configure the Smartsheet element**: 
+   - In the Smartsheet element settings, enter your Smartsheet API token. And give it a name. Then click Create.
+   - Select the desired action (Create Row, Get Rows, Update Rows, Delete Rows) you want to perform on Smartsheet records.
+   - Select the Sheet you want to interact with from the dropdown menu, you can also search for it by name.
+   - Select the Coulmn ID you want to interact with from the dropdown menu, you can also search for it by name.
+   - Map the required fields from your agent's context or user input to the corresponding Smartsheet fields.
+
+<Frame style={{ maxWidth: '400px' }}>
+  <img src="/images/elements/integrations/smartsheet/smartsheet-map-values.png" alt="Release0.com - Map smartsheet data" />
+</Frame>
+
+4. **Available Actions**:
+   - **Create Row**: Add a new row to a specified Smartsheet with data provided by the user or agent context. Save the collected data into the specified columns of the Smartsheet.
+   - **Get Rows**: Retrieve rows from a specified Smartsheet based on certain filters. Available fileters include:
+     - **All**: Fetch all rows from the specified Smartsheet.
+     - **First**: Retrieve the first row from the specified Smartsheet.
+     - **Last**: Get the last row from the specified Smartsheet.
+     - **Random**: Select a random row from the specified Smartsheet.
+    - **Specific Row Number**: Fetch a row based on its specific row number in the Smartsheet.
+    - **Search Query**: Retrieve rows that match a specific search query or criteria.
+    - **Save Response**: Store the fetched rows in the agent's context for further processing or use in subsequent dialog steps.
+   - **Update Rows**: Modify existing rows in a specified Smartsheet with new data. You can choose to update rows based on:
+     - **Equal to**: Update rows where a specific column matches a given value.
+     -**Not Equal to**: Update rows where a specific column does not match a given value.
+     - **Contains**: Update rows where a specific column contains a given substring.
+     - **Grearter Than**: Update rows where a specific column's value is greater than a given value.
+     - **Grearter Than or Equal To**: Update rows where a specific column's value is greater than or equal to a given value.
+      - **Less Than**: Update rows where a specific column's value is less than a given value.
+      - **Less Than or Equal To**: Update rows where a specific column's value is less than or equal to a given value.
+      - **Is set**: Update rows where a specific column has any value (is not empty).
+      - **Is empty**: Update rows where a specific column has no value (is empty).
+      - **Starts With**: Update rows where a specific column starts with a given substring.
+      - **Ends With**: Update rows where a specific column ends with a given substring.
+      - **In**: Update rows where a specific column's value is in a given list of values.
+   - **Delete Rows**: Remove rows from a specified Smartsheet based on certain criteria.
+
+
+5. **Test the Integration**:
+   - Save your changes and test the dialog flow in your agent to ensure that the Smartsheet integration is functioning as expected.
+   - Verify that records are being created, fetched, updated, or deleted in Smartsheet based on the actions performed by your agent.
+   - Verify that the data is correctly mapped and stored in the appropriate Smartsheet columns. Make sure your smartsheet data types match the data you are sending from Release0.
+
+

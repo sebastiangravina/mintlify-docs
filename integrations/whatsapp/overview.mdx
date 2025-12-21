@@ -26,21 +26,21 @@ When building your bot for WhatsApp, consider the following restrictions:
   - Button content cannot exceed **20 characters**. Content exceeding this limit will be truncated.
   - WhatsApp displays only **3 buttons** at a time. To include more buttons, the system adds "..." messages to show additional options.
 
-- **Skipped Blocks**:
-  Certain blocks are incompatible with WhatsApp and will be ignored:
-  - Payment input block
-  - Chatwoot block
-  - Text input block configured as a **password field**  
-  - Script or Set Variable block with `Execute on client` option enabled
-  - Google Analytics block
-  - Meta Pixel block
-  - Cal.com block
+- **Skipped elements**:
+  Certain elements are incompatible with WhatsApp and will be ignored:
+  - Payment input element
+  - Chatwoot element
+  - Text input element configured as a **password field**  
+  - Script or Set Variable element with `Execute on client` option enabled
+  - Google Analytics element
+  - Meta Pixel element
+  - Cal.com element
 
 ---
 
 ## Contact Information
 
-To assign contact details such as name and phone number to variables, use a **Set Variable** block with dedicated system values. These variables can automatically store:
+To assign contact details such as name and phone number to variables, use a **Set Variable** element with dedicated system values. These variables can automatically store:
 
 - Contact name
 - Phone number
@@ -74,7 +74,7 @@ To integrate your agent with WhatsApp:
 
 ## Collect Position
 
-You can request the user’s location with a basic **Text input block**. The collected position will be saved as a variable in the format:
+You can request the user’s location with a basic **Text input element**. The collected position will be saved as a variable in the format:
 
 ```
 <LAT>, <LONG>
@@ -93,7 +93,7 @@ User > Bot > Position Collection
 Before deployment, ensure:
 
 1. All limitations are addressed (e.g., button length, media types).
-2. The **Set Variable** block is properly configured for contact details.
+2. The **Set Variable** element is properly configured for contact details.
 3. The bot operates seamlessly in WhatsApp's runtime environment.
 
 > **Note**: Always test your bot thoroughly in the WhatsApp Preview mode to verify compatibility and performance.

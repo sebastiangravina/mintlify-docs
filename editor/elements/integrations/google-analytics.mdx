@@ -1,0 +1,43 @@
+---
+sidebarTitle: Google Analytics
+title: How to integrate your Agent with Google Analytics
+description: Track Google Analytics events and conversions within your chatbot flow.
+---
+The **Analytics** integration element allows you to track Google Analytics events at specific moments in your flow.
+
+## How the Google Analytics element Works
+
+When you include a Google Analytics element in your flow, it performs the following actions:
+1. **Initialize GA**: Tracks a "Page view" event upon page load.
+2. **Track Events**: Executes the specified event when the element is triggered.
+
+  <Frame style={{ maxWidth: '600px' }}>
+    <img src="/images/integrations/google-analytics-element.png" alt="Release0.com - Google Analytics element" />
+  </Frame>
+
+
+### Example: Google Analytics element Configuration
+
+| Property         | Value              |
+|------------------|--------------------|
+| **Tracking ID**  | G-12345           |
+| **Event Category** | Agent Dialog |
+| **Event Action** | User Lead     |
+
+
+## Tracking Conversions with Google Ads
+
+You can use the Google Analytics element to track **conversion events** for Google Ads. Configure the element with the following properties:
+
+- **Event action**: `conversion`
+- **Send to**: `<YOUR_AW_ID>`
+- **Value (optional)**: Specify a numerical value to quantify the conversion.
+
+> **Note**: Replace `<YOUR_AW_ID>` with your actual Google Ads conversion ID.
+
+
+## Troubleshooting
+
+To debug and monitor your Google Analytics events:
+1. Install the [**Google Analytics Debugger**](https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna) extension in your browser.
+2. Use the extension to inspect the data being sent to Google Analytics.

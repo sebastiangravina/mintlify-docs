@@ -1,0 +1,43 @@
+---
+sidebarTitle: Email
+title: How to use the Email input element
+icon: at
+description: Collect email addresses from users with built-in format validation, ensuring proper structure. Ideal for user registration and contact forms in your chatbot agent.
+---
+
+The **Email** User Input element is designed to collect email addresses from users while ensuring proper formatting. It provides built-in validation for email structure but does not verify if the email address exists or is active.
+
+<Frame style={{ maxWidth: '600px' }}>
+  <img src="/images/elements/inputs/email.png" alt="Release0.com - Agent Email element" />
+</Frame>
+
+## Key Features
+
+- **Email Format Validation**: Automatically checks if the user-provided email is correctly formatted (e.g., `user@example.com`).  
+- **Retry Message**: Displays a retry message if the email format is invalid.
+
+## Limitations
+
+- **No Validity Check**: The element does not verify if the email is active or belongs to a real domain.  
+- **Advanced Validation**: To check email validity, integrate with an email validation API using an HTTP Request element.
+
+## Example Usage
+
+### Basic Configuration
+User prompt:  
+"Please enter your email address."
+
+Behavior:  
+- The element ensures the input is in the correct format (e.g., `example@domain.com`).  
+- If the format is incorrect, a retry message prompts the user to re-enter the email.
+
+##### Advanced Validation with HTTP Request element
+
+1. Add an **[HTTP Request element](/editor/elements/integrations/http-request)** after the Email Input element.  
+2. Configure the HTTP request to send the collected email address to an email validation API (e.g., [Hunter.io](https://hunter.io), [Mailboxlayer](https://mailboxlayer.com), etc.).  
+3. Process the response to determine the next flow in your agent.
+
+Example HTTP Request Configuration:  
+- **API Endpoint**: `https://api.mailboxlayer.com/check?access_key=YOUR_API_KEY&email={{email_variable}}`  
+- **Method**: `GET`  
+- **Variable**: Replace `{{email_variable}}` with the variable storing the user’s email.

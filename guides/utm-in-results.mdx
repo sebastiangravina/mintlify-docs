@@ -25,18 +25,18 @@ To forward **UTM parameters** to your Agent, follow these steps. The UTM paramet
    - When a UTM parameter is included in the Agent's URL, it will be stored in the corresponding variable (e.g., `utm_source`).
 
 4. **Build a Redirect URL**:
-   - Use the saved UTM values to construct a redirect URL in a **[Redirect Logic Block](/editor/blocks/logic/redirect)**. For example:
+   - Use the saved UTM values to construct a redirect URL in a **[Redirect Logic element](/editor/elements/logic/redirect)**. For example:
      ```url
      https://redirect-site.com?utm_source={{utm_source}}&utm_value={{utm_value}}
      ```
 
-## Example Redirect Block
+## Example Redirect element
 
 Here’s an example of how to build a redirect URL using the UTM variables:
 
 ```json
 {
-  "block_type": "Redirect",
+  "element_type": "Redirect",
   "url": "https://redirect-site.com?utm_source={{utm_source}}&utm_value={{utm_value}}"
 }
 ```

@@ -1,0 +1,134 @@
+---
+sidebarTitle: HTTP Request
+title: Using the HTTP Request to connect with APIs
+description: Send and receive data from external APIs using HTTP requests in your chatbot agent. Learn how to configure HTTP requests, handle responses, and display dynamic content in your agent dialogs. 
+---
+## What is an HTTP Request?
+An **HTTP Request** allows your chatbot to communicate with external services or APIs to fetch or send data. It is a standardized way to interact with web-based services by specifying:
+- A **URL** (endpoint) to request data from.
+- A **method** (e.g., GET or POST) to determine the nature of the request.
+- Additional parameters, headers, or a body if required by the API.
+
+
+In this example, we will use an HTTP `GET` request to retrieve movie details from the OMDB API based on a movie title provided by the user.
+
+
+## Steps to Implement
+
+### 1. Collect User Input
+Create a dialog to collect the movie name from the user.
+
+#### Example Setup:
+- **Prompt Text:** "Search for a movie"
+- **Variable Name:** `Movie`
+
+### 2. Configure HTTP Request to Fetch Data
+Use the HTTP request element to call the OMDB API and retrieve movie details.
+
+#### HTTP Request Configuration:
+- **URL:**  
+  Replace `{{Movie}}` with the variable containing the user input:  
+  ```
+  http://www.omdbapi.com/?t={{Movie}}&apikey=YOUR_API_KEY
+  ```
+- **Method:** `GET`
+
+#### Testing the Request:
+1. **Set Variable Test Value:**  
+   - Variable: `Movie`  
+   - Test Value: `Indiana Jones`
+2. Click **Test the Request** to ensure the API call is functioning correctly.  
+   Example Response:  
+   ```json
+   {
+     "Title": "Indiana Jones",
+     "Year": "1981",
+     "Poster": "https://image.url/indiana-jones.jpg"
+   }
+   ```
+
+---
+
+### 3. Save API Response to Variables
+Map the relevant JSON keys from the API response to variables for use in subsequent steps.
+
+| API Response Key | Variable Name |
+|-------------------|---------------|
+| `data.Title`      | `Title`       |
+| `data.Year`       | `Year`        |
+| `data.Poster`     | `Poster`      |
+
+#### Example Configuration:
+- **Data:** `data.Title`  
+  **Set Variable:** `Title`  
+- **Data:** `data.Year`  
+  **Set Variable:** `Year`  
+- **Data:** `data.Poster`  
+  **Set Variable:** `Poster`
+
+---
+
+### 4. Display the Results Dynamically
+Create a dialog bubble to display the fetched movie details.
+
+#### Dynamic Content Setup:
+- **Agent dialog:**  
+  ```
+  Found: {{Title}} ({{Year}})
+  ```
+- **Agent image dialog:**  
+  Set the image source to `{{Poster}}`.
+
+---
+
+### 5. Optional: Call a Webhook
+You can integrate services like Make.com or Zapier for further processing by sending the collected data to a webhook URL.
+
+#### Webhook Configuration:
+- **Webhook URL:** Enter the provided URL (e.g., `https://hook.eu1.make.com/...`).  
+- **Custom Payload Example:**
+  ```json
+  {
+    "movie": "{{Title}}",
+    "year": "{{Year}}",
+    "poster": "{{Poster}}"
+  }
+  ```
+
+#### Testing the Webhook:
+1. Click **Test the Request** to ensure the data is sent successfully.
+2. Use tools like [Webhook Tester](https://webhook-test.com/) for debugging.
+
+---
+
+## Validation and Testing
+Before deployment, ensure the following:
+1. The API key is valid and has sufficient quota.
+2. The `Movie` variable captures user input correctly.
+3. All variables (`Title`, `Year`, `Poster`) are saved and mapped without errors.
+4. Dynamic content displays the movie information properly.
+
+---
+
+## Notes and Tips
+> **Note:** Always secure your API key. Avoid exposing it in client-side environments.  
+> **Tip:** Use fallback messages for cases where the movie is not found or the API request fails.
+
+---
+
+## Example: Full Flow
+1. **User Input:**  
+   User types "Shawshank Redemption".
+2. **API Call:**  
+   Fetch data from `http://www.omdbapi.com/?t=Shawshank%20Redemption&apikey=YOUR_API_KEY`.
+3. **Response Variables:**  
+   - `Title`: "The Shawshank Redemption"  
+   - `Year`: "1994"  
+   - `Poster`: *URL to movie poster*
+4. **Dynamic Output:**  
+   ```
+   Found: The Shawshank Redemption (1994)
+   ```
+
+   *(Displays the poster image)*
+

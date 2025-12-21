@@ -1,7 +1,7 @@
 ---
 sidebarTitle: How to Create Your First Agent
 title: How to create your first Agent in Release0
-description: Step-by-step guide to create your first agent in Release0, from setup to publishing. Learn how to use the flow editor, add blocks, collect user input, and test your agent.
+description: Step-by-step guide to create your first agent in Release0, from setup to publishing. Learn how to use the flow editor, add elements, collect user input, and test your agent.
 ---
 
 You can create your first agent in just a few minutes. This guide will walk you through the process step by step.
@@ -20,57 +20,57 @@ There are 3 ways to create an agent:
 
 We will focus on creating an agent from scratch.
 ### 1. Select "Build from scratch"
-When you select the **Build from scratch** option, you'll be taken to the flow editor where you can start building your agent from a blank canvas. You can add blocks, customize the flow, and configure settings as needed.
+When you select the **Build from scratch** option, you'll be taken to the flow editor where you can start building your agent from a blank canvas. You can add elements, customize the flow, and configure settings as needed.
 <Frame style={{ maxWidth: '800px' }}>
   <img src="/images/guides/create-first-agent/build-from-scratch.png" alt="Release0.com - Build from scratch" />
 </Frame>
 
-On the left side of your screen, you will see the **Blocks** panel. This is where you can add different types of blocks to your agent flow. You can choose from a variety of blocks, including:
+On the left side of your screen, you will see the **elements** panel. This is where you can add different types of elements to your agent flow. You can choose from a variety of elements, including:
 - **Text**: Send a message to the user.
 - **Input**: Collect user input (text, number, email, etc.).
 - **Logic**: Create conditions and branches in your flow.
 - **Integrations**: Connect to third-party services like Google Sheets, Zapier, Stripe, etc.
 - **AI**: Integrate advanced AI models like OpenAI, Claude, Mistral, Groq, etc.
 
-### 2. Add a Text Block
-To start, drag and drop a **Text Block** from the **Blocks** panel to the flow editor. This block will be the first message your agent sends to the user.
+### 2. Add a Text element
+To start, drag and drop a **Text element** from the **elements** panel to the flow editor. This element will be the first message your agent sends to the user.
 
 
-### 3. Configure the Text Block
-Click on the **Text Block** you just added to open its configuration panel. Here, you can customize the message that will be sent to the user. For example, you can set the message to "Hello! How can I help you today?".
+### 3. Configure the Text element
+Click on the **Text element** you just added to open its configuration panel. Here, you can customize the message that will be sent to the user. For example, you can set the message to "Hello! How can I help you today?".
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/guides/create-first-agent/text-block.gif" alt="Release0.com - Text block" />
+  <img src="/images/guides/create-first-agent/text-element.gif" alt="Release0.com - Text element" />
 </Frame>
 
-### 4. Add a User Input Block
-User input blocks are essential for collecting information from users. After the text block, you can add an input block to ask the user for their name or any other information you need.
-Next, drag and drop an **Text** Input Block from the **Blocks** panel to the flow editor. This block will allow the user to enter their name.
-### 5. Configure the Input Block
-Click on the **Text** Input Block you just added to open its configuration panel. Here, you can customize the input and assign a [variable](/editor/variables) such as 'name' and set a label for the input.
+### 4. Add a User Input element
+User input elements are essential for collecting information from users. After the text element, you can add an input element to ask the user for their name or any other information you need.
+Next, drag and drop an **Text** Input element from the **elements** panel to the flow editor. This element will allow the user to enter their name.
+### 5. Configure the Input element
+Click on the **Text** Input element you just added to open its configuration panel. Here, you can customize the input and assign a [variable](/editor/variables) such as 'name' and set a label for the input.
 
 <Frame style={{ maxWidth: '600px' }}>
-  <img src="/images/guides/create-first-agent/input-block.gif" alt="Release0.com - Input block" />
+  <img src="/images/guides/create-first-agent/input-element.gif" alt="Release0.com - Input element" />
 </Frame>
 
 ### 6. Read the User Input
-You can use the variable you assigned to the input block to read the user's response. For example, you can use the variable `name` to greet the user by their name in the next text block.
+You can use the variable you assigned to the input element to read the user's response. For example, you can use the variable `name` to greet the user by their name in the next text element.
 
   <Frame style={{ maxWidth: '600px' }}>
     <img src="/images/guides/create-first-agent/read-input.gif" alt="Release0.com - Read input" />
   </Frame>
 
 ### 7. Test Your Agent
-Once you have added the text and input blocks, you can test your agent by clicking on the **Play** button in the top right corner of the flow editor. This will open a preview of your agent where you can interact with it and see how it responds to user input.
+Once you have added the text and input elements, you can test your agent by clicking on the **Play** button in the top right corner of the flow editor. This will open a preview of your agent where you can interact with it and see how it responds to user input.
 <Frame style={{ maxWidth: '600px' }}>
   <img src="/images/guides/create-first-agent/test-agent.gif" alt="Release0.com - Test agent" />
 </Frame>
 
 ## Next Steps
 
-This is just a simple example of how to create an agent using Release0. You can add more blocks, customize the flow, and integrate with third-party services to create a more complex agent. 
+This is just a simple example of how to create an agent using Release0. You can add more elements, customize the flow, and integrate with third-party services to create a more complex agent. 
 
-- For more information on how to use the different blocks, check out the [Blocks documentation](/editor/blocks/overview).
+- For more information on how to use the different elements, check out the [elements documentation](/editor/elements/overview).
 - To learn more about variables and how to use them, check out the [Variables documentation](/editor/variables).
 - To learn more about how to integrate with third-party services, check out the [Integrations documentation](/integrations/overview).
 - To learn more about how to customize your agent, check out the [Customization documentation](/theme/overview).
