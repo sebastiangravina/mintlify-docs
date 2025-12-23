@@ -12,7 +12,7 @@ Below is an example:
 
 ```html
 <script type="module">
-  import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.2/dist/web.js'
+  import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.9/dist/web.js'
 
   Agent.initStandard({
     agent: 'my-agent',
@@ -112,7 +112,7 @@ To display multiple agents on the same page, assign unique `id`props to each:
 
 ```html
 <script type="module">
-  import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.2/dist/web.js'
+  import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.9/dist/web.js'
 
   Agent.initStandard({
     id: 'agent1'
@@ -143,20 +143,6 @@ Get the popup HTML and JavaScript code by clicking on the â€œHTML & Javascriptâ€
 <Frame style={{ maxWidth: '400px' }}>
   <img src="/images/integrations/javascript-popup.png" alt="JavaScript popus" />
 </Frame>
-
-Here is an example:
-
-```html
-<script type="module">
-  import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.2/dist/web.js'
-
-  Agent.initPopup({
-    agent: 'my-agent',
-    apiHost: 'http://localhost:3001',
-    autoShowDelay: 3000,
-  })
-</script>
-```
 
 This will trigger the popup window automatically after **3 seconds**.
 
@@ -260,7 +246,7 @@ Here is an example:
 
 ```html
 <script type="module">
-  import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.2/dist/web.js'
+  import Agent from 'https://cdn.jsdelivr.net/npm/@release0.com/js@1.1.9/dist/web.js'
 
   Agent.initBubble({
     agent: 'my-agent',
