@@ -79,7 +79,7 @@ const App = () => {
 
 ## Additional Configuration
 
-To prefill agent variables in your embed code, use the `prefilledVariables` option. The example below pre-populates values for `Current URL` and `User name`:
+To prefill agent variables in your embed code, use the `initialContext` option. The example below pre-populates values for `Current URL` and `User name`:
 
 ```javascript
 import { Standard } from '@release0.com/react';
@@ -89,7 +89,7 @@ const App = () => {
     <Standard
       agent="ag_wkudr50npuorrrjz6pyx84yv"
       style={{ width: '100%', height: '600px' }}
-      prefilledVariables={{
+      initialContext={{
         'Current URL': 'https://my-site/account',
         'User name': 'John Doe',
       }}

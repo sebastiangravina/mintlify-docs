@@ -77,7 +77,7 @@
                             "type": "string",
                             "description": "Provide it if you'd like to overwrite an existing result."
                           },
-                          "prefilledVariables": {
+                          "initialContext": {
                             "type": "object",
                             "additionalProperties": {},
                             "description": "[More info about prefilled variables.](https://docs.release0.com/editor/variables#prefilled-variables)"
@@ -615,7 +615,7 @@
                             "type": "string",
                             "description": "Provide it if you'd like to overwrite an existing result."
                           },
-                          "prefilledVariables": {
+                          "initialContext": {
                             "type": "object",
                             "additionalProperties": {},
                             "description": "[More info about prefilled variables.](https://docs.release0.com/editor/variables#prefilled-variables)"
@@ -1144,7 +1144,7 @@
                     "default": false,
                     "description": "If set to `true`, it will only register the session and not start the bot. This is used for 3rd party chat platforms as it can require a session to be registered before sending the first message."
                   },
-                  "prefilledVariables": {
+                  "initialContext": {
                     "type": "object",
                     "additionalProperties": {},
                     "description": "[More info about prefilled variables.](../../editor/variables#prefilled-variables)",
@@ -1995,7 +1995,7 @@
                       }
                     ]
                   },
-                  "prefilledVariables": {
+                  "initialContext": {
                     "type": "object",
                     "additionalProperties": {},
                     "description": "[More info about prefilled variables.](../../editor/variables#prefilled-variables)",

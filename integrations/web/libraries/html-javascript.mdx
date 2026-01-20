@@ -36,7 +36,7 @@ This code is creating a container with a 100% width (will match parent width) an
    agent: string | any;
    isPreview?: boolean;
    resultId?: string;
-   prefilledVariables?: Record<string, unknown>;
+   initialContext?: Record<string, unknown>;
    apiHost?: string;
    font?:
      | string
@@ -154,7 +154,7 @@ This will trigger the popup window automatically after **3 seconds**.
    agent: string | any;
    isPreview?: boolean;
    resultId?: string;
-   prefilledVariables?: Record<string, unknown>;
+   initialContext?: Record<string, unknown>;
    apiHost?: string;
    font?:
      | string
@@ -274,7 +274,7 @@ This will display a bubble with a preview message after **5 seconds**.
    agent: string | any;
    isPreview?: boolean;
    resultId?: string;
-   prefilledVariables?: Record<string, unknown>;
+   initialContext?: Record<string, unknown>;
    apiHost?: string;
    font?:
      | string
@@ -429,12 +429,12 @@ Agent.initStandard({
 
 ## Additional configuration
 
-You can prefill the agent variable values in your embed code by adding the `prefilledVariables` option. Here is an example:
+You can prefill the agent variable values in your embed code by adding the `initialContext` option. Here is an example:
 
 ```js
 Agent.initStandard({
   agent: 'my-agent',
-  prefilledVariables: {
+  initialContext: {
     'Current URL': 'https://release0.com',
     'User name': 'John Doe',
   },
