@@ -21,12 +21,6 @@
   "primaryTab": {
     "name": "Learn"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
       "name": "Community",
@@ -195,11 +189,6 @@
             "integrations/whatsapp/overview",
             "integrations/whatsapp/create-meta-app"
           ]
-        },
-        {
-          "group": "API",
-          "icon": "code-simple",
-          "pages": ["integrations/api/overview"]
         }
       ]
     },
@@ -239,57 +228,6 @@
     {
       "group": "Misc",
       "pages": ["faq", "support", "report-abuse"]
-    },
-    {
-      "group": "Get started",
-      "pages": ["api-reference/authentication", "api-reference/how-to"]
-    },
-    {
-      "group": "Chat",
-      "pages": [
-        "api-reference/chat/start-chat",
-        "api-reference/chat/continue-chat",
-        "api-reference/chat/save-logs",
-        "api-reference/chat/update-agent-in-session"
-      ]
-    },
-    {
-      "group": "Agent",
-      "pages": [
-        "api-reference/agent/list",
-        "api-reference/agent/get",
-        "api-reference/agent/create",
-        "api-reference/agent/import",
-        "api-reference/agent/update",
-        "api-reference/agent/delete",
-        "api-reference/agent/get-published-bot",
-        "api-reference/agent/publish",
-        "api-reference/agent/unpublish"
-      ]
-    },
-    {
-      "group": "Results",
-      "pages": [
-        "api-reference/results/list",
-        "api-reference/results/get",
-        "api-reference/results/delete",
-        "api-reference/results/list-logs"
-      ]
-    },
-    {
-      "group": "Analytics",
-      "pages": ["api-reference/analytics/get-stats"]
-    },
-    {
-      "group": "Workspace",
-      "pages": [
-        "api-reference/workspace/list",
-        "api-reference/workspace/get",
-        "api-reference/workspace/create",
-        "api-reference/workspace/update",
-        "api-reference/workspace/delete",
-        "api-reference/workspace/list-members"
-      ]
     }
   ],
   "footerSocials": {
